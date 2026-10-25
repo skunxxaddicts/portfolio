@@ -1,10 +1,19 @@
 @import "tailwindcss";
+/* css-kit shared spine — fluid type scale, semantic utilities, motion tokens.
+   Local skin below (repo-owned noir) overrides kit tokens where names collide. */
+@import "../styles/kit/base.css";
 
 /* ============================================
    THEME — "engineered noir"
    ============================================ */
 
 @theme {
+  /* css-kit semantic aliases — kit utilities read these */
+  --color-page: #07070a;
+  --color-foreground: #ece9e2;
+  --color-brand: #e8b653;
+  --color-border: var(--color-line);
+
   --color-void: #07070a;
   --color-ink: #0c0c11;
   --color-panel: #101017;

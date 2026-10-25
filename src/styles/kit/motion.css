@@ -1,0 +1,55 @@
+/* css-kit v0.2.0 · motion.css — keyframes + animate-* classes.
+   Rule: compositor-only properties (transform, opacity, filter, clip-path).
+   Every animation below is disabled under prefers-reduced-motion. */
+
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes kit-shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+@keyframes kit-fade-up {
+  from { opacity: 0; transform: translateY(0.75rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes kit-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes kit-pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.97); opacity: 0.8; }
+}
+
+@layer components {
+  /* Infinite horizontal marquee — track duplicates content, -50% loops it. */
+  .animate-marquee {
+    animation: marquee-x 40s linear infinite;
+  }
+
+  /* Reveal — pair with IntersectionObserver/.reveal-in or use on mount. */
+  .animate-fade-up {
+    animation: kit-fade-up var(--duration-slow) var(--ease-out-quart) both;
+  }
+  .animate-fade-in {
+    animation: kit-fade-in var(--duration-normal) var(--ease-out) both;
+  }
+  .animate-pulse-soft {
+    animation: kit-pulse-soft 2.4s var(--ease-in-out) infinite;
+  }
+}
+
+/* Global reduced-motion guard — kills every kit animation + smooth scroll. */
+@media (prefers-reduced-motion: reduce) {
+  @layer base {
+    html { scroll-behavior: auto; }
+  }
+  .animate-marquee,
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-pulse-soft {
+    animation: none;
+  }
+}

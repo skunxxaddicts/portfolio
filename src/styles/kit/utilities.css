@@ -1,0 +1,157 @@
+/* css-kit v0.2.0 · utilities.css — @utility recipes + small component classes.
+   Invariants at the source: reuse these; don't restyle call sites.
+   Requires tokens.css + base.css (import via index.css). */
+
+/* Fluid page gutter — 24px→40px across 360→1280px, continuous not stepped. */
+@utility gutter-x {
+  padding-inline: clamp(1.5rem, 1.11rem + 1.74vw, 2.5rem);
+}
+@utility container-page {
+  @apply mx-auto w-full max-w-12xl gutter-x;
+}
+
+@utility eyebrow {
+  @apply font-mono text-xs uppercase tracking-wider text-muted;
+}
+
+/* Typography clusters — pure type, add layout at call site. */
+@utility body-mono-md {
+  @apply font-mono text-xl font-medium leading-relaxed;
+}
+@utility body-mono-sm {
+  @apply font-mono text-sm font-medium leading-relaxed;
+}
+@utility heading-card {
+  @apply font-display text-display-sm font-medium leading-tight md:text-display-md;
+}
+@utility heading-subhead {
+  @apply font-display text-display-md font-medium leading-tight md:text-display-lg;
+}
+@utility heading-section-sm {
+  @apply font-display text-display-2xl font-medium leading-none md:text-display-3xl;
+}
+/* Single continuous clamps — endpoints preserved, no mid-range snap. */
+@utility heading-section {
+  @apply font-display font-medium leading-none text-[clamp(1.25rem,-0.28rem+6.29vw,4.75rem)];
+}
+@utility heading-hero {
+  @apply font-display font-medium leading-none tracking-tight text-[clamp(1.75rem,-0.77rem+10.34vw,7.5rem)];
+}
+@utility empty-state {
+  @apply rounded-md border border-dashed border-border px-6 py-12 text-center font-mono text-sm text-muted;
+}
+@utility section-page {
+  @apply container-page flex flex-col gap-16 py-section;
+}
+@utility section-head {
+  @apply flex flex-col gap-8;
+}
+
+/* Semantic dark-aware pairs — the light↔dark mapping can't be forgotten. */
+@utility card-surface {
+  @apply bg-surface;
+}
+@utility card {
+  @apply rounded-lg border border-border bg-surface p-6 shadow-sm;
+}
+@utility card-raised {
+  @apply rounded-lg border border-border bg-surface-raised p-6 shadow-md;
+}
+/* `text-muted` resolves straight from the --color-muted token (auto utility);
+   `text-body` kept as an alias for back-compat. Dark swaps via token values. */
+@utility text-body {
+  @apply text-foreground;
+}
+@utility border-divider {
+  @apply border-border;
+}
+@utility border-divider-strong {
+  @apply border-border-strong/50;
+}
+@utility dark-section {
+  @apply bg-dark-secondary text-light-primary;
+}
+
+/* Text fields — one recipe per surface. */
+@utility field-input {
+  @apply w-full rounded-md border border-border-strong/40 bg-transparent px-4 py-3
+    font-mono text-md text-body
+    placeholder:text-muted
+    focus:border-brand focus:outline-none disabled:opacity-60;
+}
+@utility field-input-dark {
+  @apply w-full rounded-md border border-white bg-transparent px-4 py-3
+    font-mono text-md text-light-primary
+    placeholder:text-light-tertiary
+    focus:border-brand focus:outline-none disabled:opacity-60;
+}
+
+/* Buttons — centered content by default; sizes via --btn-py/--btn-px. */
+@utility btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md bg-brand
+         px-4 py-3 font-mono text-sm font-bold uppercase tracking-wider
+         text-onbrand transition hover:brightness-110 disabled:opacity-40;
+}
+@utility btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-md border
+         border-border px-4 py-3 font-mono text-sm transition
+         hover:border-accent hover:text-foreground;
+}
+@utility btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-3
+         font-mono text-sm text-muted transition hover:bg-surface-raised
+         hover:text-foreground;
+}
+@utility btn-sm {
+  @apply px-3 py-2 text-xs;
+}
+@utility btn-lg {
+  @apply px-6 py-4 text-base;
+}
+@utility btn-icon {
+  @apply inline-flex h-11 w-11 items-center justify-center rounded-md
+         border border-border transition hover:border-accent;
+}
+
+/* Keyboard focus — non-colour cue + focus token (WCAG 2.4.7). */
+@utility focus-ring {
+  @apply outline-none focus-visible:outline-2 focus-visible:outline-offset-2
+         focus-visible:outline-[var(--color-focus)];
+}
+@utility focus-link {
+  @apply outline-none focus-visible:text-brand focus-visible:underline
+         focus-visible:underline-offset-4 focus-visible:decoration-2;
+}
+
+/* Mobile ergonomics — the patterns mobile QA proved. */
+@utility touch-target {
+  @apply min-h-11 min-w-11; /* ≥44px — WCAG 2.5.5 */
+}
+@utility scroll-x {
+  overflow-x: auto;
+  & > table { min-width: 100%; }
+}
+
+/* Status stamp — token-driven rubber stamp. --stamp-tilt per skin
+   (0deg flat, -1.5deg ledger look). Variants read status tokens. */
+@utility stamp {
+  @apply inline-block rounded-sm border-2 border-current px-2 py-0.5
+         font-mono text-xs font-bold uppercase tracking-wider;
+  transform: rotate(var(--stamp-tilt, -1.5deg));
+}
+
+/* Skeleton — shimmer block for SSR loading states (compositor-safe). */
+@utility skeleton {
+  @apply rounded-md bg-surface-raised;
+  animation: kit-shimmer 1.6s var(--ease-in-out) infinite;
+}
+
+@layer components {
+  /* Status stamp variants — `.stamp.success` etc. */
+  .stamp.success, .stamp-active   { color: var(--color-success); }
+  .stamp.warning, .stamp-pending  { color: var(--color-warning); }
+  .stamp.danger,  .stamp-defaulted{ color: var(--color-danger); }
+  .stamp.info,    .stamp-scheduled{ color: var(--color-info); }
+  .stamp.neutral, .stamp-done     { color: var(--color-muted); }
+  .stamp.brand                    { color: var(--color-brand); }
+}

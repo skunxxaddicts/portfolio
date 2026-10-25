@@ -1,0 +1,15 @@
+/* css-kit v0.2.0 · index.css — full kit in one import.
+   Repo entry css:
+     @import "tailwindcss";
+     @import "./kit/index.css";
+     @import "./kit/skin.css";
+
+   Granular alternative (tokens-only etc):
+     @import "tailwindcss";
+     @import "./kit/tokens.css";
+     @import "./kit/skin.css";                       */
+
+@import "./tokens.css";
+@import "./base.css";
+@import "./utilities.css";
+@import "./motion.css";

@@ -1,0 +1,213 @@
+/* css-kit v0.2.0 · tokens.css — all @theme tokens. Skin-agnostic structure;
+   skins override by re-declaring in a later @theme block. */
+
+@theme {
+  /* ========================================
+     BRAND / STATUS — semantic indirection.
+     Components read these, never raw hex.
+     ======================================== */
+  --color-brand: #FF6F00;
+  --color-brand-hover: #e66400;
+  --color-onbrand: #1f1f1f;       /* text/icon on brand bg (btn-primary etc) */
+
+  --color-accent: #004fed;
+  --color-accent-hover: #0033cc;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-info: #2563eb;
+
+  /* ========================================
+     SURFACES — light/dark paired scales.
+     dark-* = dark-mode surface colors; light-* = their light counterparts.
+     Semantic aliases (surface, elevated) resolve to the CURRENT mode.
+     ======================================== */
+  --color-dark-primary: #2e2e2e;
+  --color-dark-secondary: #1f1f1f;
+  --color-dark-tertiary: #535353;
+
+  --color-light-primary: #ffffff;
+  --color-light-secondary: #eaeaea;
+  --color-light-tertiary: #a5a5a5;
+
+  --color-page: #f4f4f4;          /* page bg — never pure white */
+  --color-border: rgb(5 5 5 / 0.2);
+  --color-border-strong: #2e2e2e;
+
+  /* Semantic aliases — what components actually use. */
+  --color-background: var(--color-page);
+  --color-foreground: var(--color-dark-primary);
+  --color-muted: #6a6a6a;
+  --color-surface: var(--color-light-primary);   /* default card surface */
+  --color-surface-raised: var(--color-light-primary); /* one level above */
+  --color-focus: var(--color-brand);
+
+  /* ========================================
+     TYPOGRAPHY — fluid clamps (mobile ~393px → desktop ~1440px).
+     No breakpoint snaps: size scales continuously with viewport.
+     ======================================== */
+  --font-sans: var(--font-skin-sans, ui-sans-serif, system-ui, sans-serif);
+  --font-mono: var(--font-skin-mono, ui-monospace, monospace);
+  --font-display: var(--font-skin-display, var(--font-sans));
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --text-xs: clamp(0.625rem, 0.2188rem + 1.74vw, 0.75rem);
+  --text-xs--line-height: clamp(0.9375rem, 0.3281rem + 2.6vw, 1.5rem);
+  --text-sm: clamp(0.75rem, 0.6875rem + 0.2vw, 0.875rem);
+  --text-sm--line-height: clamp(1.125rem, 0.4219rem + 3.01vw, 1.75rem);
+  --text-md: clamp(0.875rem, 0.3438rem + 2.27vw, 1rem);
+  --text-md--line-height: clamp(1.3125rem, 0.5156rem + 3.4vw, 1.875rem);
+  --text-base: var(--text-md);
+  --text-base--line-height: var(--text-md--line-height);
+  --text-lg: clamp(0.9375rem, 0.3125rem + 2.67vw, 1.125rem);
+  --text-lg--line-height: clamp(1.4063rem, 0.4688rem + 4.01vw, 2rem);
+  --text-xl: clamp(1.0625rem, 0.375rem + 2.94vw, 1.25rem);
+  --text-xl--line-height: clamp(1.5938rem, 0.5625rem + 4.41vw, 2.125rem);
+
+  --text-display-xs: clamp(0.75rem, 0.0938rem + 2.8vw, 1.5rem);
+  --text-display-xs--line-height: clamp(1.125rem, 0.1406rem + 4.21vw, 2.25rem);
+  --text-display-sm: clamp(0.75rem, -0.125rem + 3.74vw, 1.75rem);
+  --text-display-sm--line-height: clamp(1.125rem, -0.1563rem + 5.48vw, 2.375rem);
+  --text-display-md: clamp(0.875rem, -0.0938rem + 4.14vw, 2rem);
+  --text-display-md--line-height: clamp(1.25rem, -0.0625rem + 5.61vw, 2.5rem);
+  --text-display-lg: clamp(1rem, -0.0625rem + 4.54vw, 2.25rem);
+  --text-display-lg--line-height: clamp(1.5rem, 0rem + 4.27vw, 2.75rem);
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-xl: clamp(1.125rem, 0.0313rem + 4.67vw, 2.5rem);
+  --text-display-xl--line-height: clamp(1.75rem, 0.2813rem + 6.28vw, 3rem);
+  --text-display-xl--letter-spacing: -0.02em;
+  --text-display-2xl: clamp(1.25rem, 0.0625rem + 5.07vw, 3rem);
+  --text-display-2xl--line-height: clamp(1.875rem, 0.3125rem + 6.68vw, 3.75rem);
+  --text-display-2xl--letter-spacing: -0.02em;
+  --text-display-3xl: clamp(1.5rem, 0.2rem + 5.56vw, 3.75rem);
+  --text-display-3xl--line-height: clamp(2rem, 0.5rem + 6.39vw, 4.5rem);
+  --text-display-3xl--letter-spacing: 0;
+  --text-display-4xl: clamp(1.75rem, 0.25rem + 6.4vw, 4.75rem);
+  --text-display-4xl--line-height: clamp(2.25rem, 0.55rem + 7.26vw, 5.5rem);
+  --text-display-4xl--letter-spacing: -0.02em;
+  --text-display-5xl: clamp(2rem, 0.2rem + 7.68vw, 6rem);
+  --text-display-5xl--line-height: clamp(2.5rem, 0.6rem + 8.11vw, 6.5rem);
+  --text-display-5xl--letter-spacing: -0.02em;
+  --text-display-6xl: clamp(2.5rem, 0.4rem + 8.96vw, 7.5rem);
+  --text-display-6xl--line-height: 1;
+  --text-display-6xl--letter-spacing: -0.03em;
+  --text-display-7xl: clamp(3rem, 0.5rem + 10.67vw, 9rem);
+  --text-display-7xl--line-height: 1;
+  --text-display-7xl--letter-spacing: -0.03em;
+
+  /* ========================================
+     BREAKPOINTS — xs-first (393px phone → 1920px)
+     ======================================== */
+  --breakpoint-xs: 393px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+  --breakpoint-3xl: 1680px;
+  --breakpoint-4xl: 1920px;
+
+  /* ========================================
+     SECTION RHYTHM — fluid clamps (mobile → desktop).
+     ======================================== */
+  --spacing-0_75: 0.1875rem;
+  --spacing-section: clamp(4rem, 2.34rem + 7.07vw, 8rem);
+  --spacing-section-lg: clamp(5rem, 2.1rem + 12.38vw, 12rem);
+  --spacing-section-xl: clamp(6rem, 1.03rem + 21.22vw, 18rem);
+  --spacing-section-2xl: clamp(7rem, -0.04rem + 30.06vw, 24rem);
+
+  /* Safe-area insets — notched devices (iPhone home bar etc). */
+  --spacing-safe-top: env(safe-area-inset-top, 0px);
+  --spacing-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --spacing-safe-inline: env(safe-area-inset-left, 0px);
+
+  /* ========================================
+     RADIUS / SHADOW / Z / TRACKING
+     ======================================== */
+  --radius: 0.5rem;
+  --radius-none: 0rem;
+  --radius-xxs: 0.125rem;
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.25rem;
+  --radius-4xl: 1.5rem;
+  --radius-full: 9999px;
+
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
+  --shadow-md: 0 4px 6px rgb(0 0 0 / 0.08), 0 2px 4px rgb(0 0 0 / 0.04);
+  --shadow-lg: 0 10px 15px rgb(0 0 0 / 0.1), 0 4px 6px rgb(0 0 0 / 0.04);
+  --shadow-xl: 0 20px 25px rgb(0 0 0 / 0.1), 0 10px 10px rgb(0 0 0 / 0.04);
+  --shadow-2xl: 0 25px 50px rgb(0 0 0 / 0.2);
+  --shadow-inner: inset 0 2px 4px rgb(0 0 0 / 0.06);
+
+  --z-base: 0;
+  --z-raised: 1;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-popover: 45;
+  --z-toast: 50;
+  --z-tooltip: 60;
+
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+
+  /* ========================================
+     MOTION — easing + duration scales.
+     ======================================== */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-circ: cubic-bezier(0, 0.55, 0.45, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-instant: 75ms;
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+  --duration-reveal: 1000ms;
+  --duration-reveal-long: 1500ms;
+
+  /* ========================================
+     CONTAINER (max-w-* utility scale)
+     ======================================== */
+  --container-3xs: 16rem;
+  --container-2xs: 18rem;
+  --container-xs: 20rem;
+  --container-sm: 24rem;
+  --container-md: 28rem;
+  --container-lg: 32rem;
+  --container-xl: 36rem;
+  --container-2xl: 42rem;
+  --container-3xl: 48rem;
+  --container-4xl: 56rem;
+  --container-5xl: 64rem;
+  --container-6xl: 72rem;
+  --container-7xl: 80rem;
+  --container-8xl: 88rem;
+  --container-9xl: 96rem;
+  --container-10xl: 104rem;
+  --container-11xl: 112rem;
+  --container-12xl: 120rem;
+}

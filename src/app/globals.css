@@ -1,7 +1,7 @@
 @import "tailwindcss";
 /* css-kit shared spine — fluid type scale, semantic utilities, motion tokens.
    Local skin below (repo-owned noir) overrides kit tokens where names collide. */
-@import "../styles/kit/base.css";
+@import "../styles/kit/index.css";
 
 /* ============================================
    THEME — "engineered noir"
@@ -21,6 +21,8 @@
   --color-line-bright: #2c2c38;
   --color-text: #ece9e2;
   --color-muted: #9b98a3;
+  --color-surface: #101017;
+  --color-surface-raised: #1a1a24;
   --color-faint: #5b5964;
   --color-accent: #e8b653;
   --color-accent-dim: #8f6f2f;

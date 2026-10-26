@@ -43,7 +43,7 @@ src/
 
 ## Interactive cases
 
-`src/data/projects.ts` rows `case-*` point at sibling case repos under `~/Documents/DEV/` — each a different FE/BE stack, all local-runnable:
+`src/data/projects.ts` rows `case-*` point at sibling case repos under `~/Documents/DEV/porto-plan/` — each a different FE/BE stack, all local-runnable:
 
 | Case | Stack | Ports (web/api) |
 |---|---|---|

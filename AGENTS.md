@@ -1,9 +1,14 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Portfolio — SvelteKit
 
-## This is NOT the Next.js you know
+This repo is a **SvelteKit + Svelte 5** static site (prerendered via `adapter-static`), rebuilt on the `lequon` base from `web-template`. It is no longer a Next.js project.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+## Conventions
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+- Styling runs on **css-kit**: tokens/utilities in `src/lib/kit/`, identity in `src/lib/kit/skin.css` (repo-owned — never overwrite from kit pulls; verify with `node ../css-kit/tools/kit.mjs check`).
+- Content is data-driven from `src/lib/data/` — add/edit projects in `works.ts`, identity in `site.ts`.
+- Runes-mode Svelte (`$props`, `$derived`, `$state`) — match existing component style.
+- Mobile-first Tailwind; design tokens only, no hardcoded hex/px in components.
 
-<!-- END:nextjs-agent-rules -->
+## Commands
+
+- `npm run dev` / `npm run build` / `npm run check`

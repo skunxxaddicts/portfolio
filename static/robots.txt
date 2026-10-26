@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://morkie.is-a.dev/sitemap.xml

@@ -1,6 +1,4 @@
-import { cacheLife, cacheTag } from "next/cache";
-import { fallbackRepos } from "@/data/fallback-repos";
-import { site } from "@/data/site";
+import { fallbackRepos } from '#lib/data/repos';
 
 export interface RepoCard {
   name: string;
@@ -23,7 +21,7 @@ interface GitHubRepo {
 }
 
 /** Repos surfaced first in the feed, in this order. */
-const PINNED = ["portfolio", "portfolio-slicing", "e-comm", "hermes-workspace"];
+const PINNED = ['portfolio', 'portfolio-slicing', 'e-comm', 'hermes-workspace'];
 
 export interface ReposResult {
   repos: RepoCard[];
@@ -32,25 +30,24 @@ export interface ReposResult {
 }
 
 /**
- * Fetches public repos — cached for one hour (Cache Components).
+ * Fetches public repos at build time (site is prerendered).
  * Falls back to the bundled snapshot on any failure.
  */
-export async function getRepos(): Promise<ReposResult> {
-  "use cache";
-  cacheTag("github-repos");
-  cacheLife("hours");
-
+export async function getRepos(fetcher: typeof fetch = fetch): Promise<ReposResult> {
   const headers: HeadersInit = {
-    Accept: "application/vnd.github+json",
-    "X-GitHub-Api-Version": "2022-11-28",
+    Accept: 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
   };
-  if (process.env.GITHUB_TOKEN) {
-    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+  const proc = (globalThis as { process?: { env?: Record<string, string | undefined> } })
+    .process;
+  const token = proc?.env?.GITHUB_TOKEN;
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
   }
 
   try {
-    const res = await fetch(
-      `https://api.github.com/users/${site.handle}/repos?per_page=100&sort=pushed`,
+    const res = await fetcher(
+      `https://api.github.com/users/skunxxaddicts/repos?per_page=100&sort=pushed`,
       { headers },
     );
     if (!res.ok) throw new Error(`GitHub API ${res.status}`);
@@ -69,10 +66,10 @@ export async function getRepos(): Promise<ReposResult> {
       .sort((a, b) => {
         const ai = PINNED.indexOf(a.name);
         const bi = PINNED.indexOf(b.name);
-        if (ai !== -1 || bi !== -1)
-          return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+        if (ai !== -1 || bi !== -1) return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
         return b.updatedAt.localeCompare(a.updatedAt);
-      });
+      })
+      .slice(0, 8);
 
     return { repos, isFallback: false };
   } catch {

@@ -1,6 +1,11 @@
-/* css-kit v0.2.2 · utilities.css — @utility recipes + small component classes.
+/* css-kit v0.3.0 · utilities.css — @utility recipes + small component classes.
    Invariants at the source: reuse these; don't restyle call sites.
-   Requires tokens.css + base.css (import via index.css). */
+   Requires tokens.css + base.css (import via index.css).
+
+   GOTCHA: stacking a pseudo-variant on a custom @utility (e.g.
+   `placeholder:text-muted` on `field-input`) drops the utility's own inner
+   dark: half. Field recipes below carry their dark states internally —
+   never re-decorate their pseudo-elements at call sites. */
 
 /* Fluid page gutter — 24px→40px across 360→1280px, continuous not stepped. */
 @utility gutter-x {
@@ -70,14 +75,48 @@
 }
 @utility dark-section {
   @apply bg-dark-secondary text-light-primary;
+  /* Reveal/wipe masks inside a dark section must wipe with the SECTION color —
+     the panel IS the motion; transparent kills the reveal. */
+  --reveal-mask: var(--color-dark-secondary);
 }
 
-/* Text fields — one recipe per surface. */
+/* Text fields — one recipe per surface. Dark side deliberately stronger:
+   border-strong/40 on a dark page fades to near-invisible, so dark: lifts to
+   light-primary/25 and placeholders pin to light-tertiary (≈6.7:1 on dark). */
 @utility field-input {
   @apply w-full rounded-md border border-border-strong/40 bg-transparent px-4 py-3
     font-mono text-md text-body
     placeholder:text-muted
-    focus:border-brand focus:outline-none disabled:opacity-60;
+    focus:border-brand focus:outline-none disabled:opacity-60
+    dark:border-light-primary/25 dark:placeholder:text-light-tertiary;
+}
+/* Textareas inherit field chrome + the resize invariant at the source:
+   auto-grow via field-sizing, rows acts as a MINIMUM (field-sizing ignores
+   the attr — derive the floor), no drag handle. Explicit height (h-full)
+   still wins. */
+textarea.field-input {
+  resize: none;
+  field-sizing: content;
+  /* 4-row floor fallback — the typed attr() line below is dropped entirely in
+     browsers without it, so the plain declaration keeps the floor standing. */
+  min-height: calc(4 * 1lh + 1.5rem + 2px);
+  min-height: calc(attr(rows type(<integer>), 4) * 1lh + 1.5rem + 2px);
+}
+/* Select — same field chrome, native chevron replaced with a token-colored
+   data-URL arrow. Padding-right clears the glyph. */
+@utility field-select {
+  @apply field-input appearance-none bg-no-repeat pr-10 cursor-pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%236a6a6a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-position: right 1rem center;
+}
+html.dark .field-select, html.dark select.field-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23a5a5a5' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+/* Checkbox/radio — native control, brand accent, focusable. */
+@utility field-check {
+  @apply h-5 w-5 shrink-0 cursor-pointer accent-(--color-brand)
+    focus-visible:outline-2 focus-visible:outline-offset-2
+    focus-visible:outline-(--color-focus);
 }
 @utility field-input-dark {
   @apply w-full rounded-md border border-white bg-transparent px-4 py-3
@@ -109,6 +148,18 @@
     min-height: 44px;
   }
 }
+@utility btn-secondary {
+  /* Inverse chip — foreground-on-background; auto-flips in dark via tokens,
+     reads as a light chip on a dark surface either way. */
+  @apply inline-flex items-center justify-center gap-2 rounded-md bg-foreground
+         px-4 py-3 font-mono text-sm font-bold uppercase tracking-wider
+         text-background transition hover:opacity-85 disabled:opacity-40;
+}
+@utility btn-danger {
+  @apply inline-flex items-center justify-center gap-2 rounded-md bg-danger
+         px-4 py-3 font-mono text-sm font-bold uppercase tracking-wider
+         text-ondanger transition hover:brightness-110 disabled:opacity-40;
+}
 @utility btn-lg {
   @apply px-6 py-4 text-base;
 }
@@ -125,6 +176,47 @@
 @utility focus-link {
   @apply outline-none focus-visible:text-brand focus-visible:underline
          focus-visible:underline-offset-4 focus-visible:decoration-2;
+}
+/* Focus family — pick by surface:
+   focus-outline      brand outline, outside offset (default for non-text)
+   focus-outline-inset negative offset — rows/cells inside clipped containers
+   focus-ring-box     ring + background-offset — controls lifted off the page */
+@utility focus-outline {
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2
+         focus-visible:outline-(--color-focus);
+}
+@utility focus-outline-inset {
+  @apply focus-visible:outline-2 focus-visible:-outline-offset-2
+         focus-visible:outline-(--color-focus);
+}
+@utility focus-ring-box {
+  @apply focus-visible:ring-2 focus-visible:ring-(--color-focus)
+         focus-visible:ring-offset-2 focus-visible:ring-offset-(--color-background);
+}
+
+/* Scrollbars — panes that scroll without showing a bar (secondary panes,
+   pill rows) so only the main content ever shows a scrollbar. */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-muted) transparent;
+}
+
+/* Card image cinematic hover-zoom — in AND out 1.4s quart, scale-110 on the
+   parent `.group` hover. Single source for the timing: tune here, not per card. */
+@utility img-zoom {
+  @apply h-full w-full object-cover transition-transform duration-1200
+         ease-in-out-quart group-hover:scale-110;
+}
+
+/* Ops-console split: narrow meta/sidebar + wide content. Use as lg:split-pane. */
+@utility split-pane {
+  grid-template-columns: 20rem minmax(0, 1fr);
 }
 
 /* Mobile ergonomics — the patterns mobile QA proved. */
@@ -158,4 +250,47 @@
   .stamp.info,    .stamp-scheduled{ color: var(--color-info); }
   .stamp.neutral, .stamp-done     { color: var(--color-muted); }
   .stamp.brand                    { color: var(--color-brand); }
+
+  /* Full-viewport scrim — modal/drawer/dropdown backdrop. --color-ink never
+     flips: it must read as a dark veil in BOTH themes. */
+  .scrim {
+    position: fixed;
+    inset: 0;
+    background-color: rgb(from var(--color-ink) r g b / 0.6);
+  }
+
+  /* Prose — token-driven rendering for CMS/markup blocks (rich text, tiptap
+     output, rendered md). Content authors emit bare tags; this single class
+     styles the whole tree. Colors read semantic tokens so dark flips free. */
+  .prose {
+    font-family: var(--font-mono);
+    line-height: 1.7;
+    color: var(--color-foreground);
+  }
+  .prose p { margin: 0 0 0.75rem; }
+  .prose h1, .prose h2, .prose h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    margin: 1.25rem 0 0.5rem;
+  }
+  .prose h1 { font-size: 1.875rem; }
+  .prose h2 { font-size: 1.5rem; }
+  .prose h3 { font-size: 1.25rem; }
+  .prose ul, .prose ol { padding-left: 1.5rem; margin: 0 0 0.75rem; }
+  .prose blockquote {
+    border-left: 4px solid var(--color-brand);
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 1rem 0;
+  }
+  .prose a { color: var(--color-accent); text-decoration: underline; }
+  .prose strong { font-weight: 700; }
+  .prose :is([data-placeholder], .is-empty)::before {
+    /* Editor placeholder — tiptap-style `is-editor-empty` hooks. */
+    content: attr(data-placeholder);
+    color: var(--color-muted);
+    float: left;
+    pointer-events: none;
+    height: 0;
+  }
 }

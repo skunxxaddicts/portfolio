@@ -1,0 +1,46 @@
+/* css-kit v0.3.0 · ultrawide.css — ≥2560px proportional zoom.
+   Imported last (after utilities) via index.css.
+
+   The whole design is rem-based, so one root font-size ramp scales type
+   clamps, spacing rhythm, radii, and container maxes together.
+   0.9vw = ~23px @2560 → ~31px @3440, capped 34px @3778+.
+   Media queries resolve against the initial font-size, so breakpoints are
+   unaffected. px-only values (borders) intentionally stay fixed.
+
+   --container-12xl switches to a viewport fraction so it keeps tracking the
+   screen after the rem cap — 85vw keeps content dominant on superwide
+   displays (7.5% margins) instead of re-centering into a band.
+   Block-axis rhythm scales with viewport HEIGHT — the axis the air actually
+   lives on — floored at the designed px and capped so tall screens can't
+   balloon into dead bands. section-2xl stays flat (interstitial air). */
+@media (min-width: 2560px) {
+  html {
+    font-size: min(0.9vw, 34px);
+  }
+  :root {
+    --container-12xl: 85vw;
+    /* Inner measures keep their designed SHARE of the page container
+       (token ÷ 120rem × 85vw) — rem-based max-w-* would freeze at the rem
+       cap while the container keeps widening, shrinking text measures' share.
+       The rem ceilings bound chars/line at extreme widths. ≤2xl stays rem:
+       forms/panels/cards are readability caps, not layout share. */
+    --container-3xl: min(34vw, 64rem);
+    --container-4xl: min(39.67vw, 75rem);
+    --container-5xl: min(45.33vw, 85rem);
+    --container-6xl: min(51vw, 96rem);
+    --container-7xl: min(56.67vw, 107rem);
+    --container-8xl: min(62.33vw, 117rem);
+    --container-9xl: min(68vw, 128rem);
+    --container-10xl: min(73.67vw, 139rem);
+    --container-11xl: min(79.33vw, 149rem);
+    /* Section air tracks viewport height, px-floored at the designed caps. */
+    --spacing-section: clamp(128px, 12vh, 200px);
+    --spacing-section-lg: clamp(192px, 16vh, 264px);
+    --spacing-section-xl: clamp(288px, 23vh, 352px);
+    --spacing-section-2xl: 384px;
+    --spacing-stack-sm: clamp(64px, 6.5vh, 100px);
+    --spacing-stack-md: clamp(96px, 9vh, 144px);
+    --spacing-stack-lg: clamp(104px, 10vh, 152px);
+    --spacing-stack-xl: clamp(112px, 10.5vh, 160px);
+  }
+}

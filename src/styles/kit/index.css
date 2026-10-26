@@ -1,4 +1,4 @@
-/* css-kit v0.2.0 · index.css — full kit in one import.
+/* css-kit v0.3.0 · index.css — full kit in one import.
    Repo entry css:
      @import "tailwindcss";
      @import "./kit/index.css";
@@ -13,3 +13,4 @@
 @import "./base.css";
 @import "./utilities.css";
 @import "./motion.css";
+@import "./ultrawide.css";

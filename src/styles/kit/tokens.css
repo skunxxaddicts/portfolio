@@ -1,4 +1,4 @@
-/* css-kit v0.2.0 · tokens.css — all @theme tokens. Skin-agnostic structure;
+/* css-kit v0.3.0 · tokens.css — all @theme tokens. Skin-agnostic structure;
    skins override by re-declaring in a later @theme block. */
 
 @theme {
@@ -34,7 +34,15 @@
   --color-border: rgb(5 5 5 / 0.2);
   --color-border-strong: #2e2e2e;
 
-  /* Semantic aliases — what components actually use. */
+  /* Fixed near-black — scrims/overlays that must stay dark in BOTH themes
+     (modal backdrop, video overlay). Never flipped by html.dark. */
+  --color-ink: #0b0b0d;
+  --color-ondanger: #ffffff;      /* text on --color-danger bg */
+
+  /* Semantic aliases — what components actually use.
+     WCAG: muted #6a6a6a on #f4f4f4 ≈ 4.7:1 (AA); dark-muted #a5a5a5 on #1f1f1f
+     ≈ 6.7:1 (AA). Keep replacements ≥4.5:1 — earlier #8e8e8e muted failed AA
+     (2.97:1) and is documented as the anti-example. */
   --color-background: var(--color-page);
   --color-foreground: var(--color-dark-primary);
   --color-muted: #6a6a6a;
@@ -68,6 +76,29 @@
   --text-lg--line-height: clamp(1.4063rem, 0.4688rem + 4.01vw, 2rem);
   --text-xl: clamp(1.0625rem, 0.375rem + 2.94vw, 1.25rem);
   --text-xl--line-height: clamp(1.5938rem, 0.5625rem + 4.41vw, 2.125rem);
+
+  /* 2xl–9xl — fluid continuations of the xs–xl curve (min @393px → max @1440px,
+     max = Tailwind's static size so ≥1440px is byte-identical to the old scale).
+     5xl+ line-height 1 per Tailwind convention (headline sizes, tight leading). */
+  --text-2xl: clamp(1.25rem, 1.1563rem + 0.382vw, 1.5rem);
+  --text-2xl--line-height: clamp(1.75rem, 1.6563rem + 0.382vw, 2rem);
+  --text-3xl: clamp(1.5rem, 1.3594rem + 0.573vw, 1.875rem);
+  --text-3xl--line-height: clamp(2.1rem, 2.0438rem + 0.229vw, 2.25rem);
+  --text-4xl: clamp(1.75rem, 1.5625rem + 0.765vw, 2.25rem);
+  --text-4xl--line-height: clamp(2.45rem, 2.4313rem + 0.076vw, 2.5rem);
+  --text-5xl: clamp(2.25rem, 1.9688rem + 1.146vw, 3rem);
+  --text-5xl--line-height: 1;
+  --text-6xl: clamp(2.5rem, 2.0313rem + 1.91vw, 3.75rem);
+  --text-6xl--line-height: 1;
+  --text-7xl: clamp(3rem, 2.4375rem + 2.293vw, 4.5rem);
+  --text-7xl--line-height: 1;
+  --text-8xl: clamp(3.75rem, 2.9063rem + 3.44vw, 6rem);
+  --text-8xl--line-height: 1;
+  --text-9xl: clamp(4.5rem, 3.1875rem + 5.35vw, 8rem);
+  --text-9xl--line-height: 1;
+
+  /* Fixed micro label — badges/disclaimers (text-xs is fluid 10→12px; this pins 10px). */
+  --text-2xs: 0.625rem;
 
   --text-display-xs: clamp(0.75rem, 0.0938rem + 2.8vw, 1.5rem);
   --text-display-xs--line-height: clamp(1.125rem, 0.1406rem + 4.21vw, 2.25rem);
@@ -111,6 +142,7 @@
   --breakpoint-2xl: 1440px;
   --breakpoint-3xl: 1680px;
   --breakpoint-4xl: 1920px;
+  --breakpoint-5xl: 2560px;      /* ultrawide entry — see ultrawide.css */
 
   /* ========================================
      SECTION RHYTHM — fluid clamps (mobile → desktop).
@@ -125,6 +157,26 @@
   --spacing-safe-top: env(safe-area-inset-top, 0px);
   --spacing-safe-bottom: env(safe-area-inset-bottom, 0px);
   --spacing-safe-inline: env(safe-area-inset-left, 0px);
+
+  /* Fluid stack gaps between page blocks — tighter than section rhythm,
+     for sibling groups inside a section. */
+  --spacing-stack-sm: clamp(2rem, 1.22rem + 3.48vw, 4rem);
+  --spacing-stack-md: clamp(3rem, 1.83rem + 5.22vw, 6rem);
+  --spacing-stack-lg: clamp(4rem, 3.02rem + 4.35vw, 6.5rem);
+  --spacing-stack-xl: clamp(4rem, 2.83rem + 5.22vw, 7rem);
+
+  /* Hero/band measures — wider gutter for full-bleed heroes, svh/vw-driven
+     band heights that floor at their designed rem then track the viewport. */
+  --spacing-hero-gutter: clamp(1.5rem, 0.13rem + 6.09vw, 5rem); /* 24→80px */
+  --spacing-hero: 60svh;
+  --spacing-band-sm: max(35rem, 33vw);
+  --spacing-band-lg: max(38.9375rem, 36vw);
+  --spacing-band-xl: max(42.875rem, 40vw);
+  --spacing-band-cta: max(62rem, 45vw);
+
+  /* Page-shell min-height: viewport minus sticky header — keeps centered
+     content (login, 404, empty states) balanced instead of floating. */
+  --spacing-shell: calc(100svh - var(--header-h));
 
   /* ========================================
      RADIUS / SHADOW / Z / TRACKING
@@ -210,4 +262,13 @@
   --container-10xl: 104rem;
   --container-11xl: 112rem;
   --container-12xl: 120rem;
+  /* Floating panels/widgets — viewport minus edge insets. */
+  --container-float: calc(100vw - 2.5rem);
+
+  /* ========================================
+     ASPECT RATIOS (reference crops)
+     ======================================== */
+  --aspect-cinema: 2.39 / 1;
+  --aspect-square-panel: 1 / 1;
+  --aspect-portrait: 0.63 / 1;
 }

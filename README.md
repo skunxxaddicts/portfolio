@@ -6,6 +6,7 @@ SvelteKit rebuild on the `lequon` base from the `web-template` family — editor
 
 ## Stack
 
+- Bun (package manager + runtime — scripts run via `bun --bun`)
 - SvelteKit + Svelte 5, prerendered static (`adapter-static`)
 - Tailwind v4 via `@tailwindcss/vite` + css-kit tokens/utilities
 - Bricolage Grotesque / Instrument Serif / JetBrains Mono (self-hosted woff2)
@@ -24,7 +25,7 @@ SvelteKit rebuild on the `lequon` base from the `web-template` family — editor
 ## Commands
 
 ```sh
-npm run dev       # dev server
-npm run build     # static build → build/
-npm run check     # svelte-check
+bun dev           # dev server
+bun run build     # static build → build/
+bun run check     # svelte-check
 ```

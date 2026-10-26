@@ -11,4 +11,4 @@ This repo is a **SvelteKit + Svelte 5** static site (prerendered via `adapter-st
 
 ## Commands
 
-- `npm run dev` / `npm run build` / `npm run check`
+- `bun dev` / `bun run build` / `bun run check` (Bun is the package manager and runtime — scripts run via `bun --bun`)

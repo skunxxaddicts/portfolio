@@ -294,6 +294,33 @@ export const projects: Project[] = [
       "Admin kanban auto-refreshes over HTMX, no JS framework",
     ],
   },
+  {
+    slug: "case-booking",
+    index: "15",
+    title: "Booking Ops",
+    tagline: "SvelteKit + Elysia scheduling — slots, deposits, QR check-in",
+    description:
+      "Service/resource booking with a real slot engine — weekday availability rules produce a slot grid, booking holds for 15 minutes, deposit gates confirmation and issues a QR code, staff check-in by code, cancel fees by window policy, and a freed slot auto-offers the waitlist. Ops board live over SSE.",
+    role: "Full stack",
+    year: "2026",
+    stack: [
+      "SvelteKit",
+      "Svelte 5",
+      "Elysia",
+      "Bun",
+      "bun:sqlite",
+      "SSE",
+      "Tailwind v4 (css-kit/studio)",
+    ],
+    links: {},
+    highlights: [
+      "Slot engine: weekday rules → grid → date overrides → capacity minus overlaps",
+      "Deposit-gated confirm mints claim-first QR check-in code",
+      "Cancel inside window charges fee bps; freed slot offers earliest waitlist entry",
+      "SSE ops board — public bookings flip staff rows live",
+    ],
+    featured: true,
+  },
 ];
 
 export function getProject(slug: string) {

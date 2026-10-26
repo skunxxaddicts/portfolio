@@ -1,4 +1,4 @@
-/* css-kit v0.3.0 · motion.css — keyframes + animate-* classes.
+/* css-kit v0.5.0 · motion.css — keyframes + animate-* classes.
    Rule: compositor-only properties (transform, opacity, filter, clip-path).
    Every animation below is disabled under prefers-reduced-motion. */
 
@@ -29,6 +29,16 @@
 @keyframes kit-pulse-soft {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(0.97); opacity: 0.8; }
+}
+
+/* Parametric marquee utility — duration via --marquee-duration (sites used
+   26–32s; 40s default matches the .animate-marquee class). */
+@utility animate-marquee {
+  animation: marquee-x var(--marquee-duration, 40s) linear infinite;
+}
+/* Sites also reached for this name — same thing. */
+@utility marquee-track {
+  animation: marquee-x var(--marquee-duration, 40s) linear infinite;
 }
 
 @layer components {
@@ -71,6 +81,7 @@
     [data-reveal]:not(.reveal-in) { opacity: 1; }
   }
   .animate-marquee,
+  .marquee-track,
   .animate-fade-up,
   .animate-fade-down,
   .animate-zoom-in,

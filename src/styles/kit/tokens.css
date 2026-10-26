@@ -1,4 +1,4 @@
-/* css-kit v0.3.0 · tokens.css — all @theme tokens. Skin-agnostic structure;
+/* css-kit v0.5.0 · tokens.css — all @theme tokens. Skin-agnostic structure;
    skins override by re-declaring in a later @theme block. */
 
 @theme {
@@ -50,6 +50,13 @@
   --color-surface-raised: var(--color-light-primary); /* one level above */
   --color-focus: var(--color-brand);
 
+  /* Canon-family slots (web-template) — extra text tiers + accent wash.
+     soft sits between foreground & muted; faint is the palest caption tier.
+     brand-dim derives from brand via color-mix → follows every skin free. */
+  --color-soft: #3d3d38;
+  --color-faint: var(--color-light-tertiary);
+  --color-brand-dim: rgb(from var(--color-brand) r g b / 0.10);
+
   /* ========================================
      TYPOGRAPHY — fluid clamps (mobile ~393px → desktop ~1440px).
      No breakpoint snaps: size scales continuously with viewport.
@@ -57,6 +64,18 @@
   --font-sans: var(--font-skin-sans, ui-sans-serif, system-ui, sans-serif);
   --font-mono: var(--font-skin-mono, ui-monospace, monospace);
   --font-display: var(--font-skin-display, var(--font-sans));
+
+  /* Expressive families — optional accent fonts (serif pull-quotes, script
+     flourishes, pixel/hand for themed skins). Same skin-* indirection: a skin
+     may declare --font-skin-serif OR override --font-serif directly — either
+     wins over the fallback. Unused families cost nothing (utilities emit
+     on demand). */
+  --font-serif: var(--font-skin-serif, ui-serif, Georgia, serif);
+  --font-alt: var(--font-skin-alt, var(--font-sans));
+  --font-ui: var(--font-skin-ui, var(--font-sans));
+  --font-script: var(--font-skin-script, cursive);
+  --font-hand: var(--font-skin-hand, var(--font-script));
+  --font-pixel: var(--font-skin-pixel, var(--font-mono));
 
   --font-weight-normal: 400;
   --font-weight-medium: 500;
@@ -131,6 +150,35 @@
   --text-display-7xl--line-height: 1;
   --text-display-7xl--letter-spacing: -0.03em;
 
+  /* Semantic type slots — canon families name roles not sizes. Defaults
+     alias the display scale; skins override with per-site clamps.
+     --text-body deliberately absent: @utility text-body (foreground color)
+     owns that name — canon body size maps to --text-base instead. */
+  --text-hero: var(--text-9xl);
+  --text-hero--line-height: 1;
+  --text-h1: var(--text-display-4xl);
+  --text-h1--line-height: 1;
+  --text-h2: var(--text-display-3xl);
+  --text-h2--line-height: 1.05;
+  --text-h3: var(--text-display-xl);
+  --text-h3--line-height: 1.15;
+  --text-h4: var(--text-display-md);
+  --text-h4--line-height: 1.3;
+  --text-tag: var(--text-2xs);
+  --text-tag--line-height: 1.4;
+  --text-caption: var(--text-sm);
+  --text-caption--line-height: 1.45;
+  /* Extended canon slots — sites invented these repeatedly; defaults alias
+     the scales so they're free until a skin fills them. */
+  --text-eyebrow: var(--text-2xs);
+  --text-eyebrow--line-height: 1.2;
+  --text-lead: var(--text-lg);
+  --text-lead--line-height: 1.5;
+  --text-h5: var(--text-xl);
+  --text-h5--line-height: 1.3;
+  --text-logo: var(--text-h4);
+  --text-logo--line-height: 1.2;
+
   /* ========================================
      BREAKPOINTS — xs-first (393px phone → 1920px)
      ======================================== */
@@ -148,6 +196,7 @@
      SECTION RHYTHM — fluid clamps (mobile → desktop).
      ======================================== */
   --spacing-0_75: 0.1875rem;
+  --spacing-section-sm: calc(var(--spacing-section) * 0.6);
   --spacing-section: clamp(4rem, 2.34rem + 7.07vw, 8rem);
   --spacing-section-lg: clamp(5rem, 2.1rem + 12.38vw, 12rem);
   --spacing-section-xl: clamp(6rem, 1.03rem + 21.22vw, 18rem);
@@ -188,6 +237,8 @@
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.625rem;
+  /* Card corner — component-level slot so card recipes tune in one place. */
+  --radius-card: var(--radius-lg);
   --radius-xl: 0.75rem;
   --radius-2xl: 1rem;
   --radius-3xl: 1.25rem;
@@ -262,6 +313,8 @@
   --container-10xl: 104rem;
   --container-11xl: 112rem;
   --container-12xl: 120rem;
+  /* container-page cap — skins/families narrow it (canon sites ~85rem). */
+  --container-page-max: var(--container-12xl);
   /* Floating panels/widgets — viewport minus edge insets. */
   --container-float: calc(100vw - 2.5rem);
 

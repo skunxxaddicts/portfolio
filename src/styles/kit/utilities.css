@@ -1,4 +1,4 @@
-/* css-kit v0.3.0 · utilities.css — @utility recipes + small component classes.
+/* css-kit v0.5.0 · utilities.css — @utility recipes + small component classes.
    Invariants at the source: reuse these; don't restyle call sites.
    Requires tokens.css + base.css (import via index.css).
 
@@ -12,11 +12,36 @@
   padding-inline: clamp(1.5rem, 1.11rem + 1.74vw, 2.5rem);
 }
 @utility container-page {
-  @apply mx-auto w-full max-w-12xl gutter-x;
+  @apply mx-auto w-full gutter-x;
+  max-width: var(--container-page-max);
 }
 
 @utility eyebrow {
   @apply font-mono text-xs uppercase tracking-wider text-muted;
+}
+
+/* Mono micro-label — 5 canon sites invented this independently (promoted).
+   Pinned 11px deliberately: --text-2xs (10px) reads cramped at this tracking. */
+@utility mono-label {
+  @apply font-mono uppercase tracking-[0.22em] text-muted;
+  font-size: 0.6875rem;
+}
+
+/* Section vertical rhythm — alias so py-section reads as a recipe name. */
+@utility section-y {
+  @apply py-section;
+}
+
+/* Wrapper-hover image zoom — parent-hover, gentler than img-zoom's
+   group-hover scale-110. Use inside an overflow-hidden figure/a. */
+@utility img-hover {
+  overflow: hidden;
+  & img {
+    transition: transform 0.6s var(--ease-out-quint);
+  }
+  &:hover img {
+    transform: scale(1.04);
+  }
 }
 
 /* Typography clusters — pure type, add layout at call site. */
@@ -166,6 +191,18 @@ html.dark .field-select, html.dark select.field-select {
 @utility btn-icon {
   @apply inline-flex h-11 w-11 items-center justify-center rounded-md
          border border-border transition hover:border-accent;
+}
+/* Canon button variants sites kept inventing — btn-line is the editorial
+   outline/micro-label button; btn-dark aliases btn-secondary (the name
+   sites actually reach for). */
+@utility btn-line {
+  @apply inline-flex items-center justify-center gap-2 border
+         border-foreground px-6 py-3 font-mono uppercase tracking-[0.22em]
+         transition hover:bg-foreground hover:text-background;
+  font-size: 0.6875rem;
+}
+@utility btn-dark {
+  @apply btn-secondary;
 }
 
 /* Keyboard focus — non-colour cue + focus token (WCAG 2.4.7). */

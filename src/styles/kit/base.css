@@ -1,4 +1,4 @@
-/* css-kit v0.3.0 · base.css — dark plumbing + @layer base.
+/* css-kit v0.5.0 · base.css — dark plumbing + @layer base.
    Requires tokens.css (import before or via index.css). */
 
 /* Dark mode — class strategy. `.dark` on <html> set pre-paint by an inline
@@ -15,7 +15,9 @@ html.dark {
   --color-page: #1f1f1f;
   --color-background: var(--color-page);
   --color-foreground: #ffffff;
+  --color-soft: #d6d6d1;
   --color-muted: #a5a5a5;
+  --color-faint: #6f6f68;
 
   --color-surface: var(--color-dark-primary);
   --color-surface-raised: var(--color-dark-tertiary);

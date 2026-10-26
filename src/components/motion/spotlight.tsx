@@ -45,7 +45,7 @@ export function Spotlight() {
       className="pointer-events-none absolute inset-0"
       style={{ x: springX, y: springY }}
     >
-      <div className="h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,var(--color-accent)/12%,transparent_65%)]" />
+      <div className="h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,var(--color-brand)/12%,transparent_65%)]" />
     </motion.div>
   );
 }

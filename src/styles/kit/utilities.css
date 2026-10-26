@@ -1,4 +1,4 @@
-/* css-kit v0.2.0 · utilities.css — @utility recipes + small component classes.
+/* css-kit v0.2.2 · utilities.css — @utility recipes + small component classes.
    Invariants at the source: reuse these; don't restyle call sites.
    Requires tokens.css + base.css (import via index.css). */
 
@@ -104,6 +104,10 @@
 }
 @utility btn-sm {
   @apply px-3 py-2 text-xs;
+  /* touch floor: compact stays compact on desktop pointers only */
+  @media (pointer: coarse), (max-width: 767px) {
+    min-height: 44px;
+  }
 }
 @utility btn-lg {
   @apply px-6 py-4 text-base;

@@ -14,10 +14,10 @@ const leadLine2 = 'built and operated end-to-end.'.split(' ');
 	<div class="content-shell relative">
 		<div class="flex min-h-[calc(100svh-var(--spacing-header))] flex-col">
 			<div class="relative flex-1 overflow-hidden bg-paper [container-type:inline-size]">
-				<div class="absolute inset-x-0 top-[18%]">
+				<div class="absolute inset-x-0 top-[calc(18%+60px)]">
 					<WordmarkStack id="hero-title" class="text-hero" />
 				</div>
-				<div class="absolute inset-x-0 top-[18%] z-20 text-hero mix-blend-difference">
+				<div class="absolute inset-x-0 top-[calc(18%+60px)] z-20 text-hero mix-blend-difference">
 					<div class="mt-[0.82em]">
 						<p use:reveal class="text-right text-h3 text-paper">
 							{#each leadLine1 as word, i (word + i)}<span
@@ -27,7 +27,7 @@ const leadLine2 = 'built and operated end-to-end.'.split(' ');
 						</p>
 					</div>
 				</div>
-				<div class="absolute inset-x-0 top-[18%] z-20 text-hero">
+				<div class="absolute inset-x-0 top-[calc(18%+60px)] z-20 text-hero">
 					<div class="mt-[calc(0.82em+3rem)]">
 						<p use:reveal class="text-right text-h3 text-accent">
 							{#each leadLine2 as word, i (word + i)}<span

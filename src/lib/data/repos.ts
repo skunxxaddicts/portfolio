@@ -10,7 +10,7 @@ export const fallbackRepos: RepoCard[] = [
     description: 'Personal portfolio — SvelteKit + css-kit, rebuilt on the lequon base',
     language: 'TypeScript',
     stars: 0,
-    url: 'https://github.com/skunxxaddicts/portfolio',
+    url: 'https://github.com/dev-morkie/portfolio',
     updatedAt: '2026-10-26T00:00:00Z',
   },
   {
@@ -18,7 +18,7 @@ export const fallbackRepos: RepoCard[] = [
     description: 'WPH ecomm — storefront with cart and checkout flow',
     language: 'TypeScript',
     stars: 0,
-    url: 'https://github.com/skunxxaddicts/e-comm',
+    url: 'https://github.com/dev-morkie/e-comm',
     updatedAt: '2026-07-10T00:00:00Z',
   },
   {
@@ -26,7 +26,7 @@ export const fallbackRepos: RepoCard[] = [
     description: 'Native web workspace for Hermes Agent — chat, terminal, memory, skills',
     language: 'JavaScript',
     stars: 0,
-    url: 'https://github.com/skunxxaddicts/hermes-workspace',
+    url: 'https://github.com/dev-morkie/hermes-workspace',
     updatedAt: '2026-05-24T00:00:00Z',
   },
   {
@@ -34,7 +34,7 @@ export const fallbackRepos: RepoCard[] = [
     description: 'portfolio-slicing -1- WPH-13-Shanghai',
     language: 'TypeScript',
     stars: 0,
-    url: 'https://github.com/skunxxaddicts/portfolio-slicing',
+    url: 'https://github.com/dev-morkie/portfolio-slicing',
     updatedAt: '2025-11-10T00:00:00Z',
   },
   {
@@ -42,7 +42,7 @@ export const fallbackRepos: RepoCard[] = [
     description: 'Reusable component & pattern library',
     language: 'TypeScript',
     stars: 0,
-    url: 'https://github.com/skunxxaddicts/MVP-Library',
+    url: 'https://github.com/dev-morkie/MVP-Library',
     updatedAt: '2025-11-20T00:00:00Z',
   },
   {
@@ -50,7 +50,7 @@ export const fallbackRepos: RepoCard[] = [
     description: 'WPH bootcamp — Batch Shanghai exercises',
     language: null,
     stars: 0,
-    url: 'https://github.com/skunxxaddicts/batch-shanghai',
+    url: 'https://github.com/dev-morkie/batch-shanghai',
     updatedAt: '2025-07-07T00:00:00Z',
   },
 ];

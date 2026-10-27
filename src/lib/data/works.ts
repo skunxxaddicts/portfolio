@@ -47,7 +47,7 @@ export const works: Work[] = [
     imageAlt:
       'Stylized placeholder mockup for Vexxa Space — abstract browser-frame render, not final artwork',
     stack: ['TypeScript', 'Next.js', 'Postiz API fork', 'Docker Compose', 'Better-Auth'],
-    links: { github: 'https://github.com/skunxxaddicts/vexxa-space' },
+    links: { github: 'https://github.com/dev-morkie/vexxa-space' },
     highlights: [
       'Byte-verified review gate on release branches',
       'Dashboard aggregating sessions, model mix, and cost ledger',
@@ -89,7 +89,7 @@ export const works: Work[] = [
     status: 'Shipped',
     tagline: 'E-commerce storefront — WPH bootcamp project',
     stack: ['React', 'TypeScript', 'REST API', 'Tailwind'],
-    links: { github: 'https://github.com/skunxxaddicts/e-comm' },
+    links: { github: 'https://github.com/dev-morkie/e-comm' },
     highlights: ['Product catalog + cart state', 'API-driven catalog pages'],
     brief: {
       lead: 'Cart, catalog, checkout — the full storefront loop.',
@@ -107,7 +107,7 @@ export const works: Work[] = [
     status: 'Shipped',
     tagline: 'Component & pattern library',
     stack: ['React', 'TypeScript', 'Tailwind', 'shadcn/ui'],
-    links: { github: 'https://github.com/skunxxaddicts/MVP-Library' },
+    links: { github: 'https://github.com/dev-morkie/MVP-Library' },
     highlights: ['Composable primitives', 'Shared motion + layout patterns'],
     brief: {
       lead: 'Build the pieces once, ship the pages faster.',
@@ -125,7 +125,7 @@ export const works: Work[] = [
     status: 'Shipped',
     tagline: 'Figma→code slicing — WPH-13-Shanghai',
     stack: ['Next.js 16', 'React 19', 'Tailwind', 'Motion', 'Radix'],
-    links: { github: 'https://github.com/skunxxaddicts/portfolio-slicing' },
+    links: { github: 'https://github.com/dev-morkie/portfolio-slicing' },
     highlights: [
       'Full landing structure: 10 sections, carousels, accordions',
       'Performance pass documented (PERFORMANCE_OPTIMIZATIONS.md)',

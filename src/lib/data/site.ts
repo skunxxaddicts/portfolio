@@ -2,12 +2,14 @@ import type { NavItem, SocialLink } from '#lib/types';
 
 export const site = {
   name: 'morkie',
-  owner: 'skunxxaddicts',
+  owner: 'morkie',
+  descriptor: 'fullstack dev practice',
+  github: 'dev-morkie',
   tagline: 'Fullstack developer — production sites, internal tools, design systems.',
   edition: 'v2.0 · 2026 edition.',
   description:
-    'morkie is the independent dev practice of skunxxaddicts — fullstack builds across Next.js and SvelteKit, internal tools, and a shared CSS kit run across a 65-repo estate.',
-  email: 'skunxxaddicts@gmail.com',
+    'morkie is an independent fullstack dev practice — builds across Next.js and SvelteKit, internal tools, and a shared CSS kit run across a 65-repo estate.',
+  email: 'dev.morkie@gmail.com',
   url: 'https://morkie.is-a.dev',
   coordinates: 'ID — Indonesia · UTC+7',
   established: 'est. 2025',
@@ -22,9 +24,8 @@ export const navItems: NavItem[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { label: 'GitHub', href: 'https://github.com/skunxxaddicts' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/skunxxaddicts' },
-  { label: 'email', href: 'mailto:skunxxaddicts@gmail.com' },
+  { label: 'GitHub', href: 'https://github.com/dev-morkie' },
+  { label: 'email', href: 'mailto:dev.morkie@gmail.com' },
 ];
 
 export const disciplines = [

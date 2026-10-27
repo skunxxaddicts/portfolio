@@ -1,4 +1,5 @@
 import { fallbackRepos } from '#lib/data/repos';
+import { site } from '#lib/data/site';
 
 export interface RepoCard {
   name: string;
@@ -46,7 +47,7 @@ export async function getRepos(fetcher: typeof fetch = fetch): Promise<ReposResu
 
   try {
     const res = await fetcher(
-      `https://api.github.com/users/skunxxaddicts/repos?per_page=100&sort=pushed`,
+      `https://api.github.com/users/${site.github}/repos?per_page=100&sort=pushed`,
       { headers },
     );
     if (!res.ok) throw new Error(`GitHub API ${res.status}`);

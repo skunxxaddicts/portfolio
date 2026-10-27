@@ -14,7 +14,7 @@ let {
   image = `${site.url}/images/og-image.png`,
 }: Props = $props();
 
-const fullTitle = $derived(title ? `${title} — ${site.name}` : `${site.name} — ${site.owner}`);
+const fullTitle = $derived(title ? `${title} — ${site.name}` : `${site.name} — ${site.descriptor}`);
 const canonical = $derived(`${site.url}${path}`);
 </script>
 

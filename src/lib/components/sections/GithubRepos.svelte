@@ -54,12 +54,12 @@ const fmt = (iso: string) =>
 
 		<p class="mono-label mt-6">
 			<a
-				href="https://github.com/{site.owner}"
+				href="https://github.com/{site.github}"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="text-foreground underline underline-offset-4"
 			>
-				github.com/{site.owner} →
+				github.com/{site.github} →
 			</a>
 		</p>
 	</div>

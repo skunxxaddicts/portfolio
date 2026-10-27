@@ -1,6 +1,6 @@
 # morkie portfolio
 
-Personal portfolio for **skunxxaddicts** — [morkie.is-a.dev](https://morkie.is-a.dev).
+Personal portfolio for **morkie** — [morkie.is-a.dev](https://morkie.is-a.dev).
 
 SvelteKit rebuild on the `lequon` base from the `web-template` family — editorial/brutalist, fully static, mobile-first, semantic. Styles run on the shared **css-kit** spine (`src/lib/kit/` + repo-owned `skin.css`).
 

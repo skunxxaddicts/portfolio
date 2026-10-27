@@ -8,7 +8,7 @@ import SelectedWork from '#lib/components/sections/SelectedWork.svelte';
 
 <section aria-labelledby="work-hero" class="relative overflow-hidden border-b border-border">
 	<div class="content-shell relative py-16 md:py-24">
-		<p class="mono-label">[ work ] — collection of my best work</p>
+		<p class="mono-label">[ work ] — selected projects</p>
 		<h1
 			id="work-hero"
 			class="mt-4 font-display text-h1 font-extrabold uppercase tracking-display"

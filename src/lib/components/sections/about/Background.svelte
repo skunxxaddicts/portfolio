@@ -16,7 +16,7 @@ import Tag from '../../ui/Tag.svelte';
 			</h2>
 		</Reveal>
 
-		<div class="mt-12 grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+		<div class="mt-12 grid gap-10 lg:grid-cols-(--grid-background)">
 			<div class="flex flex-col gap-4">
 				<span class="mono-label">© morkie</span>
 				<h3 class="font-display text-h4 font-semibold">

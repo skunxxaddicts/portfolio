@@ -16,7 +16,7 @@ import Tag from '../ui/Tag.svelte';
 
 		<ol class="mt-12 border-t border-border">
 			{#each experience as item (item.title)}
-				<li class="grid gap-2 border-b border-border py-6 md:grid-cols-[10rem_1fr_1.4fr] md:gap-8">
+				<li class="grid gap-2 border-b border-border py-6 md:grid-cols-(--grid-experience) md:gap-8">
 					<span class="mono-label"><Num text={item.period} /></span>
 					<div>
 						<h3 class="font-display text-h5 font-semibold">{item.title}</h3>

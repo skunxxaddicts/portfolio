@@ -17,7 +17,7 @@ import Tag from '../ui/Tag.svelte';
 			</h2>
 		</Reveal>
 
-		<div class="mt-12 grid gap-10 lg:grid-cols-[1fr_1.2fr]">
+		<div class="mt-12 grid gap-10 lg:grid-cols-(--grid-about)">
 			<div class="flex flex-col gap-4">
 				<h3 class="font-display text-h4 font-semibold">{site.owner}</h3>
 				<blockquote class="border-l-2 border-foreground pl-5 font-serif text-lead italic text-ink-soft">

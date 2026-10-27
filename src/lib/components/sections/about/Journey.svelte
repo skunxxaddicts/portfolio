@@ -17,7 +17,7 @@ import Tag from '../../ui/Tag.svelte';
 		<ol class="mt-12 border-t border-border">
 			{#each journey as entry (entry.year + entry.title)}
 				<li
-					class="grid gap-3 border-b border-border py-6 md:grid-cols-[6rem_1.2fr_2fr] md:gap-8"
+					class="grid gap-3 border-b border-border py-6 md:grid-cols-(--grid-journey) md:gap-8"
 				>
 					<span class="font-display text-h4 font-semibold text-accent">{entry.year}</span>
 					<div>

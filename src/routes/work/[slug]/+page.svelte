@@ -76,7 +76,7 @@ const meta = $derived([
 		<img
 			src={work.image}
 			alt={work.imageAlt}
-			class="mx-auto max-h-[32rem] w-full object-cover"
+			class="mx-auto max-h-128 w-full object-cover"
 		/>
 	</div>
 {/if}

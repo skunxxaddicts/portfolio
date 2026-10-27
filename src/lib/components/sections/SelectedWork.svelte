@@ -30,7 +30,7 @@ let { index = '02' }: Props = $props();
 					)}
 				>
 					{#if work.image}
-						<div class="aspect-[5/4] overflow-hidden">
+						<div class="aspect-(--aspect-card) overflow-hidden">
 							<img
 								src={work.image}
 								alt={work.imageAlt}
@@ -39,7 +39,7 @@ let { index = '02' }: Props = $props();
 							/>
 						</div>
 					{:else}
-						<div class="flex aspect-[5/4] flex-col justify-between p-6">
+						<div class="flex aspect-(--aspect-card) flex-col justify-between p-6">
 							<div class="flex items-start justify-between">
 								<span class="mono-label text-accent">
 									[ {work.index} ]

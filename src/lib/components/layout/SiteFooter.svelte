@@ -7,7 +7,7 @@ import Wordmark from '../ui/Wordmark.svelte';
 
 <footer class="bg-foreground text-paper">
 	<div class="content-inset py-10 md:py-12">
-		<div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+		<div class="grid gap-10 md:grid-cols-(--grid-footer)">
 			<div class="flex flex-col gap-4">
 				<Wordmark class="text-h3" />
 				<p class="max-w-xs text-base text-paper/70"><Num text={site.tagline} /></p>

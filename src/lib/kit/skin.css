@@ -4,13 +4,10 @@
 	/* ── palette ───────────────────────────────────────────── */
 	--color-paper: #f2efe6;
 	--color-surface: #faf7ef;
-	--color-cream: #f2efe6;
-	--color-sand: #e9e4d8;
 	--color-accent: #c00000;
 	--color-foreground: #1a1a1a;
 	--color-ink-soft: #333333;
 	--color-border: #dddddd;
-	--color-line-strong: #8a8a8a;
 	--color-muted: #999999;
 	--color-slate: #5d6c7b;
 
@@ -41,18 +38,51 @@
 	--text-eyebrow: 0.75rem;
 	--text-eyebrow--line-height: 1.4;
 	--text-nav: 0.92rem;
-	--spacing-header: 5.5rem;
 
 	/* ── spacing / rhythm ──────────────────────────────────── */
+	--spacing-header: 5.5rem;
 	--spacing-section: clamp(3rem, 6vw, 6rem);
 	--spacing-container: clamp(1.25rem, 3vw, 4rem);
+
+	/* ── hero geometry — the tuned anchor + lead gap, single source ── */
+	--spacing-hero-anchor: calc(18% + 60px);
+	--spacing-hero-lead: 0.82em;
+
+	/* ── wordmark registration — em-scaled so it holds at every size ── */
+	--spacing-mark-gap: 0.06em;
+	--spacing-mark-shift: -0.008em;
+	--spacing-wordmark-inset: 0.03em;
+	--wordmark-box-h: 0.8em;
+
+	/* ── media ─────────────────────────────────────────────── */
+	--aspect-card: 5 / 4;
+
+	/* ── grid templates — no fr scale in TW; tokens keep call sites clean ── */
+	--grid-footer: 1.5fr 1fr 1fr 1fr;
+	--grid-repo-row: 14rem 1fr auto;
+	--grid-services: 1fr 1.6fr;
+	--grid-about: 1fr 1.2fr;
+	--grid-background: 1fr 1.4fr;
+	--grid-journey: 6rem 1.2fr 2fr;
+	--grid-experience: 10rem 1fr 1.4fr;
 
 	/* ── motion ────────────────────────────────────────────── */
 	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 	--duration-reveal: 0.9s;
 
-	--color-brand: var(--color-slate);
+	/* Kit semantic aliases — brand is the kit's primary-action slot: in this
+	   skin that's the ink (btn/btn-solid render it), not the slate text tint.
+	   --color-focus inherits brand → focus outlines stay foreground, as today. */
+	--color-brand: var(--color-foreground);
+	--color-onbrand: var(--color-paper);
 	--color-page: var(--color-paper);
 	--color-soft: var(--color-muted);
 	--color-faint: var(--color-muted);
+}
+
+/* Kit's --spacing-shell reads --header-h, which base.css binds on :root at
+   plain-CSS level (4rem, 5rem ≥md) — @theme emits too early to beat it, so
+   the override must live on :root here, after the kit import. */
+:root {
+	--header-h: var(--spacing-header);
 }

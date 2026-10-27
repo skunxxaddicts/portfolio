@@ -35,7 +35,7 @@ const fmt = (iso: string) =>
 						href={repo.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="group grid items-baseline gap-1 border-b border-border py-5 transition-colors hover:bg-surface md:grid-cols-[14rem_1fr_auto] md:gap-8 md:px-4"
+						class="group grid items-baseline gap-1 border-b border-border py-5 transition-colors hover:bg-surface md:grid-cols-(--grid-repo-row) md:gap-8 md:px-4"
 					>
 						<span class="inline-flex items-center gap-2 font-display text-h5 font-semibold">
 							{repo.name}

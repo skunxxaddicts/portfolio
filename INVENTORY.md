@@ -64,8 +64,10 @@ components: 24 · utils: 2 · routes: 6 · extras: 8
 
 ## Site @utility recipes
 
-- accent-serif, btn, btn-solid, content-shell, logo-mark, mono-label, nav-label, stagger-word, tracking-display
+- accent-serif, btn, btn-solid, content-shell, content-inset, logo-mark, logo-mark-outline, mono-label (overrides kit recipe), nav-label, stagger-word, text-outline-accent, text-outline-ink, text-outline-paper, tracking-display, wordmark-cluster
 
 ## Site-extra tokens (identity — not in kit)
 
-- --color-accent, --color-cream, --color-ink-soft, --color-line-strong, --color-paper, --color-sand, --color-slate, --font-skin-display, --font-skin-mono, --spacing-container, --text-cta, --text-cta--line-height
+- --aspect-card, --color-accent, --color-ink-soft, --color-paper, --color-slate, --font-skin-display, --font-skin-mono, --grid-{footer,repo-row,services,about,background,journey,experience}, --spacing-container, --spacing-hero-anchor, --spacing-hero-lead, --spacing-mark-gap, --spacing-mark-shift, --spacing-wordmark-inset, --text-cta, --text-cta--line-height, --text-h5, --text-nav, --wordmark-box-h
+- :root --header-h — binds kit's --spacing-shell to --spacing-header (base.css :root defaults 4rem/5rem beat @theme emissions)
+- Kit aliases: --color-brand → foreground, --color-onbrand → paper, --color-focus → brand (= ink, identical render)

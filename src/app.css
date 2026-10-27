@@ -18,7 +18,7 @@
 	}
 
 	:focus-visible {
-		outline: 2px solid var(--color-foreground);
+		outline: 2px solid var(--color-focus);
 		outline-offset: 3px;
 	}
 
@@ -43,6 +43,7 @@
 	display: inline-block;
 	inline-size: 0.72em;
 	block-size: 0.72em;
+	margin-inline-start: var(--spacing-mark-shift);
 	background: currentColor;
 	--mark-radius: 48% 48% 12% 48%;
 	border-radius: var(--mark-radius);
@@ -95,6 +96,24 @@
 	letter-spacing: -0.03em;
 }
 
+/* wordmark recipe — mark + text cluster, baseline-aligned, em-scaled gap */
+@utility wordmark-cluster {
+	@apply inline-flex items-baseline whitespace-nowrap font-display font-extrabold uppercase tracking-display;
+	gap: var(--spacing-mark-gap);
+}
+
+/* hollow-letter strokes for the wordmark's overlay layer — color-mix on the
+   token so opacity is fixed but the color tracks the skin */
+@utility text-outline-paper {
+	-webkit-text-stroke: 2px color-mix(in srgb, var(--color-paper) 50%, transparent);
+}
+@utility text-outline-ink {
+	-webkit-text-stroke: 2px color-mix(in srgb, var(--color-foreground) 50%, transparent);
+}
+@utility text-outline-accent {
+	-webkit-text-stroke: 2px color-mix(in srgb, var(--color-accent) 60%, transparent);
+}
+
 /* hero headline word — hidden until the reveal container fires (JS-only gate) */
 @utility stagger-word {
 	display: inline-block;
@@ -111,7 +130,8 @@
 	}
 }
 
-/* mono micro-label, e.g. [ 01 / 06 ] */
+/* mono micro-label, e.g. [ 01 / 06 ] — intentionally overrides the kit recipe:
+   skin size (--text-eyebrow), 0.14em tracking, slate color */
 @utility mono-label {
 	font-family: var(--font-mono);
 	font-size: var(--text-eyebrow);

@@ -45,10 +45,12 @@ export interface AccordionEntry {
 						{item.title}
 					</span>
 					{#if item.meta}<span class="mono-label hidden sm:inline">{item.meta}</span>{/if}
-					<span class="inline-flex size-5 items-center justify-center overflow-clip">
+					<span
+						class="inline-flex size-9 shrink-0 items-center justify-center self-center overflow-clip bg-foreground text-paper md:size-10"
+					>
 						<span
 							class={cn(
-								'font-mono text-lg leading-none transition-transform duration-300',
+								'font-mono text-xl leading-none transition-transform duration-300',
 								open && 'rotate-45',
 							)}
 							aria-hidden="true">+</span

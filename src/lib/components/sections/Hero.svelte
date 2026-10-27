@@ -25,9 +25,7 @@ const leadWords =
 					class="absolute top-0 left-0 z-10 h-full w-auto object-cover object-top"
 				/>
 				<div class="absolute inset-x-0 top-[18%] z-20" aria-hidden="true">
-					<p class="flex origin-right justify-end px-[0.03em] text-hero">
-						<Wordmark outline class="origin-right scale-[0.97]" />
-					</p>
+					<p class="flex justify-end px-[0.03em] text-hero"><Wordmark outline /></p>
 				</div>
 				<div
 					class="mono-label absolute inset-x-0 top-0 z-30 flex flex-col gap-1 py-4 sm:flex-row sm:items-center sm:justify-between"

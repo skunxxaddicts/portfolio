@@ -58,6 +58,16 @@
 	}
 }
 
+/* hollow monogram — 2px ink squircle border, accent-bordered quarter-disc */
+@utility logo-mark-outline {
+	background: transparent;
+	border: 2px solid currentColor;
+	&::after {
+		background: transparent;
+		border: 2px solid var(--color-accent);
+	}
+}
+
 /* display tracking measured from the reference (-3%) */
 @utility tracking-display {
 	letter-spacing: -0.03em;

@@ -14,7 +14,9 @@ let { index = '02' }: Props = $props();
 	<Tag {index} label="selected work" />
 	<div class="py-section">
 		<Reveal>
-			<h2 class="font-display text-h2 font-semibold tracking-tight">Selected Work.</h2>
+			<h2 class="font-display text-h2 font-semibold tracking-tight">
+				Selected <span class="accent-serif">Work.</span>
+			</h2>
 		</Reveal>
 
 		<div class="mt-10 grid gap-px border border-border bg-border sm:grid-cols-2">

@@ -14,7 +14,7 @@ import Reveal from '../ui/Reveal.svelte';
 				id="cta-title"
 				class="mx-auto mt-4 font-display text-cta font-extrabold uppercase leading-none tracking-tight"
 			>
-				Ready to<br />Create Magic?
+				Ready to<br />Create <span class="accent-serif">Magic?</span>
 			</h2>
 			<div class="mt-10 flex flex-wrap items-center justify-center gap-4">
 				<Button href="/contact" variant="solid" icon="arrow-insert">Start a project</Button>

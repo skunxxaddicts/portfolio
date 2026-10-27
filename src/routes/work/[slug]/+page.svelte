@@ -32,7 +32,7 @@ const meta = $derived([
 			id="work-title"
 			class="mt-6 font-display text-h1 font-extrabold uppercase tracking-tight"
 		>
-			{work.title}
+			{work.title}<span class="text-accent">.</span>
 		</h1>
 		<dl class="mt-12 grid grid-cols-2 border-t border-border sm:grid-cols-3 lg:grid-cols-6">
 			{#each meta as m (m.label)}
@@ -48,12 +48,16 @@ const meta = $derived([
 <section aria-labelledby="brief" class="border-b border-border">
 	<div class="content-shell grid gap-10 py-14 md:grid-cols-2 md:py-20">
 		<div>
-			<h2 id="brief" class="font-display text-h3 font-semibold tracking-tight">The Brief</h2>
+			<h2 id="brief" class="font-display text-h3 font-semibold tracking-tight">
+				The <span class="accent-serif">Brief</span>
+			</h2>
 			<p class="mt-5 font-display text-h5 font-medium leading-snug">{work.brief.lead}</p>
 			<p class="mt-4 text-base text-ink-soft">{work.brief.body}</p>
 		</div>
 		<div>
-			<h2 class="font-display text-h3 font-semibold tracking-tight">Highlights</h2>
+			<h2 class="font-display text-h3 font-semibold tracking-tight">
+				<span class="accent-serif">Highlights</span>
+			</h2>
 			<ul class="mt-5 divide-y divide-border border-y border-border">
 				{#each work.highlights as h, i (h)}
 					<li class="flex items-baseline gap-4 py-3">

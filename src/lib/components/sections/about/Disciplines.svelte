@@ -5,10 +5,12 @@ import Tag from '../../ui/Tag.svelte';
 </script>
 
 <div class="border-b border-border">
-	<Tag index="04" label="disciplines" />
+	<Tag index="04" total="06" label="disciplines" />
 	<div class="py-section">
 		<Reveal>
-			<h2 class="font-display text-h2 font-semibold tracking-tight">How time gets split.</h2>
+			<h2 class="font-display text-h2 font-semibold tracking-tight">
+				How <span class="accent-serif">time</span> gets split.
+			</h2>
 		</Reveal>
 		<p class="mt-6 max-w-2xl text-lead text-ink-soft">
 			A focused practice — most of the calendar lives in two or three disciplines, with the

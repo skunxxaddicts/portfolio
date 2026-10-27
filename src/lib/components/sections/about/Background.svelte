@@ -7,11 +7,11 @@ import Tag from '../../ui/Tag.svelte';
 </script>
 
 <div class="border-b border-border">
-	<Tag index="01" label="background" />
+	<Tag index="01" total="06" label="background" />
 	<div class="py-section">
 		<Reveal>
 			<h2 class="max-w-4xl font-display text-h2 font-semibold tracking-tight">
-				Self-taught, bootcamp-sharpened, production-tested.
+				Self-taught, bootcamp-sharpened, <span class="accent-serif">production-tested.</span>
 			</h2>
 		</Reveal>
 

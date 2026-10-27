@@ -18,7 +18,9 @@ const fmt = (iso: string) =>
 	<Tag index="05" label="github" />
 	<div class="py-section">
 		<Reveal>
-			<h2 class="font-display text-h2 font-semibold tracking-tight">Public repos.</h2>
+			<h2 class="font-display text-h2 font-semibold tracking-tight">
+				Public <span class="accent-serif">repos.</span>
+			</h2>
 			<p class="mt-4 max-w-xl text-lead text-ink-soft">
 				Live from the GitHub API at build time{#if result.isFallback}&nbsp;— currently
 				showing the bundled snapshot{/if}.

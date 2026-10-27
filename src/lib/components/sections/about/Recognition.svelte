@@ -5,10 +5,12 @@ import Tag from '../../ui/Tag.svelte';
 </script>
 
 <div class="border-b border-border">
-	<Tag index="06" label="milestones" />
+	<Tag index="06" total="06" label="milestones" />
 	<div class="py-section">
 		<Reveal>
-			<h2 class="font-display text-h2 font-semibold tracking-tight">Press, talks, mentions.</h2>
+			<h2 class="font-display text-h2 font-semibold tracking-tight">
+				Press, talks, <span class="accent-serif">mentions.</span>
+			</h2>
 		</Reveal>
 
 		<ul class="mt-10 grid border-t border-border sm:grid-cols-2">

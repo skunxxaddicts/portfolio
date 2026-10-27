@@ -8,7 +8,9 @@ import Tag from '../ui/Tag.svelte';
 	<Tag index="03" label="experience" />
 	<div class="py-section">
 		<Reveal>
-			<h2 class="font-display text-h2 font-semibold tracking-tight">Where the reps happened.</h2>
+			<h2 class="font-display text-h2 font-semibold tracking-tight">
+				Where the <span class="accent-serif">reps</span> happened.
+			</h2>
 		</Reveal>
 
 		<ol class="mt-10 border-t border-border">

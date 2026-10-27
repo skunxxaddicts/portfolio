@@ -30,7 +30,7 @@ function isActive(href: string): boolean {
 			class="flex items-center gap-3 py-4 font-display text-logo font-bold tracking-tight"
 			aria-label="{site.name} — home"
 		>
-			{site.name}<span class="text-muted">.</span>
+			{site.name}<span class="text-accent">.</span>
 		</a>
 
 		<nav aria-label="Primary" class="hidden items-center gap-8 md:flex">

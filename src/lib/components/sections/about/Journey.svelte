@@ -5,11 +5,11 @@ import Tag from '../../ui/Tag.svelte';
 </script>
 
 <div class="border-b border-border">
-	<Tag index="03" label="journey" />
+	<Tag index="03" total="06" label="journey" />
 	<div class="py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
-				Eight years, six chapters.
+				Eight years, six <span class="accent-serif">chapters.</span>
 			</h2>
 		</Reveal>
 

@@ -5,7 +5,7 @@ interface Props {
   label: string;
   class?: string;
 }
-let { index, total = '06', label, class: className = '' }: Props = $props();
+let { index, total = '07', label, class: className = '' }: Props = $props();
 </script>
 
 {#if index}

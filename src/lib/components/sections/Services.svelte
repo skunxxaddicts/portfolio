@@ -20,7 +20,9 @@ let { index = '06' }: Props = $props();
 	<div class="grid gap-10 py-section lg:grid-cols-[1fr_1.6fr]">
 		<div class="flex flex-col gap-8">
 			<Reveal>
-				<h2 class="font-display text-h2 font-semibold tracking-tight">What I offer.</h2>
+				<h2 class="font-display text-h2 font-semibold tracking-tight">
+					What I <span class="accent-serif">offer.</span>
+				</h2>
 			</Reveal>
 			<p class="max-w-md text-lead text-ink-soft">
 				A focused menu — not a hypermarket. Each service is delivered end-to-end by me, with a

@@ -12,7 +12,8 @@ import Tag from '../ui/Tag.svelte';
 	<div class="py-section">
 		<Reveal>
 			<h2 class="max-w-4xl font-display text-h2 font-semibold tracking-tight">
-				One operator. Sites, tools, and the system that ties them together.
+				One operator. Sites, tools, and the <span class="accent-serif">system</span> that
+				ties them together.
 			</h2>
 		</Reveal>
 

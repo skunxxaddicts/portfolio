@@ -21,7 +21,7 @@ import { site } from '#lib/data/site';
 			id="about-hero"
 			class="mt-4 font-display text-h1 font-extrabold uppercase tracking-tight"
 		>
-			Hello,<br />I'm morkie.
+			Hello,<br />I'm morkie<span class="text-accent">.</span>
 		</h1>
 	</div>
 </section>

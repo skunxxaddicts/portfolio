@@ -21,7 +21,7 @@ let sent = $state<'idle' | 'success' | 'error'>('idle');
 				id="contact-title"
 				class="mt-4 font-display text-h1 font-extrabold uppercase tracking-tight"
 			>
-				Get in touch.
+				Get in <span class="accent-serif">touch.</span>
 			</h1>
 			<p class="mt-6 max-w-md text-lead text-ink-soft">
 				Open for freelance — production sites, internal tools, design-system work. Tell me

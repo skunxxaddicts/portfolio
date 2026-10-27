@@ -15,7 +15,7 @@ import SelectedWork from '#lib/components/sections/SelectedWork.svelte';
 			id="work-hero"
 			class="mt-4 font-display text-h1 font-extrabold uppercase tracking-tight"
 		>
-			My Projects.
+			My <span class="accent-serif">Projects.</span>
 		</h1>
 	</div>
 </section>

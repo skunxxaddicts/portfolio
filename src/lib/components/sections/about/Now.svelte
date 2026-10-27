@@ -17,7 +17,7 @@ const iconMap = {
 	<div class="py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
-				What I'm doing this month.
+				What I'm doing this <span class="accent-serif">month.</span>
 			</h2>
 		</Reveal>
 		<p class="mt-6 max-w-2xl text-lead text-ink-soft">
@@ -36,7 +36,7 @@ const iconMap = {
 		</ul>
 
 		<p class="mt-12 font-display text-h3 font-semibold tracking-tight">
-			Now You<br />Know me.
+			Now You<br />Know <span class="accent-serif">me.</span>
 		</p>
 	</div>
 </div>

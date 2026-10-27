@@ -7,7 +7,9 @@ import Icon from '../ui/Icon.svelte';
 	<div class="content-shell border-ink-soft/40 py-12 md:py-16">
 		<div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
 			<div class="flex flex-col gap-4">
-				<span class="font-display text-h3 font-bold tracking-tight">{site.name}.</span>
+				<span class="font-display text-h3 font-bold tracking-tight"
+					>{site.name}<span class="text-accent">.</span></span
+				>
 				<p class="max-w-xs text-base text-paper/70">{site.tagline}</p>
 				<p class="mono-label text-paper/50">{site.edition}</p>
 			</div>

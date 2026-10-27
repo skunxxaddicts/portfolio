@@ -33,9 +33,9 @@ const leadWords =
 				>
 					<h1
 						id="hero-title"
-						class="whitespace-nowrap font-display text-hero font-extrabold uppercase tracking-display text-right"
+						class="whitespace-nowrap pb-[0.14em] font-display text-hero font-extrabold uppercase tracking-display text-right"
 					>
-						<span class="logo-mark me-2 align-baseline" aria-hidden="true"></span>morkie<span
+						<span class="logo-mark me-[0.06em] align-baseline" aria-hidden="true"></span>morkie<span
 							class="text-accent">.</span
 						>
 					</h1>

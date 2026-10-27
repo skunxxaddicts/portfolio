@@ -24,11 +24,11 @@ const leadWords =
 				src="/images/hero-visual.png"
 				alt=""
 				loading="eager"
-				class="h-64 w-full object-cover md:h-80"
+				class="h-72 w-full object-cover md:h-96"
 			/>
 		</div>
 
-		<div class="py-10 md:py-16">
+		<div class="py-14 md:py-24">
 			<h1
 				id="hero-title"
 				class="font-display text-hero font-extrabold uppercase tracking-display"

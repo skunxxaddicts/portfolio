@@ -44,7 +44,7 @@
 
 	/* ── spacing / rhythm ──────────────────────────────────── */
 	--spacing-section: clamp(3rem, 6vw, 6rem);
-	--spacing-container: clamp(1.5rem, 6vw, 6rem);
+	--spacing-container: clamp(1.25rem, 3vw, 4rem);
 
 	/* ── motion ────────────────────────────────────────────── */
 	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);

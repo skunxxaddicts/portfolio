@@ -34,8 +34,32 @@ export const works: Work[] = [
     },
   },
   {
-    slug: 'sinergi-warrior',
+    slug: 'viral-music',
     index: '02',
+    title: 'Viral Music',
+    year: '2025–2026',
+    sector: 'Case study',
+    role: 'Design, build, migrate',
+    scope: 'Brand site + artist/store/admin apps',
+    status: 'Featured',
+    tagline: 'Music label platform — one SvelteKit codebase, four apps',
+    stack: ['SvelteKit 2', 'Svelte 5', 'Bun', 'Tailwind v4', 'Supabase'],
+    links: {},
+    highlights: [
+      'Four host-dispatched apps in one codebase: site, sounds, store, core admin',
+      'Supabase content + auth layer with RLS and admin allowlist gating',
+      'Migrated clean off the legacy Next.js codebase to Svelte 5 runes',
+    ],
+    brief: {
+      lead: 'A music label platform, not just a brand site.',
+      body: 'Public brand site, artist platform (sounds), ecommerce (store), and internal CMS (core) — all host-dispatched from a single SvelteKit + Svelte 5 codebase on Bun, with Supabase backing content, auth, and realtime.',
+    },
+    featured: true,
+    dark: true,
+  },
+  {
+    slug: 'sinergi-warrior',
+    index: '03',
     title: 'Sinergi Warrior',
     year: '2026',
     sector: 'Client work',
@@ -53,7 +77,7 @@ export const works: Work[] = [
   },
   {
     slug: 'e-comm',
-    index: '03',
+    index: '04',
     title: 'E-comm',
     year: '2025',
     sector: 'Bootcamp',
@@ -71,7 +95,7 @@ export const works: Work[] = [
   },
   {
     slug: 'mvp-library',
-    index: '04',
+    index: '05',
     title: 'MVP Library',
     year: '2025',
     sector: 'Bootcamp',
@@ -89,7 +113,7 @@ export const works: Work[] = [
   },
   {
     slug: 'portfolio-slicing',
-    index: '05',
+    index: '06',
     title: 'Portfolio Slicing',
     year: '2025',
     sector: 'Bootcamp',
@@ -110,7 +134,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-parking',
-    index: '06',
+    index: '07',
     title: 'Parking Ops',
     year: '2026',
     sector: 'Case study',
@@ -138,7 +162,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-teleconsult',
-    index: '07',
+    index: '08',
     title: 'Teleconsult',
     year: '2026',
     sector: 'Case study',
@@ -175,7 +199,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-fieldservice',
-    index: '08',
+    index: '09',
     title: 'FieldOps',
     year: '2026',
     sector: 'Case study',
@@ -200,7 +224,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-store',
-    index: '09',
+    index: '10',
     title: 'Store + CMS',
     year: '2026',
     sector: 'Case study',
@@ -221,7 +245,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-queue',
-    index: '10',
+    index: '11',
     title: 'Queue Board',
     year: '2026',
     sector: 'Case study',
@@ -239,7 +263,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-pawn',
-    index: '11',
+    index: '12',
     title: 'Pawn Ledger',
     year: '2026',
     sector: 'Case study',
@@ -257,7 +281,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-cinema',
-    index: '12',
+    index: '13',
     title: 'Cinema Seats',
     year: '2026',
     sector: 'Case study',
@@ -278,7 +302,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-bengkel',
-    index: '13',
+    index: '14',
     title: 'Bengkel WOs',
     year: '2026',
     sector: 'Case study',
@@ -299,7 +323,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-booking',
-    index: '14',
+    index: '15',
     title: 'Booking Ops',
     year: '2026',
     sector: 'Case study',

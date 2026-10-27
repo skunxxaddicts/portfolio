@@ -41,7 +41,7 @@
 	--text-eyebrow: 0.75rem;
 	--text-eyebrow--line-height: 1.4;
 	--text-nav: 0.92rem;
-	--spacing-header: clamp(4.5rem, 5.33vw, 5.75rem);
+	--spacing-header: 5.5rem;
 
 	/* ── spacing / rhythm ──────────────────────────────────── */
 	--spacing-section: clamp(3rem, 6vw, 6rem);

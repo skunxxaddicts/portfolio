@@ -11,7 +11,7 @@ interface Props {
 let { duration = 28, repeat = 3, children }: Props = $props();
 </script>
 
-<div class="marquee overflow-hidden" aria-hidden="true">
+<div class="marquee w-full min-w-0 overflow-hidden" aria-hidden="true">
 	<div class="marquee-track flex w-max" style:--marquee-duration="{duration}s">
 		{#each Array(repeat) as _, i (i)}
 			<div class="marquee-group flex shrink-0 items-center">

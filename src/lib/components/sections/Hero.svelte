@@ -5,10 +5,9 @@ import Marquee from '../ui/Marquee.svelte';
 import Num from '../ui/Num.svelte';
 import WordmarkStack from '../ui/WordmarkStack.svelte';
 
-const leadWords =
-  'Production sites, internal tools, and the design system underneath them — built and operated end-to-end.'.split(
-    ' ',
-  );
+const leadLine1 =
+  'Production sites, internal tools, and the design system underneath them'.split(' ');
+const leadLine2 = 'built and operated end-to-end.'.split(' ');
 </script>
 
 <section aria-labelledby="hero-title" class="relative overflow-hidden border-b border-border">
@@ -19,11 +18,21 @@ const leadWords =
 					<WordmarkStack id="hero-title" class="text-hero" />
 				</div>
 				<div class="absolute inset-x-0 top-[18%] z-20 text-hero mix-blend-difference">
-					<div class="mt-[0.95em]">
+					<div class="mt-[0.82em]">
 						<p use:reveal class="text-right text-h3 text-paper">
-							{#each leadWords as word, i (word + i)}<span
+							{#each leadLine1 as word, i (word + i)}<span
 									class="stagger-word"
 									style:--d="{i * 40}ms">{word}</span
+								>{' '}{/each}
+						</p>
+					</div>
+				</div>
+				<div class="absolute inset-x-0 top-[18%] z-20 text-hero">
+					<div class="mt-[calc(0.82em+3rem)]">
+						<p use:reveal class="text-right text-h3 text-accent">
+							{#each leadLine2 as word, i (word + i)}<span
+									class="stagger-word"
+									style:--d="{(leadLine1.length + i) * 40}ms">{word}</span
 								>{' '}{/each}
 						</p>
 					</div>
@@ -56,7 +65,7 @@ const leadWords =
 		</div>
 	</div>
 
-	<div class="border-t border-border bg-accent py-8">
+	<div class="flex h-22 items-center border-t border-border bg-accent">
 		<Marquee duration={30}>
 			{#each disciplines as d (d)}
 				<span class="mx-8 font-display text-h3 font-semibold uppercase tracking-tight md:mx-12">

@@ -24,8 +24,8 @@ function isActive(href: string): boolean {
 	}}
 />
 
-<header class="sticky top-0 z-40 border-b border-border bg-paper">
-	<div class="content-shell flex items-center justify-between bg-paper">
+<header class="sticky top-0 z-40 bg-paper">
+	<div class="content-shell flex h-22 items-center justify-between border-b border-border bg-paper">
 		<a href="/" class="inline-block py-6 text-h3" aria-label="{site.name} — home">
 			<Wordmark />
 		</a>

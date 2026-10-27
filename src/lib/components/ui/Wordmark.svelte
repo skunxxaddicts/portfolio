@@ -12,7 +12,8 @@ let { class: cls = '', outline = false }: { class?: string; outline?: boolean } 
 	<span
 		class="logo-mark ms-[-0.008em] {outline ? 'logo-mark-outline text-foreground' : ''}"
 		aria-hidden="true"
-	></span>
+		>{#if outline}<span class="mark-crop"><span class="mark-ring"></span></span>{/if}</span
+	>
 	<span
 		>{site.name}<span
 			class={outline ? '[-webkit-text-stroke:2px_var(--color-accent)]' : 'text-accent'}

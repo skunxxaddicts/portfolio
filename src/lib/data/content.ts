@@ -35,7 +35,7 @@ export const services: Service[] = [
       'Marketing sites and content platforms — designed in browser, built mobile-first, deployed and operated on real infrastructure.',
     price: 'Project-based',
     timeline: 'Timeline 2–6wk',
-    tools: 'SvelteKit · Next.js · Tailwind v4',
+    tools: 'SvelteKit · Next.js · Tailwind',
   },
   {
     index: '02',
@@ -53,7 +53,7 @@ export const services: Service[] = [
       'Token architecture, shared CSS kits, and component libraries — the kind of work behind the 65-repo css-kit estate.',
     price: 'Retainer / project',
     timeline: 'Timeline 3–8wk',
-    tools: 'Tailwind v4 · tokens · CLI tooling',
+    tools: 'Tailwind · tokens · CLI tooling',
   },
   {
     index: '04',
@@ -140,7 +140,7 @@ export const journey: JourneyEntry[] = [
     title: 'css-kit + web-template estate',
     subtitle: 'Design-system engineering',
     tag: 'Tooling',
-    body: 'Built a shared Tailwind v4 kit — 159 tokens, skins, CLI tooling, verification gates — and migrated 65 repositories onto it across 8 frameworks.',
+    body: 'Built a shared Tailwind kit — 159 tokens, skins, CLI tooling, verification gates — and migrated 65 repositories onto it across 8 frameworks.',
   },
   {
     year: '2025–now',

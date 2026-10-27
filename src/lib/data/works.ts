@@ -14,7 +14,7 @@ export const works: Work[] = [
     image: '/images/work/7ocean-tour.png',
     imageAlt:
       'Stylized placeholder mockup for 7Ocean Tour & Travel — abstract browser-frame render, not final artwork',
-    stack: ['Next.js 16', 'React 19', 'Tailwind v4', 'PocketBase', 'nginx', 'pm2', 'Cloudflare'],
+    stack: ['Next.js 16', 'React 19', 'Tailwind', 'PocketBase', 'nginx', 'pm2', 'Cloudflare'],
     links: { live: 'https://7oceantour.com' },
     highlights: [
       'Bilingual content model (EN/ID) resolved at the data layer',
@@ -39,7 +39,7 @@ export const works: Work[] = [
     title: 'Vexxa Space',
     year: '2025–2026',
     sector: 'Agent tooling',
-    role: 'Architecture, frontend, BFF integration',
+    role: 'Architecture, UI, BFF integration',
     scope: 'Agent workspace + automation',
     status: 'Featured',
     tagline: 'Agent workspace — chat, swarm jobs, orchestration',
@@ -54,7 +54,7 @@ export const works: Work[] = [
       'Talks to a self-hosted Hermes agent gateway over LAN/Tailscale',
     ],
     brief: {
-      lead: 'One operator needs one control room, not five dashboards.',
+      lead: 'One operator, one control room.',
       body: 'A web workspace for the Hermes agent: chat UI, content pipeline, swarm job dispatch, scraping orchestration, and social-media automation. De-bloated fork rebuilt for a single-operator workflow.',
     },
     featured: true,
@@ -124,7 +124,7 @@ export const works: Work[] = [
     scope: 'Figma→code',
     status: 'Shipped',
     tagline: 'Figma→code slicing — WPH-13-Shanghai',
-    stack: ['Next.js 16', 'React 19', 'Tailwind v4', 'Motion', 'Radix'],
+    stack: ['Next.js 16', 'React 19', 'Tailwind', 'Motion', 'Radix'],
     links: { github: 'https://github.com/skunxxaddicts/portfolio-slicing' },
     highlights: [
       'Full landing structure: 10 sections, carousels, accordions',
@@ -148,14 +148,7 @@ export const works: Work[] = [
     image: '/images/work/case-parking.png',
     imageAlt:
       'Stylized placeholder mockup for Parking Ops — abstract browser-frame render, not final artwork',
-    stack: [
-      'Bun',
-      'bun:sqlite',
-      'Bun.serve',
-      'Web Components',
-      'SSE',
-      'Tailwind v4 (css-kit/gate)',
-    ],
+    stack: ['Bun', 'bun:sqlite', 'Bun.serve', 'Web Components', 'SSE', 'Tailwind (css-kit/gate)'],
     links: {},
     highlights: [
       'Tariff engine as one shared module — unit tests, API, and browser ticker all read it',
@@ -191,7 +184,7 @@ export const works: Work[] = [
       'nhooyr/websocket',
       'React 19',
       'Vite',
-      'Tailwind v4 (css-kit/clinic)',
+      'Tailwind (css-kit/clinic)',
     ],
     links: {},
     highlights: [
@@ -263,7 +256,7 @@ export const works: Work[] = [
     scope: 'Ticket + display board',
     status: 'Shipped',
     tagline: 'SvelteKit + Hono live queue display',
-    stack: ['SvelteKit', 'Hono', 'SSE', 'Tailwind v4 (css-kit/studio)'],
+    stack: ['SvelteKit', 'Hono', 'SSE', 'Tailwind (css-kit/studio)'],
     links: {},
     highlights: ['One-way SSE push to public display boards', 'Public ticket flow'],
     brief: {
@@ -281,7 +274,7 @@ export const works: Work[] = [
     scope: 'Loan engine + ledger',
     status: 'Shipped',
     tagline: 'Nuxt + Go REST — loan simulator & auction board',
-    stack: ['Nuxt', 'Vue', 'Go REST', 'sqlc', 'Tailwind v4 (css-kit/ledger)'],
+    stack: ['Nuxt', 'Vue', 'Go REST', 'sqlc', 'Tailwind (css-kit/ledger)'],
     links: {},
     highlights: ['Loan + interest engine', 'Rotated stamp status marks on ledger cards'],
     brief: {
@@ -299,7 +292,7 @@ export const works: Work[] = [
     scope: 'Seat map + ticketing',
     status: 'Shipped',
     tagline: 'Astro + React island over Go GraphQL',
-    stack: ['Astro', 'React island', 'Go', 'gqlgen GraphQL', 'Tailwind v4 (css-kit/theater)'],
+    stack: ['Astro', 'React island', 'Go', 'gqlgen GraphQL', 'Tailwind (css-kit/theater)'],
     links: {},
     highlights: [
       'Hold → countdown → pay → QR ticket → check-in, full loop',
@@ -320,7 +313,7 @@ export const works: Work[] = [
     scope: 'Work-order pipeline',
     status: 'Shipped',
     tagline: 'Go templ + HTMX work-order pipeline',
-    stack: ['Go', 'templ', 'HTMX', 'pgx', 'Postgres', 'Tailwind v4 (css-kit/workshop)'],
+    stack: ['Go', 'templ', 'HTMX', 'pgx', 'Postgres', 'Tailwind (css-kit/workshop)'],
     links: {},
     highlights: [
       'Customer approves estimate via public page — server decrements stock atomically',
@@ -348,7 +341,7 @@ export const works: Work[] = [
       'Bun',
       'bun:sqlite',
       'SSE',
-      'Tailwind v4 (css-kit/studio)',
+      'Tailwind (css-kit/studio)',
     ],
     links: {},
     highlights: [

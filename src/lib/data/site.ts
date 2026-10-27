@@ -6,7 +6,7 @@ export const site = {
   tagline: 'Fullstack developer — production sites, internal tools, design systems.',
   edition: 'v2.0 · 2026 edition.',
   description:
-    'morkie is the independent dev practice of skunxxaddicts — Next.js and SvelteKit frontends, fullstack internal tools, and a shared CSS kit run across a 60+ repo estate.',
+    'morkie is the independent dev practice of skunxxaddicts — fullstack builds across Next.js and SvelteKit, internal tools, and a shared CSS kit run across a 65-repo estate.',
   email: 'skunxxaddicts@gmail.com',
   url: 'https://morkie.is-a.dev',
   coordinates: 'ID — Indonesia · UTC+7',

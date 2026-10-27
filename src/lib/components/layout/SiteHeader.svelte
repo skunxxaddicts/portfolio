@@ -38,24 +38,26 @@ function isActive(href: string): boolean {
 				<a
 					href={item.href}
 					class={cn(
-						'mono-label py-6 transition-colors hover:text-foreground',
+						'nav-label py-6 transition-colors hover:text-foreground',
 						isActive(item.href) && 'text-foreground',
 					)}
 					aria-current={isActive(item.href) ? 'page' : undefined}
 				>
-					<span class="text-muted">{item.index}</span>&nbsp;&nbsp;{item.label}
+					<span class="text-accent">{item.index}</span>&nbsp;&nbsp;{item.label}
 				</a>
 			{/each}
 		</nav>
 
 		<div class="hidden md:block">
-			<Button href="/contact" variant="solid">Get in touch</Button>
+			<Button href="/contact" variant="solid" class="[--btn-text:var(--text-nav)]"
+				>Get in touch</Button
+			>
 		</div>
 
 		<button
 			type="button"
 			bind:this={menuBtn}
-			class="mono-label flex items-center gap-2 py-6 md:hidden"
+			class="nav-label flex items-center gap-2 py-6 md:hidden"
 			aria-expanded={menuOpen}
 			aria-controls="mobile-nav"
 			onclick={() => (menuOpen = !menuOpen)}
@@ -80,11 +82,13 @@ function isActive(href: string): boolean {
 						onclick={() => (menuOpen = false)}
 					>
 						{item.label}
-						<span class="mono-label">{item.index}</span>
+						<span class="nav-label text-accent">{item.index}</span>
 					</a>
 				{/each}
 				<div class="py-4">
-					<Button href="/contact" variant="solid" class="w-full" >Get in touch</Button>
+					<Button href="/contact" variant="solid" class="w-full [--btn-text:var(--text-nav)]"
+						>Get in touch</Button
+					>
 				</div>
 			</div>
 		</nav>

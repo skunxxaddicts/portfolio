@@ -20,7 +20,7 @@
 	--font-skin-mono: 'JetBrains Mono', ui-monospace, monospace;
 
 	/* fluid scale — mobile first, mirrors original breakpoints */
-	--text-hero: clamp(5.25rem, 16.5vw, 22rem);
+	--text-hero: clamp(4rem, 20.8cqw, 22rem);
 	--text-hero--line-height: 0.8;
 	--text-cta: clamp(5.25rem, 12vw, 9.38rem);
 	--text-cta--line-height: 0.95;

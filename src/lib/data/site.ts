@@ -65,7 +65,7 @@ export const heroFacts = [
   {
     index: '04',
     label: 'Archive',
-    title: 'The folio · 2025→2026',
+    title: 'The folio',
     body: 'Client work, case studies, tooling. Open the index',
   },
 ] as const;

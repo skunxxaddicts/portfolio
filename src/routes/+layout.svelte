@@ -2,7 +2,6 @@
 import Lenis from 'lenis';
 import { onMount } from 'svelte';
 import favicon from '#lib/assets/favicon.svg';
-import BgLines from '#lib/components/layout/BgLines.svelte';
 import SiteFooter from '#lib/components/layout/SiteFooter.svelte';
 import SiteHeader from '#lib/components/layout/SiteHeader.svelte';
 import type { LayoutProps } from './$types';
@@ -38,8 +37,7 @@ onMount(() => {
 </a>
 
 <SiteHeader />
-<main id="main" class="relative">
-	<BgLines />
+<main id="main">
 	{@render children()}
 </main>
 <SiteFooter />

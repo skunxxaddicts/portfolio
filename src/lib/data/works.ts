@@ -34,35 +34,8 @@ export const works: Work[] = [
     },
   },
   {
-    slug: 'vexxa-space',
-    index: '02',
-    title: 'Vexxa Space',
-    year: '2025–2026',
-    sector: 'Agent tooling',
-    role: 'Architecture, UI, BFF integration',
-    scope: 'Agent workspace + automation',
-    status: 'Featured',
-    tagline: 'Agent workspace — chat, swarm jobs, orchestration',
-    image: '/images/work/vexxa-space.png',
-    imageAlt:
-      'Stylized placeholder mockup for Vexxa Space — abstract browser-frame render, not final artwork',
-    stack: ['TypeScript', 'Next.js', 'Postiz API fork', 'Docker Compose', 'Better-Auth'],
-    links: { github: 'https://github.com/dev-morkie/vexxa-space' },
-    highlights: [
-      'Byte-verified review gate on release branches',
-      'Dashboard aggregating sessions, model mix, and cost ledger',
-      'Talks to a self-hosted Hermes agent gateway over LAN/Tailscale',
-    ],
-    brief: {
-      lead: 'One operator, one control room.',
-      body: 'A web workspace for the Hermes agent: chat UI, content pipeline, swarm job dispatch, scraping orchestration, and social-media automation. De-bloated fork rebuilt for a single-operator workflow.',
-    },
-    featured: true,
-    dark: true,
-  },
-  {
     slug: 'sinergi-warrior',
-    index: '03',
+    index: '02',
     title: 'Sinergi Warrior',
     year: '2026',
     sector: 'Client work',
@@ -80,7 +53,7 @@ export const works: Work[] = [
   },
   {
     slug: 'e-comm',
-    index: '04',
+    index: '03',
     title: 'E-comm',
     year: '2025',
     sector: 'Bootcamp',
@@ -98,7 +71,7 @@ export const works: Work[] = [
   },
   {
     slug: 'mvp-library',
-    index: '05',
+    index: '04',
     title: 'MVP Library',
     year: '2025',
     sector: 'Bootcamp',
@@ -116,7 +89,7 @@ export const works: Work[] = [
   },
   {
     slug: 'portfolio-slicing',
-    index: '06',
+    index: '05',
     title: 'Portfolio Slicing',
     year: '2025',
     sector: 'Bootcamp',
@@ -137,7 +110,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-parking',
-    index: '07',
+    index: '06',
     title: 'Parking Ops',
     year: '2026',
     sector: 'Case study',
@@ -165,7 +138,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-teleconsult',
-    index: '08',
+    index: '07',
     title: 'Teleconsult',
     year: '2026',
     sector: 'Case study',
@@ -202,7 +175,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-fieldservice',
-    index: '09',
+    index: '08',
     title: 'FieldOps',
     year: '2026',
     sector: 'Case study',
@@ -227,7 +200,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-store',
-    index: '10',
+    index: '09',
     title: 'Store + CMS',
     year: '2026',
     sector: 'Case study',
@@ -248,7 +221,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-queue',
-    index: '11',
+    index: '10',
     title: 'Queue Board',
     year: '2026',
     sector: 'Case study',
@@ -266,7 +239,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-pawn',
-    index: '12',
+    index: '11',
     title: 'Pawn Ledger',
     year: '2026',
     sector: 'Case study',
@@ -284,7 +257,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-cinema',
-    index: '13',
+    index: '12',
     title: 'Cinema Seats',
     year: '2026',
     sector: 'Case study',
@@ -305,7 +278,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-bengkel',
-    index: '14',
+    index: '13',
     title: 'Bengkel WOs',
     year: '2026',
     sector: 'Case study',
@@ -326,7 +299,7 @@ export const works: Work[] = [
   },
   {
     slug: 'case-booking',
-    index: '15',
+    index: '14',
     title: 'Booking Ops',
     year: '2026',
     sector: 'Case study',

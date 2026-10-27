@@ -43,7 +43,7 @@
 	display: inline-block;
 	inline-size: 0.72em;
 	block-size: 0.72em;
-	background: var(--color-foreground);
+	background: currentColor;
 	border-radius: 48% 48% 12% 48%;
 	overflow: hidden;
 	&::after {

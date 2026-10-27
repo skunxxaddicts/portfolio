@@ -6,7 +6,7 @@ import Tag from '../../ui/Tag.svelte';
 
 <div class="border-b border-border">
 	<Tag index="04" total="06" label="disciplines" />
-	<div class="px-6 py-section">
+	<div class="py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				How <span class="accent-serif">time</span> gets split.

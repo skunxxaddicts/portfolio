@@ -34,9 +34,9 @@ const meta = $derived([
 		>
 			{work.title}<span class="text-accent">.</span>
 		</h1>
-		<dl class="-mx-6 mt-12 grid grid-cols-2 border-t border-border sm:grid-cols-3 lg:grid-cols-6">
+		<dl class="mt-12 grid grid-cols-2 border-t border-border sm:grid-cols-3 lg:grid-cols-6">
 			{#each meta as m (m.label)}
-				<div class="flex flex-col gap-1 border-b border-border px-6 py-5 sm:border-l sm:first:border-l-0 lg:border-b-0">
+				<div class="flex flex-col gap-1 border-b border-border py-5 sm:border-l sm:pl-5 sm:first:border-l-0 sm:first:pl-0 lg:border-b-0">
 					<dt class="mono-label">[ {m.label} ]</dt>
 					<dd class="text-base font-medium">{m.value}</dd>
 				</div>

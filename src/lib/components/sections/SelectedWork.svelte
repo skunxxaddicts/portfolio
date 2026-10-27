@@ -12,14 +12,14 @@ let { index = '02' }: Props = $props();
 
 <div class="border-b border-border">
 	<Tag {index} label="selected work" />
-	<div class="px-6 py-section">
+	<div class="py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				Selected <span class="accent-serif">Work.</span>
 			</h2>
 		</Reveal>
 
-		<div class="-mx-6 mt-12 grid gap-px border border-border bg-border sm:grid-cols-2">
+		<div class="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2">
 			{#each works as work (work.slug)}
 				<a
 					href="/work/{work.slug}"

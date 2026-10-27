@@ -16,7 +16,7 @@ const fmt = (iso: string) =>
 
 <div class="border-b border-border">
 	<Tag index="05" label="github" />
-	<div class="px-6 py-section">
+	<div class="py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				Public <span class="accent-serif">repos.</span>
@@ -27,14 +27,14 @@ const fmt = (iso: string) =>
 			</p>
 		</Reveal>
 
-		<ol class="-mx-6 mt-12 border-t border-border">
+		<ol class="mt-12 border-t border-border">
 			{#each result.repos as repo (repo.name)}
 				<li>
 					<a
 						href={repo.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="group grid items-baseline gap-1 border-b border-border px-6 py-5 transition-colors hover:bg-surface md:grid-cols-[14rem_1fr_auto] md:gap-8"
+						class="group grid items-baseline gap-1 border-b border-border py-5 transition-colors hover:bg-surface md:grid-cols-[14rem_1fr_auto] md:gap-8 md:px-4"
 					>
 						<span class="inline-flex items-center gap-2 font-display text-h5 font-semibold">
 							{repo.name}

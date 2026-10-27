@@ -6,14 +6,14 @@ import Tag from '../ui/Tag.svelte';
 
 <div class="border-b border-border">
 	<Tag index="07" label="testimonials" />
-	<div class="px-6 py-section">
+	<div class="py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				What clients <span class="accent-serif">say.</span>
 			</h2>
 		</Reveal>
 
-		<ul class="-mx-6 mt-12 grid gap-px border border-border bg-border sm:grid-cols-2">
+		<ul class="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2">
 			{#each testimonials as t (t.quote)}
 				{@const i = t.quote.indexOf(t.accent)}
 				<li class="flex flex-col justify-between gap-8 bg-paper px-6 py-8">

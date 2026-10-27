@@ -6,17 +6,17 @@ import Tag from '../../ui/Tag.svelte';
 
 <div class="border-b border-border">
 	<Tag index="03" total="06" label="journey" />
-	<div class="px-6 py-section">
+	<div class="py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				Eight years, six <span class="accent-serif">chapters.</span>
 			</h2>
 		</Reveal>
 
-		<ol class="-mx-6 mt-12 border-t border-border">
+		<ol class="mt-12 border-t border-border">
 			{#each journey as entry (entry.year + entry.title)}
 				<li
-					class="grid gap-3 border-b border-border px-6 py-6 md:grid-cols-[6rem_1.2fr_2fr] md:gap-8"
+					class="grid gap-3 border-b border-border py-6 md:grid-cols-[6rem_1.2fr_2fr] md:gap-8"
 				>
 					<span class="font-display text-h4 font-semibold">{entry.year}</span>
 					<div>

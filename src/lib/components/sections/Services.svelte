@@ -17,7 +17,7 @@ let { index = '06' }: Props = $props();
 
 <div class="border-b border-border">
 	<Tag {index} label="services" />
-	<div class="grid gap-10 px-6 py-section lg:grid-cols-[1fr_1.6fr]">
+	<div class="grid gap-10 py-section lg:grid-cols-[1fr_1.6fr]">
 		<div class="flex flex-col gap-8">
 			<Reveal>
 				<h2 class="font-display text-h2 font-semibold tracking-tight">
@@ -44,7 +44,7 @@ let { index = '06' }: Props = $props();
 			</div>
 		</div>
 
-		<div class="-mr-6">
+		<div>
 			<Accordion items={entries}>
 				{#snippet children(item)}
 					{@const s = services.find((x) => x.index === item.id)}

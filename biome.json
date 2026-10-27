@@ -13,6 +13,7 @@
       "!**/build",
       "!**/dist",
       "!**/package-lock.json",
+      "!**/bun.lock",
       "!**/*.min.js",
       "!**/*.min.css",
       "!**/*.css",

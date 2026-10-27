@@ -14,13 +14,13 @@ SvelteKit rebuild on the `lequon` base from the `web-template` family — editor
 
 ## Content model
 
-| File | Holds |
-|---|---|
-| `src/lib/data/works.ts` | Case studies + projects (slug → `/work/[slug]`) |
-| `src/lib/data/site.ts` | Identity, nav, socials, hero facts, marquee |
-| `src/lib/data/content.ts` | Process, services, stats, journey, principles, now |
-| `src/lib/data/experience.ts` | Home experience timeline |
-| `src/lib/data/repos.ts` | GitHub fallback snapshot |
+| File                         | Holds                                              |
+| ---------------------------- | -------------------------------------------------- |
+| `src/lib/data/works.ts`      | Case studies + projects (slug → `/work/[slug]`)    |
+| `src/lib/data/site.ts`       | Identity, nav, socials, hero facts, marquee        |
+| `src/lib/data/content.ts`    | Process, services, stats, journey, principles, now |
+| `src/lib/data/experience.ts` | Home experience timeline                           |
+| `src/lib/data/repos.ts`      | GitHub fallback snapshot                           |
 
 ## Commands
 

@@ -81,6 +81,9 @@
   },
   "__meta": {
     "url": "/",
-    "title": "morkie — skunxxaddicts"
+    "title": "morkie — skunxxaddicts",
+    "viewport": "1280x800",
+    "userAgent": "headless Chrome (desktop)",
+    "captured": "2026-10-26"
   }
 }

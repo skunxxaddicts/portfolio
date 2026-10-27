@@ -38,8 +38,7 @@ export async function getRepos(fetcher: typeof fetch = fetch): Promise<ReposResu
     Accept: 'application/vnd.github+json',
     'X-GitHub-Api-Version': '2022-11-28',
   };
-  const proc = (globalThis as { process?: { env?: Record<string, string | undefined> } })
-    .process;
+  const proc = (globalThis as { process?: { env?: Record<string, string | undefined> } }).process;
   const token = proc?.env?.GITHUB_TOKEN;
   if (token) {
     headers.Authorization = `Bearer ${token}`;

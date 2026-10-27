@@ -25,6 +25,10 @@ export const works: Work[] = [
     },
     featured: true,
     dark: true,
+    quote: {
+      text: 'TODO: replace with the real client quote',
+      author: 'TODO — 7Ocean Tour & Travel',
+    },
   },
   {
     slug: 'vexxa-space',
@@ -135,7 +139,14 @@ export const works: Work[] = [
     scope: 'Kiosk + operator console',
     status: 'Featured',
     tagline: 'Live-fee parking kiosk — zero-dependency Bun app',
-    stack: ['Bun', 'bun:sqlite', 'Bun.serve', 'Web Components', 'SSE', 'Tailwind v4 (css-kit/gate)'],
+    stack: [
+      'Bun',
+      'bun:sqlite',
+      'Bun.serve',
+      'Web Components',
+      'SSE',
+      'Tailwind v4 (css-kit/gate)',
+    ],
     links: {},
     highlights: [
       'Tariff engine as one shared module — unit tests, API, and browser ticker all read it',
@@ -318,7 +329,15 @@ export const works: Work[] = [
     scope: 'Slot engine + ops board',
     status: 'Featured',
     tagline: 'SvelteKit + Elysia scheduling — slots, deposits, QR check-in',
-    stack: ['SvelteKit', 'Svelte 5', 'Elysia', 'Bun', 'bun:sqlite', 'SSE', 'Tailwind v4 (css-kit/studio)'],
+    stack: [
+      'SvelteKit',
+      'Svelte 5',
+      'Elysia',
+      'Bun',
+      'bun:sqlite',
+      'SSE',
+      'Tailwind v4 (css-kit/studio)',
+    ],
     links: {},
     highlights: [
       'Slot engine: weekday rules → grid → date overrides → capacity minus overlaps',

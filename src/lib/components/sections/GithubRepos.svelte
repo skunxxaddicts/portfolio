@@ -1,6 +1,6 @@
 <script lang="ts">
-import type { ReposResult } from '#lib/github';
 import { site } from '#lib/data/site';
+import type { ReposResult } from '#lib/github';
 import Icon from '../ui/Icon.svelte';
 import Reveal from '../ui/Reveal.svelte';
 import Tag from '../ui/Tag.svelte';

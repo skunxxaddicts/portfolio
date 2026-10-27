@@ -128,8 +128,14 @@ export const recognition = [
 ] as const;
 
 export const nowItems = [
-  { icon: 'triangle', text: 'Rebuilding this portfolio on a SvelteKit base from the web-template family.' },
-  { icon: 'pencil', text: 'Running css-kit across 65 repos — tokens, skins, smoke + baseline gates.' },
+  {
+    icon: 'triangle',
+    text: 'Rebuilding this portfolio on a SvelteKit base from the web-template family.',
+  },
+  {
+    icon: 'pencil',
+    text: 'Running css-kit across 65 repos — tokens, skins, smoke + baseline gates.',
+  },
   { icon: 'circle', text: 'Preparing the VPS redeploy for the case-study demos.' },
   { icon: 'star', text: 'Open for freelance — production sites and internal tools.' },
 ] as const;

@@ -25,3 +25,6 @@ vite.config.ts.timestamp-*
 # Local
 JOURNAL.md
 .sixth/
+.playwright-mcp/
+.claude/
+.agents/

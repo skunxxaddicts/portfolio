@@ -6,12 +6,22 @@ import Button from '../ui/Button.svelte';
 import Icon from '../ui/Icon.svelte';
 
 let menuOpen = $state(false);
+let menuBtn: HTMLButtonElement | undefined = $state();
 const currentPath = $derived(page.url.pathname);
 
 function isActive(href: string): boolean {
   return href === '/' ? currentPath === '/' : currentPath.startsWith(href);
 }
 </script>
+
+<svelte:window
+	onkeydown={(e) => {
+		if (e.key === 'Escape' && menuOpen) {
+			menuOpen = false;
+			menuBtn?.focus();
+		}
+	}}
+/>
 
 <header class="sticky top-0 z-40 border-b border-border bg-paper">
 	<div class="content-shell flex items-center justify-between bg-paper">
@@ -44,6 +54,7 @@ function isActive(href: string): boolean {
 
 		<button
 			type="button"
+			bind:this={menuBtn}
 			class="mono-label flex items-center gap-2 py-4 md:hidden"
 			aria-expanded={menuOpen}
 			aria-controls="mobile-nav"

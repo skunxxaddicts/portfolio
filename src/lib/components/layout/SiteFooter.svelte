@@ -12,12 +12,12 @@ import Icon from '../ui/Icon.svelte';
 				<p class="mono-label text-paper/50">{site.edition}</p>
 			</div>
 
-			<nav aria-label="Pages" class="flex flex-col gap-2">
+			<nav aria-label="Pages" class="flex flex-col gap-1">
 				<p class="mono-label pb-2 text-paper/50">Pages</p>
 				{#each navItems as item (item.href)}
 					<a
 						href={item.href}
-						class="group flex items-baseline gap-2 text-h5 text-paper transition-colors hover:text-paper/60"
+						class="group flex items-center gap-2 py-3 text-h5 text-paper transition-colors hover:text-paper/60"
 					>
 						{item.label}
 						<sup class="mono-label text-paper/50">{item.index}</sup>
@@ -25,18 +25,18 @@ import Icon from '../ui/Icon.svelte';
 				{/each}
 				<a
 					href="/contact"
-					class="group flex items-baseline gap-2 text-h5 text-paper transition-colors hover:text-paper/60"
+					class="group flex items-center gap-2 py-3 text-h5 text-paper transition-colors hover:text-paper/60"
 				>
 					Contact <sup class="mono-label text-paper/50">04</sup>
 				</a>
 			</nav>
 
-			<nav aria-label="Elsewhere" class="flex flex-col gap-2">
+			<nav aria-label="Elsewhere" class="flex flex-col gap-1">
 				<p class="mono-label pb-2 text-paper/50">Elsewhere</p>
 				{#each socialLinks as link (link.label)}
 					<a
 						href={link.href}
-						class="group inline-flex items-center gap-2 text-h5 text-paper transition-colors hover:text-paper/60"
+						class="group inline-flex items-center gap-2 py-3 text-h5 text-paper transition-colors hover:text-paper/60"
 						target={link.href.startsWith('http') ? '_blank' : undefined}
 						rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
 					>

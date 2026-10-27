@@ -22,7 +22,10 @@ const meta = $derived([
 
 <section aria-labelledby="work-title" class="border-b border-border">
 	<div class="content-shell py-16 md:py-24">
-		<a href="/work" class="mono-label inline-flex items-center gap-2 hover:text-foreground">
+		<a
+			href="/work"
+			class="mono-label inline-flex min-h-11 items-center gap-2 hover:text-foreground"
+		>
 			<Icon name="arrow-right" size={12} /> all work
 		</a>
 		<h1

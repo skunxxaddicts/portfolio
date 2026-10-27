@@ -32,6 +32,7 @@ let {
 		{placeholder}
 		{required}
 		{autocomplete}
+		aria-describedby={hint ? `${id}-hint` : undefined}
 		class="w-full border border-border bg-surface px-4 py-3 font-display text-base text-foreground transition-colors placeholder:text-muted focus:border-foreground focus:outline-none"
 	/>
 	{#if hint}<p id="{id}-hint" class="mono-label text-muted">{hint}</p>{/if}

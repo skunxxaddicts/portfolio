@@ -32,14 +32,14 @@ const leadWords =
 		<div class="py-16 md:py-28">
 			<h1
 				id="hero-title"
-				class="font-display text-hero font-extrabold uppercase tracking-display"
+				class="font-display text-hero font-extrabold uppercase tracking-display text-right"
 			>
 				<span class="logo-mark me-2 align-baseline" aria-hidden="true"></span>morkie<span
 					class="text-accent">.</span
 				>
 			</h1>
 			<div class="mt-4 border-t border-foreground" aria-hidden="true"></div>
-			<p use:reveal class="mt-6 text-lead text-ink-soft">
+			<p use:reveal class="mt-6 text-lead text-ink-soft text-right">
 				{#each leadWords as word, i (word + i)}<span class="stagger-word" style:--d="{i * 40}ms"
 						>{word}</span
 					>{' '}{/each}

@@ -2,10 +2,11 @@
 
 @theme {
 	/* ── palette ───────────────────────────────────────────── */
-	--color-paper: #fafafa;
-	--color-surface: #ffffff;
-	--color-cream: #fff7ec;
-	--color-sand: #f3ebe1;
+	--color-paper: #f2efe6;
+	--color-surface: #faf7ef;
+	--color-cream: #f2efe6;
+	--color-sand: #e9e4d8;
+	--color-accent: #d85131;
 	--color-foreground: #1a1a1a;
 	--color-ink-soft: #333333;
 	--color-border: #dddddd;

@@ -4,7 +4,7 @@ import Icon from '../ui/Icon.svelte';
 import Num from '../ui/Num.svelte';
 </script>
 
-<footer class="border-t border-border bg-foreground text-paper">
+<footer class="bg-foreground text-paper">
 	<div class="content-shell border-ink-soft/40 py-10 md:py-12">
 		<div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
 			<div class="flex flex-col gap-4">

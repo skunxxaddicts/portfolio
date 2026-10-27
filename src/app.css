@@ -62,6 +62,15 @@
 @utility logo-mark-outline {
 	background: transparent;
 	border: 2px solid currentColor;
+	overflow: visible;
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		border: 2px solid var(--color-accent);
+		clip-path: inset(48% 0% 0% 48%);
+	}
 	&::after {
 		background: transparent;
 		border-top: 2px solid var(--color-accent);

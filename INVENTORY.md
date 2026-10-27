@@ -1,6 +1,6 @@
 # lequon — INVENTORY
 
-components: 23 · utils: 2 · routes: 6 · extras: 8
+components: 24 · utils: 2 · routes: 6 · extras: 8
 
 ## Components
 
@@ -27,6 +27,7 @@ components: 23 · utils: 2 · routes: 6 · extras: 8
 - **Recognition** (about)
 - **SelectedWork** `index = '02'`
 - **Services** `index = '06'`
+- **Testimonials**
 
 ### ui
 
@@ -37,25 +38,25 @@ components: 23 · utils: 2 · routes: 6 · extras: 8
 - **Marquee** `duration = 28, repeat = 3, children`
 - **Reveal** `delay = 0, y = 24, class: className = '', children`
 - **Stat** `value, label, index`
-- **Tag** `index, total = '06', label, class: className = ''`
+- **Tag** `index, total = '07', label, class: className = ''`
 - **Textarea** `id, name, label, rows = 5, placeholder, required = false`
 
 ## Utils / data
 
-- `data/content.ts` — processSteps, services, serviceIncludes, aboutStats, homeStats, principles, journey, disciplinesSplit, recognition, nowItems
+- `data/content.ts` — processSteps, services, serviceIncludes, testimonials, aboutStats, homeStats, principles, journey, disciplinesSplit, recognition, nowItems
 - `data/experience.ts` — experience
 - `data/repos.ts` — fallbackRepos
 - `data/site.ts` — site, navItems, socialLinks, disciplines, heroFacts
 - `data/works.ts` — works, getWork
 - `github.ts` — getRepos, ReposResult, RepoCard
 - `index.ts` — cn, reveal (re-exports)
-- `types.ts` — NavItem, SocialLink, WorkLinks, Work, ProcessStep, Service, JourneyEntry, Principle, ExperienceItem
+- `types.ts` — NavItem, SocialLink, WorkLinks, Work, ProcessStep, Testimonial, Service, JourneyEntry, Principle, ExperienceItem
 - `utils/cn.ts` — cn
 - `utils/reveal.ts` — reveal
 
 ## Motion / fx
 
-- css @keyframes, marquee util, svelte transition:/animate:, use:reveal, Lenis (reduced-motion gated, `anchors: true`)
+- css @keyframes, marquee util, svelte transition:/animate:, use:reveal, hero word-stagger (`.stagger-word` + `--d` delay var, `html.js`-gated), Lenis (reduced-motion gated, `anchors: true`)
 
 ## Routes
 
@@ -63,8 +64,8 @@ components: 23 · utils: 2 · routes: 6 · extras: 8
 
 ## Site @utility recipes
 
-- bg-lines, btn, btn-solid, content-shell, mono-label
+- accent-serif, bg-lines, btn, btn-solid, content-shell, hero-blob, mono-label, stagger-word
 
 ## Site-extra tokens (identity — not in kit)
 
-- --color-cream, --color-ink-soft, --color-line-strong, --color-paper, --color-sand, --color-slate, --font-skin-display, --font-skin-mono, --spacing-container, --text-cta, --text-cta--line-height
+- --color-accent, --color-cream, --color-ink-soft, --color-line-strong, --color-paper, --color-sand, --color-slate, --font-skin-display, --font-skin-mono, --spacing-container, --text-cta, --text-cta--line-height

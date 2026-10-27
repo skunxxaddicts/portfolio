@@ -6,7 +6,7 @@ import Tag from '../../ui/Tag.svelte';
 
 <div class="border-b border-border">
 	<Tag index="02" total="06" label="principles" />
-	<div class="py-section">
+	<div class="px-(--spacing-container) py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				Four <span class="accent-serif">beliefs</span> the studio runs on.

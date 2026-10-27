@@ -12,7 +12,7 @@ let { index = '02' }: Props = $props();
 
 <div class="border-b border-border">
 	<Tag {index} label="selected work" />
-	<div class="py-section">
+	<div class="px-(--spacing-container) py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				Selected <span class="accent-serif">Work.</span>

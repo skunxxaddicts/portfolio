@@ -6,7 +6,7 @@ import Tag from '../../ui/Tag.svelte';
 
 <div class="border-b border-border">
 	<Tag index="06" total="06" label="milestones" />
-	<div class="py-section">
+	<div class="px-(--spacing-container) py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				Press, talks, <span class="accent-serif">mentions.</span>

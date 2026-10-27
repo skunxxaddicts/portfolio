@@ -6,7 +6,7 @@ import Tag from '../ui/Tag.svelte';
 
 <div class="border-b border-border">
 	<Tag index="04" label="process" />
-	<div class="py-section">
+	<div class="px-(--spacing-container) py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				How the <span class="accent-serif">work</span> gets made.

@@ -9,7 +9,7 @@ let { index, total = '07', label, class: className = '' }: Props = $props();
 </script>
 
 {#if index}
-	<div class="flex items-baseline gap-4 border-b border-border py-6 {className}">
+	<div class="flex items-baseline gap-4 border-b border-border px-(--spacing-container) py-6 {className}">
 		<span class="mono-label">[ {index} / {total} ]</span>
 		<span class="mono-label text-foreground">{label}</span>
 	</div>

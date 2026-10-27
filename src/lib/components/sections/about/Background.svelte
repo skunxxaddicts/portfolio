@@ -8,7 +8,7 @@ import Tag from '../../ui/Tag.svelte';
 
 <div class="border-b border-border">
 	<Tag index="01" total="06" label="background" />
-	<div class="py-section">
+	<div class="px-(--spacing-container) py-section">
 		<Reveal>
 			<h2 class="max-w-4xl font-display text-h2 font-semibold tracking-tight">
 				Self-taught, bootcamp-sharpened, <span class="accent-serif">production-tested.</span>

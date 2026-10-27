@@ -14,7 +14,7 @@ const iconMap = {
 </script>
 
 <div class="border-b border-border">
-	<div class="py-section">
+	<div class="px-(--spacing-container) py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				What I'm doing this <span class="accent-serif">month.</span>

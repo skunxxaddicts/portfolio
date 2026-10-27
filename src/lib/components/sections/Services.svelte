@@ -17,7 +17,7 @@ let { index = '06' }: Props = $props();
 
 <div class="border-b border-border">
 	<Tag {index} label="services" />
-	<div class="grid gap-10 py-section lg:grid-cols-[1fr_1.6fr]">
+	<div class="grid gap-10 px-(--spacing-container) py-section lg:grid-cols-[1fr_1.6fr]">
 		<div class="flex flex-col gap-8">
 			<Reveal>
 				<h2 class="font-display text-h2 font-semibold tracking-tight">

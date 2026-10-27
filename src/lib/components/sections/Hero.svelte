@@ -26,10 +26,10 @@ const leadWords =
 					src="/images/morkie.png"
 					alt="morkie"
 					loading="eager"
-					class="absolute left-[-6%] top-0 h-[160%] w-auto object-cover object-top"
+					class="absolute bottom-8 left-0 h-[calc(100%-2rem)] w-auto object-cover object-top"
 				/>
 				<div
-					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-paper via-paper/85 to-transparent pb-8 pt-24"
+					class="absolute inset-x-0 bottom-0 pb-8"
 				>
 					<h1
 						id="hero-title"
@@ -39,7 +39,7 @@ const leadWords =
 							class="text-accent">.</span
 						>
 					</h1>
-					<div class="mt-4 border-t border-foreground" aria-hidden="true"></div>
+					<div class="mt-4 border-t border-border" aria-hidden="true"></div>
 				</div>
 			</div>
 		</div>

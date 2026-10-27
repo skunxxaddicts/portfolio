@@ -12,7 +12,7 @@ const leadWords =
 
 <section aria-labelledby="hero-title" class="relative overflow-hidden border-b border-border">
 	<div class="content-shell relative">
-		<div class="flex min-h-svh flex-col">
+		<div class="flex min-h-[calc(100svh-var(--spacing-header))] flex-col">
 			<div
 				class="mono-label flex flex-col gap-1 border-b border-border py-4 sm:flex-row sm:items-center sm:justify-between"
 			>
@@ -26,10 +26,10 @@ const leadWords =
 					src="/images/morkie.png"
 					alt="morkie"
 					loading="eager"
-					class="absolute inset-0 h-full w-full object-contain object-left"
+					class="absolute left-[-6%] top-0 h-[160%] w-auto object-cover object-top"
 				/>
 				<div
-					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-paper via-paper/85 to-transparent pt-24"
+					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-paper via-paper/85 to-transparent pb-8 pt-24"
 				>
 					<h1
 						id="hero-title"

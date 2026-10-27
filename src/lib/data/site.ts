@@ -34,11 +34,11 @@ export const disciplines = [
   'Node.js',
   'Go',
   'Bun',
-  'Tailwind v4',
-  'React',
+  'Tailwind',
+  'React JS',
   'Postgres',
-  'Design systems',
-  'Realtime / SSE',
+  'Figma',
+  'PocketBase',
 ] as const;
 
 export const heroFacts = [

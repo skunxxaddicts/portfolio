@@ -11,6 +11,9 @@ export const works: Work[] = [
     scope: 'Full production platform',
     status: 'Live',
     tagline: 'Production travel platform — live client work',
+    image: '/images/work/7ocean-tour.png',
+    imageAlt:
+      'Stylized placeholder mockup for 7Ocean Tour & Travel — abstract browser-frame render, not final artwork',
     stack: ['Next.js 16', 'React 19', 'Tailwind v4', 'PocketBase', 'nginx', 'pm2', 'Cloudflare'],
     links: { live: 'https://7oceantour.com' },
     highlights: [
@@ -40,6 +43,9 @@ export const works: Work[] = [
     scope: 'Agent workspace + automation',
     status: 'Featured',
     tagline: 'Agent workspace — chat, swarm jobs, orchestration',
+    image: '/images/work/vexxa-space.png',
+    imageAlt:
+      'Stylized placeholder mockup for Vexxa Space — abstract browser-frame render, not final artwork',
     stack: ['TypeScript', 'Next.js', 'Postiz API fork', 'Docker Compose', 'Better-Auth'],
     links: { github: 'https://github.com/skunxxaddicts/vexxa-space' },
     highlights: [
@@ -139,6 +145,9 @@ export const works: Work[] = [
     scope: 'Kiosk + operator console',
     status: 'Featured',
     tagline: 'Live-fee parking kiosk — zero-dependency Bun app',
+    image: '/images/work/case-parking.png',
+    imageAlt:
+      'Stylized placeholder mockup for Parking Ops — abstract browser-frame render, not final artwork',
     stack: [
       'Bun',
       'bun:sqlite',
@@ -171,6 +180,9 @@ export const works: Work[] = [
     scope: 'Booking + video lobby',
     status: 'Featured',
     tagline: 'Book → pay → real Jitsi room → WebSocket lobby',
+    image: '/images/work/case-teleconsult.png',
+    imageAlt:
+      'Stylized placeholder mockup for Teleconsult — abstract browser-frame render, not final artwork',
     stack: [
       'Go 1.27',
       'chi',

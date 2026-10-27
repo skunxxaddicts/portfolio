@@ -33,11 +33,14 @@ const leadWords =
 				>
 					<h1
 						id="hero-title"
-						class="font-display text-hero font-extrabold uppercase tracking-display text-right"
+						class="flex w-full items-end justify-between font-display text-hero font-extrabold uppercase leading-none"
+						aria-label="morkie."
 					>
-						<span class="logo-mark me-2 align-baseline" aria-hidden="true"></span>morkie<span
-							class="text-accent">.</span
+						<span class="logo-mark align-baseline" aria-hidden="true"></span>
+						<span aria-hidden="true" class="flex flex-1 items-end justify-between"
+							>{#each 'morkie'.split('') as ch (ch)}<span>{ch}</span>{/each}</span
 						>
+						<span class="text-accent" aria-hidden="true">.</span>
 					</h1>
 					<div class="mt-4 border-t border-border" aria-hidden="true"></div>
 				</div>

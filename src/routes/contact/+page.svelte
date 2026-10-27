@@ -1,6 +1,5 @@
 <script lang="ts">
-const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT as string | undefined;
-
+import { PUBLIC_FORM_ENDPOINT as endpoint } from '$app/env/public';
 import BgLines from '#lib/components/layout/BgLines.svelte';
 import Seo from '#lib/components/layout/Seo.svelte';
 import Button from '#lib/components/ui/Button.svelte';
@@ -50,9 +49,22 @@ let sent = $state<'idle' | 'success' | 'error'>('idle');
 					action={endpoint ?? `mailto:${site.email}`}
 					class="flex flex-col gap-6"
 					onsubmit={(e) => {
-						if (!endpoint) return;
 						e.preventDefault();
 						const form = e.currentTarget;
+						if (!endpoint) {
+							const data = new FormData(form);
+							const v = (k: string) => String(data.get(k) ?? '');
+							const subject = `Portfolio inquiry — ${v('name')}`;
+							const body = [
+								`Name: ${v('name')}`,
+								`Email: ${v('email')}`,
+								`Phone: ${v('phone') || '—'}`,
+								'',
+								v('details'),
+							].join('\n');
+							window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+							return;
+						}
 						fetch(endpoint, {
 							method: 'POST',
 							body: new FormData(form),
@@ -62,7 +74,7 @@ let sent = $state<'idle' | 'success' | 'error'>('idle');
 							.catch(() => (sent = 'error'));
 					}}
 				>
-					<Field id="name" name="name" label="Name" placeholder="Jhon Smith" autocomplete="name" required />
+					<Field id="name" name="name" label="Name" placeholder="John Smith" autocomplete="name" required />
 					<Field
 						id="email"
 						name="email"
@@ -100,6 +112,9 @@ let sent = $state<'idle' | 'success' | 'error'>('idle');
 						<p role="alert" class="mono-label text-foreground">
 							Oops! Something went wrong — please email {site.email} directly.
 						</p>
+					{/if}
+					{#if !endpoint}
+						<p class="mono-label text-muted">Submitting opens your mail app.</p>
 					{/if}
 					<Button type="submit" variant="solid" icon="arrow-right">Send message</Button>
 				</form>

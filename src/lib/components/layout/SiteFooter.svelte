@@ -2,17 +2,14 @@
 import { navItems, site, socialLinks } from '#lib/data/site';
 import Icon from '../ui/Icon.svelte';
 import Num from '../ui/Num.svelte';
+import Wordmark from '../ui/Wordmark.svelte';
 </script>
 
 <footer class="bg-foreground text-paper">
 	<div class="content-inset py-10 md:py-12">
 		<div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
 			<div class="flex flex-col gap-4">
-				<span class="inline-flex items-center gap-2 font-display text-h3 font-extrabold uppercase tracking-display"
-					><span class="logo-mark" aria-hidden="true"></span>{site.name}<span
-						class="text-accent">.</span
-					></span
-				>
+				<Wordmark class="text-h3" />
 				<p class="max-w-xs text-base text-paper/70"><Num text={site.tagline} /></p>
 				<p class="mono-label text-paper/50"><Num text={site.edition} /></p>
 			</div>

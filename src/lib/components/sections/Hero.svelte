@@ -3,6 +3,7 @@ import { disciplines, heroFacts, site } from '#lib/data/site';
 import { reveal } from '#lib/utils/reveal';
 import Marquee from '../ui/Marquee.svelte';
 import Num from '../ui/Num.svelte';
+import Wordmark from '../ui/Wordmark.svelte';
 
 const leadWords =
   'Production sites, internal tools, and the design system underneath them — built and operated end-to-end.'.split(
@@ -13,33 +14,27 @@ const leadWords =
 <section aria-labelledby="hero-title" class="relative overflow-hidden border-b border-border">
 	<div class="content-shell relative">
 		<div class="flex min-h-[calc(100svh-var(--spacing-header))] flex-col">
-			<div
-				class="mono-label flex flex-col gap-1 border-b border-border py-4 sm:flex-row sm:items-center sm:justify-between"
-			>
-				<span><Num text={site.coordinates} /></span>
-				<span>- FOLIO/<span class="text-accent">02</span></span>
-				<span>{site.name} — independent dev practice, <Num text={site.established} /></span>
-			</div>
-
 			<div class="relative flex-1 overflow-hidden [container-type:inline-size]">
+				<div class="absolute inset-x-0 top-[18%]">
+					<h1 id="hero-title" class="px-[0.03em] text-hero text-right"><Wordmark /></h1>
+				</div>
 				<img
 					src="/images/morkie.png"
 					alt="morkie"
 					loading="eager"
-					class="absolute bottom-8 left-0 h-[calc(100%-2rem)] w-auto object-cover object-top"
+					class="absolute top-0 left-0 z-10 h-full w-auto object-cover object-top"
 				/>
-				<div
-					class="absolute inset-x-0 bottom-0 pb-8"
-				>
-					<h1
-						id="hero-title"
-						class="flex items-end justify-between whitespace-nowrap px-[0.03em] pb-[0.14em] font-display text-hero font-extrabold uppercase tracking-display"
-					>
-						<span class="logo-mark align-baseline" aria-hidden="true"></span>
-						<span>morkie<span class="text-accent">.</span></span>
-					</h1>
-					<div class="mt-4 border-t border-border" aria-hidden="true"></div>
+				<div class="absolute inset-x-0 top-[18%] z-20" aria-hidden="true">
+					<p class="px-[0.03em] text-hero text-right"><Wordmark outline /></p>
 				</div>
+				<div
+					class="mono-label absolute inset-x-0 top-0 z-30 flex flex-col gap-1 py-4 sm:flex-row sm:items-center sm:justify-between"
+				>
+					<span><Num text={site.coordinates} /></span>
+					<span>- FOLIO/<span class="text-accent">02</span></span>
+					<span>{site.name} — independent dev practice, <Num text={site.established} /></span>
+				</div>
+				<div class="absolute inset-x-0 bottom-0 z-30 border-t border-border" aria-hidden="true"></div>
 			</div>
 		</div>
 

@@ -4,6 +4,7 @@ import { cn } from '#lib/utils/cn';
 import { page } from '$app/state';
 import Button from '../ui/Button.svelte';
 import Icon from '../ui/Icon.svelte';
+import Wordmark from '../ui/Wordmark.svelte';
 
 let menuOpen = $state(false);
 let menuBtn: HTMLButtonElement | undefined = $state();
@@ -25,12 +26,8 @@ function isActive(href: string): boolean {
 
 <header class="sticky top-0 z-40 border-b border-border bg-paper">
 	<div class="content-shell flex items-center justify-between bg-paper">
-		<a
-			href="/"
-			class="flex items-center gap-2 py-6 font-display text-h3 font-extrabold uppercase tracking-display"
-			aria-label="{site.name} — home"
-		>
-			<span class="logo-mark" aria-hidden="true"></span>{site.name}<span class="text-accent">.</span>
+		<a href="/" class="inline-block py-6 text-h3" aria-label="{site.name} — home">
+			<Wordmark />
 		</a>
 
 		<nav aria-label="Primary" class="hidden items-center gap-8 md:flex">

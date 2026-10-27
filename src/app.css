@@ -58,13 +58,14 @@
 	}
 }
 
-/* hollow monogram — 2px ink squircle border, accent-bordered quarter-disc */
+/* hollow monogram — continuous 2px line: ink on the squircle; the quarter's arc is accent via its top+left borders (right/bottom unset so they can't double the squircle edge) */
 @utility logo-mark-outline {
 	background: transparent;
 	border: 2px solid currentColor;
 	&::after {
 		background: transparent;
-		border: 2px solid var(--color-accent);
+		border-top: 2px solid var(--color-accent);
+		border-left: 2px solid var(--color-accent);
 	}
 }
 

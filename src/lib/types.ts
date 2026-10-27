@@ -42,6 +42,16 @@ export interface ProcessStep {
   index: string;
   weeks: string;
   title: string;
+  body: string;
+}
+
+export interface Testimonial {
+  initials: string;
+  name: string;
+  role: string;
+  /** substring of `quote` rendered in the accent serif */
+  accent: string;
+  quote: string;
 }
 
 export interface Service {

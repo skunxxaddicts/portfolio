@@ -1,10 +1,30 @@
-import type { JourneyEntry, Principle, ProcessStep, Service } from '#lib/types';
+import type { JourneyEntry, Principle, ProcessStep, Service, Testimonial } from '#lib/types';
 
 export const processSteps: ProcessStep[] = [
-  { index: '01', weeks: 'Phase 01', title: 'Scope' },
-  { index: '02', weeks: 'Phase 02', title: 'Design + build' },
-  { index: '03', weeks: 'Phase 03', title: 'Harden' },
-  { index: '04', weeks: 'Phase 04', title: 'Ship + operate' },
+  {
+    index: '01',
+    weeks: 'Phase 01',
+    title: 'Scope',
+    body: 'Long calls, short docs. What you are actually buying, what success looks like, and what stays out — agreed before anything moves.',
+  },
+  {
+    index: '02',
+    weeks: 'Phase 02',
+    title: 'Design + build',
+    body: 'Designed in browser, built mobile-first. You watch it grow on a staging URL, not a Figma link.',
+  },
+  {
+    index: '03',
+    weeks: 'Phase 03',
+    title: 'Harden',
+    body: 'Checks, baselines, a11y, perf budget. The unglamorous pass that makes the work last past launch week.',
+  },
+  {
+    index: '04',
+    weeks: 'Phase 04',
+    title: 'Ship + operate',
+    body: 'Deploy, DNS, monitoring, backups — then a support window and docs so you own the thing.',
+  },
 ];
 
 export const services: Service[] = [
@@ -35,6 +55,15 @@ export const services: Service[] = [
     timeline: 'Timeline 3–8wk',
     tools: 'Tailwind v4 · tokens · CLI tooling',
   },
+  {
+    index: '04',
+    title: 'Ongoing operations',
+    description:
+      'Deploy pipelines, monitoring, backups, and small iterations — the part most portfolios never show, kept running after launch.',
+    price: 'Retainer',
+    timeline: 'Monthly',
+    tools: 'VPS · CI · Observability',
+  },
 ];
 
 export const serviceIncludes = [
@@ -45,6 +74,38 @@ export const serviceIncludes = [
   'Docs + handoff notes',
   'Post-launch support window',
 ] as const;
+
+// TODO: replace all four entries with real client quotes before launch.
+export const testimonials: Testimonial[] = [
+  {
+    initials: '··',
+    name: 'Client name',
+    role: 'Role — Company',
+    accent: 'client quote',
+    quote: 'TODO — replace with a real client quote before launch.',
+  },
+  {
+    initials: '··',
+    name: 'Client name',
+    role: 'Role — Company',
+    accent: 'working relationship',
+    quote: 'TODO — short sentence on the working relationship.',
+  },
+  {
+    initials: '··',
+    name: 'Client name',
+    role: 'Role — Company',
+    accent: 'outcome',
+    quote: 'TODO — outcome or metric the client would highlight.',
+  },
+  {
+    initials: '··',
+    name: 'Client name',
+    role: 'Role — Company',
+    accent: 'work with morkie',
+    quote: 'TODO — why they would work with morkie again.',
+  },
+];
 
 export const aboutStats = [
   { index: '01', label: 'Projects', value: '15+' },

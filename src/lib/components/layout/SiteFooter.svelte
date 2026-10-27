@@ -8,7 +8,7 @@ import Num from '../ui/Num.svelte';
 	<div class="content-inset py-10 md:py-12">
 		<div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
 			<div class="flex flex-col gap-4">
-				<span class="inline-flex items-center gap-2 font-display text-h3 font-bold tracking-tight"
+				<span class="inline-flex items-center gap-2 font-display text-h3 font-extrabold uppercase tracking-display"
 					><span class="logo-mark" aria-hidden="true"></span>{site.name}<span
 						class="text-accent">.</span
 					></span

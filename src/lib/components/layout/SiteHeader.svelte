@@ -27,7 +27,7 @@ function isActive(href: string): boolean {
 	<div class="content-shell flex items-center justify-between bg-paper">
 		<a
 			href="/"
-			class="flex items-center gap-2 py-6 font-display text-logo font-bold tracking-tight"
+			class="flex items-center gap-2 py-6 font-display text-logo font-extrabold uppercase tracking-display"
 			aria-label="{site.name} — home"
 		>
 			<span class="logo-mark" aria-hidden="true"></span>{site.name}<span class="text-accent">.</span>

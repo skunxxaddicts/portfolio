@@ -1,6 +1,7 @@
 <script lang="ts">
 import { aboutStats } from '#lib/data/content';
 import { site } from '#lib/data/site';
+import Num from '../../ui/Num.svelte';
 import Reveal from '../../ui/Reveal.svelte';
 import Stat from '../../ui/Stat.svelte';
 import Tag from '../../ui/Tag.svelte';
@@ -21,18 +22,21 @@ import Tag from '../../ui/Tag.svelte';
 				<h3 class="font-display text-h4 font-semibold">
 					Developer of working systems, not demo screenshots.
 				</h3>
-				<p class="mono-label mt-auto">{site.owner} · Indonesia</p>
+				<p class="mono-label mt-auto"><Num text="{site.owner} · Indonesia" /></p>
 			</div>
 			<div class="flex flex-col gap-6 text-lead text-ink-soft">
 				<p>
 					I build web software that goes somewhere: client sites on real infrastructure,
-					internal tools with real state machines, and the design system that keeps a 65-repo
-					estate consistent.
+					internal tools with real state machines, and the design system that keeps a <span
+						class="text-accent">65</span
+					>-repo estate consistent.
 				</p>
 				<p>
 					The path ran through a fullstack bootcamp (WPH, Batch Shanghai), then straight into
 					freelance — a production travel platform on a hardened VPS, a live company profile,
-					and a growing family of domain demos ported from a 70-module template monorepo.
+					and a growing family of domain demos ported from a <span class="text-accent"
+						>70</span
+					>-module template monorepo.
 				</p>
 				<p>
 					The through-line is infrastructure-as-practice: shared tokens, CLI tooling, and

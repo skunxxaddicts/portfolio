@@ -1,5 +1,6 @@
 <script lang="ts">
 import { journey } from '#lib/data/content';
+import Num from '../../ui/Num.svelte';
 import Reveal from '../../ui/Reveal.svelte';
 import Tag from '../../ui/Tag.svelte';
 </script>
@@ -18,10 +19,10 @@ import Tag from '../../ui/Tag.svelte';
 				<li
 					class="grid gap-3 border-b border-border py-6 md:grid-cols-[6rem_1.2fr_2fr] md:gap-8"
 				>
-					<span class="font-display text-h4 font-semibold">{entry.year}</span>
+					<span class="font-display text-h4 font-semibold text-accent">{entry.year}</span>
 					<div>
 						<h3 class="font-display text-h5 font-semibold">{entry.title}</h3>
-						<p class="mono-label mt-1">{entry.tag}</p>
+						<p class="mono-label mt-1"><Num text={entry.tag} /></p>
 					</div>
 					<p class="text-base text-ink-soft">{entry.body}</p>
 				</li>

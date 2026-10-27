@@ -3,7 +3,7 @@ import type { ExperienceItem } from '#lib/types';
 export const experience: ExperienceItem[] = [
   {
     period: '2026',
-    title: 'Freelance Frontend Developer',
+    title: 'Freelance Fullstack Developer',
     org: 'Client work — 7Ocean Tour & Travel, Sinergi Warrior',
     detail:
       'Design, build, deploy, and operate production sites end-to-end: Next.js frontends, PocketBase backends, VPS + Cloudflare infrastructure, security hardening.',

@@ -1,5 +1,6 @@
 <script lang="ts">
 import { disciplinesSplit } from '#lib/data/content';
+import Num from '../../ui/Num.svelte';
 import Reveal from '../../ui/Reveal.svelte';
 import Tag from '../../ui/Tag.svelte';
 </script>
@@ -14,7 +15,7 @@ import Tag from '../../ui/Tag.svelte';
 		</Reveal>
 		<p class="mt-6 max-w-2xl text-lead text-ink-soft">
 			A focused practice — most of the calendar lives in two or three disciplines, with the
-			rest serving as connective tissue. These percentages shift each year; this is FY2026.
+			rest serving as connective tissue. These percentages shift each year.
 		</p>
 
 		<div class="mt-12 flex flex-col gap-8">
@@ -22,7 +23,9 @@ import Tag from '../../ui/Tag.svelte';
 				<div>
 					<div class="mb-2 flex items-baseline justify-between gap-4">
 						<h3 class="font-display text-h5 font-semibold">{d.name}</h3>
-						<span class="mono-label">{d.share}% · avg engagement {d.engagement}</span>
+						<span class="mono-label"
+							><Num text="{d.share}% · avg engagement {d.engagement}" /></span
+						>
 					</div>
 					<div
 						class="h-2 w-full border border-border bg-surface"
@@ -34,6 +37,6 @@ import Tag from '../../ui/Tag.svelte';
 				</div>
 			{/each}
 		</div>
-		<p class="mono-label mt-6">`FY 2026 estimate`</p>
+		<p class="mono-label mt-6">`rolling estimate`</p>
 	</div>
 </div>

@@ -18,7 +18,7 @@ import Tag from '../../ui/Tag.svelte';
 				<li
 					class="flex min-h-44 flex-col justify-between gap-6 border-b border-border px-6 py-8 sm:border-l sm:first:border-l-0 lg:border-b-0"
 				>
-					<span class="mono-label">{p.index}</span>
+					<span class="mono-label text-accent">{p.index}</span>
 					<div>
 						<p class="font-display text-h4 font-semibold">{p.title}</p>
 						<p class="mono-label mt-2">{p.traits.join(' · ')}</p>

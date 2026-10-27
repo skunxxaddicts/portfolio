@@ -6,7 +6,6 @@ components: 24 · utils: 2 · routes: 6 · extras: 8
 
 ### layout
 
-- **BgLines**
 - **Seo** `title, description = site.description, path = '/', image = ${site.url}/images/og-image.png,`
 - **SiteFooter**
 - **SiteHeader**
@@ -36,6 +35,7 @@ components: 24 · utils: 2 · routes: 6 · extras: 8
 - **Field** `id, name, label, type = 'text', placeholder, required = false, autocomplete, hint,`
 - **Icon** `name, size = 16`
 - **Marquee** `duration = 28, repeat = 3, children`
+- **Num** `text` — renders digit runs in accent
 - **Reveal** `delay = 0, y = 24, class: className = '', children`
 - **Stat** `value, label, index`
 - **Tag** `index, total = '07', label, class: className = ''`
@@ -64,7 +64,7 @@ components: 24 · utils: 2 · routes: 6 · extras: 8
 
 ## Site @utility recipes
 
-- accent-serif, bg-lines, btn, btn-solid, content-shell, logo-mark, mono-label, stagger-word, tracking-display
+- accent-serif, btn, btn-solid, content-shell, logo-mark, mono-label, nav-label, stagger-word, tracking-display
 
 ## Site-extra tokens (identity — not in kit)
 

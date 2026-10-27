@@ -3,6 +3,7 @@ import Seo from '#lib/components/layout/Seo.svelte';
 import Cta from '#lib/components/sections/Cta.svelte';
 import Button from '#lib/components/ui/Button.svelte';
 import Icon from '#lib/components/ui/Icon.svelte';
+import Num from '#lib/components/ui/Num.svelte';
 import type { PageProps } from './$types';
 
 let { data }: PageProps = $props();
@@ -32,13 +33,13 @@ const meta = $derived([
 			id="work-title"
 			class="mt-6 font-display text-h1 font-extrabold uppercase tracking-display"
 		>
-			{work.title}<span class="text-accent">.</span>
+			<Num text={work.title} /><span class="text-accent">.</span>
 		</h1>
 		<dl class="mt-12 grid grid-cols-2 border-t border-border sm:grid-cols-3 lg:grid-cols-6">
 			{#each meta as m (m.label)}
 				<div class="flex flex-col gap-1 border-b border-border py-5 sm:border-l sm:pl-5 sm:first:border-l-0 sm:first:pl-0 lg:border-b-0">
 					<dt class="mono-label">[ {m.label} ]</dt>
-					<dd class="text-base font-medium">{m.value}</dd>
+					<dd class="text-base font-medium"><Num text={m.value} /></dd>
 				</div>
 			{/each}
 		</dl>
@@ -61,7 +62,7 @@ const meta = $derived([
 			<ul class="mt-5 divide-y divide-border border-y border-border">
 				{#each work.highlights as h, i (h)}
 					<li class="flex items-baseline gap-4 py-3">
-						<span class="mono-label">{String(i + 1).padStart(2, '0')}</span>
+						<span class="mono-label text-accent">{String(i + 1).padStart(2, '0')}</span>
 						<span class="text-base text-ink-soft">{h}</span>
 					</li>
 				{/each}
@@ -121,14 +122,14 @@ const meta = $derived([
 	<div class="content-shell flex items-center justify-between gap-4 py-10">
 		<div>
 			<p class="mono-label">That Was</p>
-			<p class="mt-1 font-display text-h2 font-semibold tracking-tight">{work.title}</p>
+			<p class="mt-1 font-display text-h2 font-semibold tracking-tight"><Num text={work.title} /></p>
 		</div>
 		<div class="text-right">
 			<p class="mono-label">Next</p>
 			<p
 				class="mt-1 inline-flex items-center gap-2 font-display text-h4 font-semibold tracking-tight"
 			>
-				{next.title}
+				<Num text={next.title} />
 				<Icon name="arrow-right" size={18} />
 			</p>
 		</div>

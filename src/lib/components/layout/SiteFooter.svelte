@@ -1,6 +1,7 @@
 <script lang="ts">
 import { navItems, site, socialLinks } from '#lib/data/site';
 import Icon from '../ui/Icon.svelte';
+import Num from '../ui/Num.svelte';
 </script>
 
 <footer class="border-t border-border bg-foreground text-paper">
@@ -12,8 +13,8 @@ import Icon from '../ui/Icon.svelte';
 						class="text-accent">.</span
 					></span
 				>
-				<p class="max-w-xs text-base text-paper/70">{site.tagline}</p>
-				<p class="mono-label text-paper/50">{site.edition}</p>
+				<p class="max-w-xs text-base text-paper/70"><Num text={site.tagline} /></p>
+				<p class="mono-label text-paper/50"><Num text={site.edition} /></p>
 			</div>
 
 			<nav aria-label="Pages" class="flex flex-col gap-1">
@@ -24,14 +25,14 @@ import Icon from '../ui/Icon.svelte';
 						class="group flex items-center gap-2 py-3 text-h5 text-paper transition-colors hover:text-paper/60"
 					>
 						{item.label}
-						<sup class="mono-label text-paper/50">{item.index}</sup>
+						<sup class="mono-label text-accent">{item.index}</sup>
 					</a>
 				{/each}
 				<a
 					href="/contact"
 					class="group flex items-center gap-2 py-3 text-h5 text-paper transition-colors hover:text-paper/60"
 				>
-					Contact <sup class="mono-label text-paper/50">04</sup>
+					Contact <sup class="mono-label text-accent">04</sup>
 				</a>
 			</nav>
 
@@ -51,15 +52,15 @@ import Icon from '../ui/Icon.svelte';
 			</nav>
 
 			<div class="flex flex-col gap-2 md:items-end">
-				<p class="mono-label text-paper/50">{site.coordinates}</p>
-				<p class="mono-label text-paper/50">Last updated {site.lastUpdated}</p>
+				<p class="mono-label text-paper/50"><Num text={site.coordinates} /></p>
+				<p class="mono-label text-paper/50">Last updated <Num text={site.lastUpdated} /></p>
 			</div>
 		</div>
 
 		<div
 			class="mt-10 flex flex-col gap-2 border-t border-paper/10 pt-6 md:flex-row md:items-center md:justify-between"
 		>
-			<p class="mono-label text-paper/50">{site.copyright}</p>
+			<p class="mono-label text-paper/50"><Num text={site.copyright} /></p>
 			<p class="mono-label text-paper/50">Built with SvelteKit</p>
 		</div>
 	</div>

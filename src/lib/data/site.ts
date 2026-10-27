@@ -3,10 +3,10 @@ import type { NavItem, SocialLink } from '#lib/types';
 export const site = {
   name: 'morkie',
   owner: 'skunxxaddicts',
-  tagline: 'Frontend developer — production sites, internal tools, design systems.',
+  tagline: 'Fullstack developer — production sites, internal tools, design systems.',
   edition: 'v2.0 · 2026 edition.',
   description:
-    'morkie is the independent dev practice of skunxxaddicts — Next.js and SvelteKit frontends, full-stack internal tools, and a shared CSS kit run across a 60+ repo estate.',
+    'morkie is the independent dev practice of skunxxaddicts — Next.js and SvelteKit frontends, fullstack internal tools, and a shared CSS kit run across a 60+ repo estate.',
   email: 'skunxxaddicts@gmail.com',
   url: 'https://morkie.is-a.dev',
   coordinates: 'ID — Indonesia · UTC+7',
@@ -31,6 +31,7 @@ export const disciplines = [
   'TypeScript',
   'SvelteKit',
   'Next.js',
+  'Node.js',
   'Go',
   'Bun',
   'Tailwind v4',
@@ -44,13 +45,13 @@ export const heroFacts = [
   {
     index: '01',
     label: 'Discipline',
-    title: 'Frontend + tooling',
+    title: 'Fullstack + tooling',
     body: 'Interfaces, design systems, dev infrastructure. Built end-to-end.',
   },
   {
     index: '02',
     label: 'Practice',
-    title: 'Full-stack builds',
+    title: 'Fullstack builds',
     body: 'Web apps, realtime features, VPS deploys. One operator, whole stack.',
   },
   {

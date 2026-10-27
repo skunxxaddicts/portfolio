@@ -2,6 +2,7 @@
 import { site } from '#lib/data/site';
 import type { ReposResult } from '#lib/github';
 import Icon from '../ui/Icon.svelte';
+import Num from '../ui/Num.svelte';
 import Reveal from '../ui/Reveal.svelte';
 import Tag from '../ui/Tag.svelte';
 
@@ -42,7 +43,9 @@ const fmt = (iso: string) =>
 						</span>
 						<span class="text-base text-ink-soft">{repo.description ?? '—'}</span>
 						<span class="mono-label">
-							{repo.language ?? 'mixed'} · ★ {repo.stars} · {fmt(repo.updatedAt)}
+							{repo.language ?? 'mixed'} · ★ <Num text={repo.stars} /> · <Num
+								text={fmt(repo.updatedAt)}
+							/>
 						</span>
 					</a>
 				</li>

@@ -1,5 +1,6 @@
 <script lang="ts">
 import { testimonials } from '#lib/data/content';
+import Num from '../ui/Num.svelte';
 import Reveal from '../ui/Reveal.svelte';
 import Tag from '../ui/Tag.svelte';
 </script>
@@ -30,7 +31,7 @@ import Tag from '../ui/Tag.svelte';
 							<p class="font-display text-h5 font-semibold">{t.name}</p>
 							<p class="mono-label mt-1">{t.role}</p>
 						</div>
-						<span class="mono-label">05/05</span>
+						<span class="mono-label"><Num text="05/05" /></span>
 					</div>
 				</li>
 			{/each}

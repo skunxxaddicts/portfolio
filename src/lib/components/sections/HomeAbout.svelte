@@ -28,7 +28,7 @@ import Tag from '../ui/Tag.svelte';
 			<div class="flex flex-col gap-8">
 				<p class="text-lead text-ink-soft">
 					Client sites that run on real servers, case-study apps with real state machines,
-					and a shared CSS kit that keeps 65 repos honest.
+					and a shared CSS kit that keeps <span class="text-accent">65</span> repos honest.
 				</p>
 				<div class="grid grid-cols-3 gap-6">
 					{#each homeStats as stat (stat.label)}
@@ -38,7 +38,7 @@ import Tag from '../ui/Tag.svelte';
 				<div class="border border-border bg-surface p-6">
 					<span class="mono-label">[ MORKIE ]</span>
 					<p class="mt-3 text-base text-ink-soft">
-						Independent dev practice — frontend, tooling, infrastructure.
+						Independent dev practice — fullstack, tooling, infrastructure.
 					</p>
 					<div class="mt-5">
 						<Button href="/about" icon="arrow-right">more about me</Button>

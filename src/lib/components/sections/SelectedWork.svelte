@@ -1,6 +1,7 @@
 <script lang="ts">
 import { works } from '#lib/data/works';
 import { cn } from '#lib/utils/cn';
+import Num from '../ui/Num.svelte';
 import Reveal from '../ui/Reveal.svelte';
 import Tag from '../ui/Tag.svelte';
 
@@ -40,7 +41,7 @@ let { index = '02' }: Props = $props();
 					{:else}
 						<div class="flex aspect-[5/4] flex-col justify-between p-6">
 							<div class="flex items-start justify-between">
-								<span class={cn('mono-label', work.dark && 'text-paper/50')}>
+								<span class="mono-label text-accent">
 									[ {work.index} ]
 								</span>
 								<span class={cn('mono-label', work.dark && 'text-paper/50')}>
@@ -50,7 +51,7 @@ let { index = '02' }: Props = $props();
 							<p
 								class="font-display text-h2 font-extrabold uppercase leading-none tracking-tight transition-transform duration-700 ease-out group-hover:-translate-y-1"
 							>
-								{work.title}
+								<Num text={work.title} />
 							</p>
 							<p class={cn('mono-label', work.dark && 'text-paper/50')}>
 								{work.stack.slice(0, 3).join(' · ')}
@@ -60,11 +61,11 @@ let { index = '02' }: Props = $props();
 					<div class="flex items-start justify-between gap-4 border-t border-border p-5">
 						<div>
 							<p class="font-display text-h5 font-semibold">
-								{work.image ? work.title : work.tagline}
+								<Num text={work.image ? work.title : work.tagline} />
 							</p>
 							<p class={cn('mono-label mt-1', work.dark && 'text-paper/50')}>{work.sector}</p>
 						</div>
-						<span class={cn('mono-label', work.dark && 'text-paper/50')}>{work.year}</span>
+						<span class="mono-label text-accent"><Num text={work.year} /></span>
 					</div>
 				</a>
 			{/each}

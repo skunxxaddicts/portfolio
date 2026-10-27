@@ -2,6 +2,7 @@
 import { nowItems } from '#lib/data/content';
 import { site } from '#lib/data/site';
 import Icon from '../../ui/Icon.svelte';
+import Num from '../../ui/Num.svelte';
 import Reveal from '../../ui/Reveal.svelte';
 
 const iconMap = {
@@ -24,13 +25,13 @@ const iconMap = {
 			An always-current snapshot of what's on the desk. Closer to a journal than a portfolio —
 			updated whenever it stops being true.
 		</p>
-		<p class="mono-label mt-4">Last updated · {site.lastUpdated}</p>
+		<p class="mono-label mt-4">Last updated · <Num text={site.lastUpdated} /></p>
 
 		<ul class="mt-12 border-t border-border">
 			{#each nowItems as item (item.text)}
 				<li class="flex items-center gap-4 border-b border-border py-4">
 					<Icon name={iconMap[item.icon]} size={18} />
-					<span class="text-base">{item.text}</span>
+					<span class="text-base"><Num text={item.text} /></span>
 				</li>
 			{/each}
 		</ul>

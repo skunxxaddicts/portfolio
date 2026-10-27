@@ -40,7 +40,7 @@ export interface AccordionEntry {
 						openId = open ? null : item.id;
 					}}
 				>
-					<span class="mono-label">-{item.id}</span>
+					<span class="mono-label">-<span class="text-accent">{item.id}</span></span>
 					<span class="flex-1 font-display text-h4 font-semibold uppercase tracking-tight">
 						{item.title}
 					</span>

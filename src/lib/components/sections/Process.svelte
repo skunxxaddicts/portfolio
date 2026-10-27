@@ -1,5 +1,6 @@
 <script lang="ts">
 import { processSteps } from '#lib/data/content';
+import Num from '../ui/Num.svelte';
 import Reveal from '../ui/Reveal.svelte';
 import Tag from '../ui/Tag.svelte';
 </script>
@@ -18,10 +19,10 @@ import Tag from '../ui/Tag.svelte';
 				<li
 					class="flex min-h-64 flex-col justify-between gap-6 border-b border-border px-6 py-8 sm:border-l sm:first:border-l-0 lg:border-b-0"
 				>
-					<span class="font-display text-h2 font-semibold text-line-strong">{step.index}</span>
+					<span class="font-display text-h2 font-semibold text-accent">{step.index}</span>
 					<p class="text-base text-ink-soft">{step.body}</p>
 					<div class="flex flex-col gap-1">
-						<span class="mono-label">{step.weeks}</span>
+						<span class="mono-label"><Num text={step.weeks} /></span>
 						<span class="font-display text-h4 font-semibold">{step.title}</span>
 					</div>
 				</li>

@@ -41,7 +41,7 @@ export const services: Service[] = [
     index: '02',
     title: 'Internal tools & dashboards',
     description:
-      'Booking engines, dispatch boards, admin panels — full-stack builds with realtime updates, guarded state machines, and audit trails.',
+      'Booking engines, dispatch boards, admin panels — fullstack builds with realtime updates, guarded state machines, and audit trails.',
     price: 'Project-based',
     timeline: 'Timeline 4–10wk',
     tools: 'Go · Bun · SSE/WS · Postgres',
@@ -130,7 +130,7 @@ export const principles: Principle[] = [
 export const journey: JourneyEntry[] = [
   {
     year: '2026',
-    title: 'Freelance frontend developer',
+    title: 'Freelance fullstack developer',
     subtitle: 'Client work — 7Ocean Tour & Travel, Sinergi Warrior',
     tag: 'Independent',
     body: 'Design, build, deploy, and operate production sites end-to-end: Next.js frontends, PocketBase backends, VPS + Cloudflare infrastructure, security hardening.',
@@ -160,12 +160,12 @@ export const journey: JourneyEntry[] = [
 
 export const disciplinesSplit = [
   {
-    name: 'Frontend builds',
+    name: 'Fullstack builds',
     share: 45,
     engagement: 'SvelteKit · Next.js',
   },
   {
-    name: 'Full-stack tooling',
+    name: 'Fullstack tooling',
     share: 30,
     engagement: 'Go · Bun · realtime',
   },

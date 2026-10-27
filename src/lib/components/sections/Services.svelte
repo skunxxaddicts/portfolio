@@ -1,6 +1,7 @@
 <script lang="ts">
 import { serviceIncludes, services } from '#lib/data/content';
 import Accordion, { type AccordionEntry } from '../ui/Accordion.svelte';
+import Num from '../ui/Num.svelte';
 import Reveal from '../ui/Reveal.svelte';
 import Tag from '../ui/Tag.svelte';
 
@@ -29,7 +30,7 @@ let { index = '06' }: Props = $props();
 				single point of contact for the duration.
 			</p>
 			<p class="mono-label inline-flex w-fit border border-foreground px-3 py-2 text-foreground">
-				Booking Q3 - Q4 2026
+				Now booking
 			</p>
 			<div>
 				<p class="mono-label pb-3">Every engagement includes</p>
@@ -52,9 +53,9 @@ let { index = '06' }: Props = $props();
 						<div class="flex flex-col gap-4">
 							<p class="max-w-lg text-base text-ink-soft">{s.description}</p>
 							<p class="mono-label flex flex-wrap gap-x-6 gap-y-1">
-								<span class="text-foreground">{s.price}</span>
-								<span>{s.timeline}</span>
-								<span>{s.tools}</span>
+								<span class="text-foreground"><Num text={s.price} /></span>
+								<span><Num text={s.timeline} /></span>
+								<span><Num text={s.tools} /></span>
 							</p>
 						</div>
 					{/if}

@@ -2,6 +2,7 @@
 import Seo from '#lib/components/layout/Seo.svelte';
 import Button from '#lib/components/ui/Button.svelte';
 import Field from '#lib/components/ui/Field.svelte';
+import Num from '#lib/components/ui/Num.svelte';
 import Textarea from '#lib/components/ui/Textarea.svelte';
 import { site } from '#lib/data/site';
 import { PUBLIC_FORM_ENDPOINT as endpoint } from '$app/env/public';
@@ -23,10 +24,10 @@ let sent = $state<'idle' | 'success' | 'error'>('idle');
 			</h1>
 			<p class="mt-6 max-w-md text-lead text-ink-soft">
 				Open for freelance — production sites, internal tools, design-system work. Tell me
-				what you're building — I reply within 24 hours.
+				what you're building — I reply within <span class="text-accent">24</span> hours.
 			</p>
 			<div class="mono-label mt-10 flex flex-col gap-2">
-				<span>{site.coordinates}</span>
+				<span><Num text={site.coordinates} /></span>
 				<a href="mailto:{site.email}" class="text-foreground underline underline-offset-4"
 					>{site.email}</a
 				>
@@ -38,7 +39,7 @@ let sent = $state<'idle' | 'success' | 'error'>('idle');
 				<div role="status" class="border border-foreground bg-surface p-8">
 					<p class="font-display text-h4 font-semibold">Message sent.</p>
 					<p class="mt-2 text-base text-ink-soft">
-						Thank you — I'll get back to you within 24 hours.
+						Thank you — I'll get back to you within <span class="text-accent">24</span> hours.
 					</p>
 				</div>
 			{:else}

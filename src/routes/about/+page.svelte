@@ -7,6 +7,7 @@ import Now from '#lib/components/sections/about/Now.svelte';
 import Principles from '#lib/components/sections/about/Principles.svelte';
 import Recognition from '#lib/components/sections/about/Recognition.svelte';
 import Cta from '#lib/components/sections/Cta.svelte';
+import Num from '#lib/components/ui/Num.svelte';
 import { site } from '#lib/data/site';
 </script>
 
@@ -14,7 +15,7 @@ import { site } from '#lib/data/site';
 
 <section aria-labelledby="about-hero" class="relative overflow-hidden border-b border-border">
 	<div class="content-shell relative py-16 md:py-24">
-		<p class="mono-label">{site.coordinates}</p>
+		<p class="mono-label"><Num text={site.coordinates} /></p>
 		<h1
 			id="about-hero"
 			class="mt-4 font-display text-h1 font-extrabold uppercase tracking-display"

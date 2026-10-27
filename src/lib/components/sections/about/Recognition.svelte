@@ -1,5 +1,6 @@
 <script lang="ts">
 import { recognition } from '#lib/data/content';
+import Num from '../../ui/Num.svelte';
 import Reveal from '../../ui/Reveal.svelte';
 import Tag from '../../ui/Tag.svelte';
 </script>
@@ -18,8 +19,8 @@ import Tag from '../../ui/Tag.svelte';
 				<li
 					class="flex items-baseline gap-6 border-b border-border py-4 sm:odd:border-r sm:odd:pr-8 sm:even:pl-8"
 				>
-					<span class="mono-label shrink-0">{r.year}</span>
-					<span class="text-base">{r.item}</span>
+					<span class="mono-label shrink-0 text-accent">{r.year}</span>
+					<span class="text-base"><Num text={r.item} /></span>
 				</li>
 			{/each}
 		</ul>

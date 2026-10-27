@@ -8,8 +8,12 @@
 		scroll-behavior: smooth;
 	}
 
+	html {
+		@apply bg-paper;
+	}
+
 	body {
-		@apply bg-paper font-display text-base text-foreground antialiased;
+		@apply mx-auto max-w-[90rem] bg-paper font-display text-base text-foreground antialiased;
 	}
 
 	::selection {
@@ -35,6 +39,9 @@
 	inset: 0;
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(12, 1fr);
+	}
 	pointer-events: none;
 	& > span {
 		border-left: 1px solid var(--color-border);
@@ -52,16 +59,30 @@
 	color: var(--color-accent);
 }
 
-/* accent petal behind the hero wordmark's first letter (em-scaled) */
-@utility hero-blob {
-	position: absolute;
-	left: -0.05em;
-	top: 0.14em;
-	height: 0.46em;
-	width: 0.42em;
-	background: var(--color-accent);
-	border-radius: 58% 58% 58% 8%;
-	transform: rotate(10deg);
+/* template monogram — ink squircle with a vermilion quarter-disc, em-scaled */
+@utility logo-mark {
+	position: relative;
+	display: inline-block;
+	inline-size: 0.72em;
+	block-size: 0.72em;
+	background: var(--color-foreground);
+	border-radius: 48% 48% 12% 48%;
+	overflow: hidden;
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		inline-size: 52%;
+		block-size: 52%;
+		background: var(--color-accent);
+		border-top-left-radius: 100%;
+	}
+}
+
+/* display tracking measured from the reference (-3%) */
+@utility tracking-display {
+	letter-spacing: -0.03em;
 }
 
 /* hero headline word — hidden until the reveal container fires (JS-only gate) */
@@ -89,9 +110,10 @@
 	color: var(--color-slate);
 }
 
-/* bordered content container used by every section */
+/* bordered frame pinned to viewport edges; content insets via padding */
 @utility content-shell {
-	margin-inline: var(--spacing-container);
+	margin-inline: 0;
+	padding-inline: var(--spacing-container);
 	border-left: 1px solid var(--color-border);
 	border-right: 1px solid var(--color-border);
 }

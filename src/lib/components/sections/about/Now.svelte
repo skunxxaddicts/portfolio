@@ -14,7 +14,7 @@ const iconMap = {
 </script>
 
 <div class="border-b border-border">
-	<div class="py-section">
+	<div class="px-6 py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				What I'm doing this <span class="accent-serif">month.</span>
@@ -26,9 +26,9 @@ const iconMap = {
 		</p>
 		<p class="mono-label mt-4">Last updated · {site.lastUpdated}</p>
 
-		<ul class="mt-10 border-t border-border">
+		<ul class="-mx-6 mt-12 border-t border-border">
 			{#each nowItems as item (item.text)}
-				<li class="flex items-center gap-4 border-b border-border py-4">
+				<li class="flex items-center gap-4 border-b border-border px-6 py-4">
 					<Icon name={iconMap[item.icon]} size={18} />
 					<span class="text-base">{item.text}</span>
 				</li>

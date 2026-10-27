@@ -1,5 +1,4 @@
 <script lang="ts">
-import BgLines from '#lib/components/layout/BgLines.svelte';
 import Seo from '#lib/components/layout/Seo.svelte';
 import Background from '#lib/components/sections/about/Background.svelte';
 import Disciplines from '#lib/components/sections/about/Disciplines.svelte';
@@ -14,12 +13,11 @@ import { site } from '#lib/data/site';
 <Seo title="About" path="/about" description="morkie — independent dev practice. Background, principles, journey and what's being built this month." />
 
 <section aria-labelledby="about-hero" class="relative overflow-hidden border-b border-border">
-	<BgLines />
 	<div class="content-shell relative py-16 md:py-24">
 		<p class="mono-label">{site.coordinates}</p>
 		<h1
 			id="about-hero"
-			class="mt-4 font-display text-h1 font-extrabold uppercase tracking-tight"
+			class="mt-4 font-display text-h1 font-extrabold uppercase tracking-display"
 		>
 			Hello,<br />I'm morkie<span class="text-accent">.</span>
 		</h1>

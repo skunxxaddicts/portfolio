@@ -1,18 +1,16 @@
 <script lang="ts">
 import { site } from '#lib/data/site';
-import BgLines from '../layout/BgLines.svelte';
 import Button from '../ui/Button.svelte';
 import Reveal from '../ui/Reveal.svelte';
 </script>
 
 <section aria-labelledby="cta-title" class="relative overflow-hidden">
-	<BgLines />
 	<div class="content-shell relative py-section text-center">
 		<Reveal>
 			<p class="mono-label">{site.coordinates}</p>
 			<h2
 				id="cta-title"
-				class="mx-auto mt-4 font-display text-cta font-extrabold uppercase leading-none tracking-tight"
+				class="mx-auto mt-4 font-display text-cta font-extrabold uppercase tracking-display"
 			>
 				Ready to<br />Create <span class="accent-serif">Magic?</span>
 			</h2>

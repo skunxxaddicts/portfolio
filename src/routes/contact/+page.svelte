@@ -1,5 +1,4 @@
 <script lang="ts">
-import BgLines from '#lib/components/layout/BgLines.svelte';
 import Seo from '#lib/components/layout/Seo.svelte';
 import Button from '#lib/components/ui/Button.svelte';
 import Field from '#lib/components/ui/Field.svelte';
@@ -13,13 +12,12 @@ let sent = $state<'idle' | 'success' | 'error'>('idle');
 <Seo title="Contact" path="/contact" description="Get in touch with morkie — production sites, internal tools, design systems. Replies within 24 hours." />
 
 <section aria-labelledby="contact-title" class="relative overflow-hidden">
-	<BgLines />
 	<div class="content-shell relative grid gap-12 py-16 md:py-24 lg:grid-cols-2">
 		<div>
 			<p class="mono-label">[ Contact ] — Let's talk</p>
 			<h1
 				id="contact-title"
-				class="mt-4 font-display text-h1 font-extrabold uppercase tracking-tight"
+				class="mt-4 font-display text-h1 font-extrabold uppercase tracking-display"
 			>
 				Get in <span class="accent-serif">touch.</span>
 			</h1>

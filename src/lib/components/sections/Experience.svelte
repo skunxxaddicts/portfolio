@@ -6,16 +6,16 @@ import Tag from '../ui/Tag.svelte';
 
 <div class="border-b border-border">
 	<Tag index="03" label="experience" />
-	<div class="py-section">
+	<div class="px-6 py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				Where the <span class="accent-serif">reps</span> happened.
 			</h2>
 		</Reveal>
 
-		<ol class="mt-10 border-t border-border">
+		<ol class="-mx-6 mt-12 border-t border-border">
 			{#each experience as item (item.title)}
-				<li class="grid gap-2 border-b border-border py-6 md:grid-cols-[10rem_1fr_1.4fr] md:gap-8">
+				<li class="grid gap-2 border-b border-border px-6 py-6 md:grid-cols-[10rem_1fr_1.4fr] md:gap-8">
 					<span class="mono-label">{item.period}</span>
 					<div>
 						<h3 class="font-display text-h5 font-semibold">{item.title}</h3>

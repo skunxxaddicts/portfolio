@@ -12,14 +12,14 @@ let { index = '02' }: Props = $props();
 
 <div class="border-b border-border">
 	<Tag {index} label="selected work" />
-	<div class="py-section">
+	<div class="px-6 py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				Selected <span class="accent-serif">Work.</span>
 			</h2>
 		</Reveal>
 
-		<div class="mt-10 grid gap-px border border-border bg-border sm:grid-cols-2">
+		<div class="-mx-6 mt-12 grid gap-px border border-border bg-border sm:grid-cols-2">
 			{#each works as work (work.slug)}
 				<a
 					href="/work/{work.slug}"
@@ -29,7 +29,7 @@ let { index = '02' }: Props = $props();
 					)}
 				>
 					{#if work.image}
-						<div class="aspect-[4/3] overflow-hidden">
+						<div class="aspect-[5/4] overflow-hidden">
 							<img
 								src={work.image}
 								alt={work.imageAlt}
@@ -38,7 +38,7 @@ let { index = '02' }: Props = $props();
 							/>
 						</div>
 					{:else}
-						<div class="flex aspect-[4/3] flex-col justify-between p-6">
+						<div class="flex aspect-[5/4] flex-col justify-between p-6">
 							<div class="flex items-start justify-between">
 								<span class={cn('mono-label', work.dark && 'text-paper/50')}>
 									[ {work.index} ]

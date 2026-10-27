@@ -34,7 +34,7 @@ export interface AccordionEntry {
 					id="acc-btn-{item.id}"
 					aria-expanded={open}
 					aria-controls="acc-panel-{item.id}"
-					class="flex w-full cursor-pointer items-baseline justify-between gap-4 py-6 text-left"
+					class="flex w-full cursor-pointer items-baseline justify-between gap-4 py-9 text-left"
 					onclick={() => {
 						touched = true;
 						openId = open ? null : item.id;
@@ -46,7 +46,7 @@ export interface AccordionEntry {
 					</span>
 					{#if item.meta}<span class="mono-label hidden sm:inline">{item.meta}</span>{/if}
 					<span
-						class="inline-flex size-9 shrink-0 items-center justify-center self-center overflow-clip bg-foreground text-paper md:size-10"
+						class="inline-flex size-9 shrink-0 items-center justify-center self-center overflow-clip bg-foreground text-paper"
 					>
 						<span
 							class={cn(

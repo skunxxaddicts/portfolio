@@ -6,7 +6,7 @@ import Tag from '../../ui/Tag.svelte';
 
 <div class="border-b border-border">
 	<Tag index="04" total="06" label="disciplines" />
-	<div class="py-section">
+	<div class="px-6 py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				How <span class="accent-serif">time</span> gets split.
@@ -17,7 +17,7 @@ import Tag from '../../ui/Tag.svelte';
 			rest serving as connective tissue. These percentages shift each year; this is FY2026.
 		</p>
 
-		<div class="mt-10 flex flex-col gap-8">
+		<div class="mt-12 flex flex-col gap-8">
 			{#each disciplinesSplit as d (d.name)}
 				<div>
 					<div class="mb-2 flex items-baseline justify-between gap-4">

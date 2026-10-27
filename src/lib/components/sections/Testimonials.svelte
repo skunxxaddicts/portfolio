@@ -6,17 +6,17 @@ import Tag from '../ui/Tag.svelte';
 
 <div class="border-b border-border">
 	<Tag index="07" label="testimonials" />
-	<div class="py-section">
+	<div class="px-6 py-section">
 		<Reveal>
 			<h2 class="font-display text-h2 font-semibold tracking-tight">
 				What clients <span class="accent-serif">say.</span>
 			</h2>
 		</Reveal>
 
-		<ul class="mt-10 grid gap-px border border-border bg-border sm:grid-cols-2">
+		<ul class="-mx-6 mt-12 grid gap-px border border-border bg-border sm:grid-cols-2">
 			{#each testimonials as t (t.quote)}
 				{@const i = t.quote.indexOf(t.accent)}
-				<li class="flex flex-col justify-between gap-8 bg-paper p-6 md:p-8">
+				<li class="flex flex-col justify-between gap-8 bg-paper px-6 py-8">
 					<blockquote class="font-serif text-lead italic text-ink-soft">
 						"{#if i >= 0}{t.quote.slice(0, i)}<span class="accent-serif">{t.accent}</span
 							>{t.quote.slice(i + t.accent.length)}{:else}{t.quote}{/if}"

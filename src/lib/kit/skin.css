@@ -27,7 +27,7 @@
 	--text-h1: clamp(2.75rem, 7vw, 5.94rem);
 	--text-h1--line-height: 0.95;
 	--text-h2: clamp(2rem, 5vw, 4rem);
-	--text-h2--line-height: 1.05;
+	--text-h2--line-height: 0.95;
 	--text-h3: clamp(1.5rem, 3vw, 2.25rem);
 	--text-h3--line-height: 1.2;
 	--text-h4: clamp(1.13rem, 2vw, 1.38rem);
@@ -36,15 +36,15 @@
 	--text-h5--line-height: 1.3;
 	--text-lead: clamp(1.06rem, 1.8vw, 1.38rem);
 	--text-lead--line-height: 1.4;
-	--text-base: clamp(0.88rem, 1.2vw, 1.13rem);
-	--text-base--line-height: 1.5;
-	--text-eyebrow: 0.69rem;
-	--text-eyebrow--line-height: 1.2;
+	--text-base: clamp(0.88rem, 1.255vw, 1.13rem);
+	--text-base--line-height: 1.3;
+	--text-eyebrow: 0.75rem;
+	--text-eyebrow--line-height: 1.4;
 	--text-logo: 1.38rem;
 
 	/* ── spacing / rhythm ──────────────────────────────────── */
-	--spacing-section: clamp(4rem, 10vw, 9rem);
-	--spacing-container: clamp(1.25rem, 4vw, 4rem);
+	--spacing-section: clamp(3rem, 6vw, 6rem);
+	--spacing-container: 1.5rem;
 
 	/* ── motion ────────────────────────────────────────────── */
 	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);

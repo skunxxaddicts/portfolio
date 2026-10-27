@@ -1,11 +1,11 @@
 <script lang="ts">
-import { PUBLIC_FORM_ENDPOINT as endpoint } from '$app/env/public';
 import BgLines from '#lib/components/layout/BgLines.svelte';
 import Seo from '#lib/components/layout/Seo.svelte';
 import Button from '#lib/components/ui/Button.svelte';
 import Field from '#lib/components/ui/Field.svelte';
 import Textarea from '#lib/components/ui/Textarea.svelte';
 import { site } from '#lib/data/site';
+import { PUBLIC_FORM_ENDPOINT as endpoint } from '$app/env/public';
 
 let sent = $state<'idle' | 'success' | 'error'>('idle');
 </script>

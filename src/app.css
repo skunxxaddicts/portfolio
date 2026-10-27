@@ -44,7 +44,8 @@
 	inline-size: 0.72em;
 	block-size: 0.72em;
 	background: currentColor;
-	border-radius: 48% 48% 12% 48%;
+	--mark-radius: 48% 48% 12% 48%;
+	border-radius: var(--mark-radius);
 	overflow: hidden;
 	&::after {
 		content: '';
@@ -61,12 +62,12 @@
 /* hollow monogram — continuous 2px line: ink on the squircle; the quarter's arc is accent via its top+left borders (right/bottom unset so they can't double the squircle edge) */
 @utility logo-mark-outline {
 	background: transparent;
-	border: 2px solid currentColor;
+	border: 2px solid color-mix(in srgb, currentColor 50%, transparent);
 	overflow: visible;
 	&::after {
 		background: transparent;
-		border-top: 2px solid var(--color-accent);
-		border-left: 2px solid var(--color-accent);
+		border-top: 2px solid color-mix(in srgb, var(--color-accent) 60%, transparent);
+		border-left: 2px solid color-mix(in srgb, var(--color-accent) 60%, transparent);
 	}
 	/* crop window over the quarter's bounds + border band */
 	.mark-crop {
@@ -75,7 +76,6 @@
 		bottom: -2px;
 		inline-size: calc(52% + 2px);
 		block-size: calc(52% + 2px);
-		border-top-left-radius: 100%;
 		overflow: hidden;
 	}
 	/* duplicated squircle ring painted accent — registers on the ink border band */
@@ -85,8 +85,8 @@
 		bottom: 0;
 		inline-size: 0.72em;
 		block-size: 0.72em;
-		border: 2px solid var(--color-accent);
-		border-radius: inherit;
+		border: 2px solid color-mix(in srgb, var(--color-accent) 60%, transparent);
+		border-radius: var(--mark-radius);
 	}
 }
 

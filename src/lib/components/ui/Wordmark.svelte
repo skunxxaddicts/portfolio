@@ -6,7 +6,7 @@ let { class: cls = '', outline = false }: { class?: string; outline?: boolean } 
 
 <span
 	class="inline-flex items-baseline gap-[0.06em] whitespace-nowrap font-display font-extrabold uppercase tracking-display {cls} {outline
-		? 'text-transparent [-webkit-text-stroke:2px_var(--color-foreground)]'
+		? 'text-transparent [-webkit-text-stroke:2px_color-mix(in_srgb,var(--color-foreground)_50%,transparent)]'
 		: ''}"
 >
 	<span
@@ -16,7 +16,9 @@ let { class: cls = '', outline = false }: { class?: string; outline?: boolean } 
 	>
 	<span
 		>{site.name}<span
-			class={outline ? '[-webkit-text-stroke:2px_var(--color-accent)]' : 'text-accent'}
+			class={outline
+				? '[-webkit-text-stroke:2px_color-mix(in_srgb,var(--color-accent)_60%,transparent)]'
+				: 'text-accent'}
 			>.</span
 		></span
 	>

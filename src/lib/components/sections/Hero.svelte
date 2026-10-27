@@ -48,7 +48,7 @@ const leadWords =
 
 		<div class="grid border-t border-border sm:grid-cols-2 lg:grid-cols-4">
 			{#each heroFacts as fact (fact.index)}
-				<div class="flex flex-col gap-2 border-b border-border py-6 pr-6 sm:border-b-0 sm:border-l sm:pl-6 first:sm:border-l-0 first:sm:pl-0">
+				<div class="flex flex-col gap-2 border-b border-border py-6 pr-6 sm:border-b-0 sm:border-l sm:pl-6 first:sm:border-l-0">
 					<span class="mono-label">[<span class="text-accent">{fact.index}</span>] {fact.label}</span>
 					<p class="font-display text-h5 font-semibold"><Num text={fact.title} /></p>
 					<p class="text-base text-ink-soft"><Num text={fact.body} /></p>

@@ -12,34 +12,40 @@ const leadWords =
 
 <section aria-labelledby="hero-title" class="relative overflow-hidden border-b border-border">
 	<div class="content-shell relative">
-		<div
-			class="mono-label flex flex-col gap-1 border-b border-border py-4 sm:flex-row sm:items-center sm:justify-between"
-		>
-			<span><Num text={site.coordinates} /></span>
-			<span>- FOLIO/<span class="text-accent">02</span></span>
-			<span>{site.name} — independent dev practice, <Num text={site.established} /></span>
-		</div>
+		<div class="flex min-h-svh flex-col">
+			<div
+				class="mono-label flex flex-col gap-1 border-b border-border py-4 sm:flex-row sm:items-center sm:justify-between"
+			>
+				<span><Num text={site.coordinates} /></span>
+				<span>- FOLIO/<span class="text-accent">02</span></span>
+				<span>{site.name} — independent dev practice, <Num text={site.established} /></span>
+			</div>
 
-		<div class="border-b border-border">
-			<img
-				src="/images/hero-visual.png"
-				alt=""
-				loading="eager"
-				class="h-80 w-full object-cover md:h-[27rem]"
-			/>
+			<div class="relative flex-1 overflow-hidden">
+				<img
+					src="/images/morkie.png"
+					alt="morkie"
+					loading="eager"
+					class="absolute inset-0 h-full w-full object-contain object-left"
+				/>
+				<div
+					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-paper via-paper/85 to-transparent pt-24"
+				>
+					<h1
+						id="hero-title"
+						class="font-display text-hero font-extrabold uppercase tracking-display text-right"
+					>
+						<span class="logo-mark me-2 align-baseline" aria-hidden="true"></span>morkie<span
+							class="text-accent">.</span
+						>
+					</h1>
+					<div class="mt-4 border-t border-foreground" aria-hidden="true"></div>
+				</div>
+			</div>
 		</div>
 
 		<div class="py-16 md:py-28">
-			<h1
-				id="hero-title"
-				class="font-display text-hero font-extrabold uppercase tracking-display text-right"
-			>
-				<span class="logo-mark me-2 align-baseline" aria-hidden="true"></span>morkie<span
-					class="text-accent">.</span
-				>
-			</h1>
-			<div class="mt-4 border-t border-foreground" aria-hidden="true"></div>
-			<p use:reveal class="mt-6 text-lead text-ink-soft text-right">
+			<p use:reveal class="text-lead text-ink-soft text-right">
 				{#each leadWords as word, i (word + i)}<span class="stagger-word" style:--d="{i * 40}ms"
 						>{word}</span
 					>{' '}{/each}

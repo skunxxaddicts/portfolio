@@ -16,7 +16,7 @@ const leadWords =
 		<div class="flex min-h-[calc(100svh-var(--spacing-header))] flex-col">
 			<div class="relative flex-1 overflow-hidden [container-type:inline-size]">
 				<div class="absolute inset-x-0 top-[18%]">
-					<h1 id="hero-title" class="px-[0.03em] text-hero text-right"><Wordmark /></h1>
+					<h1 id="hero-title" class="flex justify-end px-[0.03em] text-hero"><Wordmark /></h1>
 				</div>
 				<img
 					src="/images/morkie.png"
@@ -25,7 +25,9 @@ const leadWords =
 					class="absolute top-0 left-0 z-10 h-full w-auto object-cover object-top"
 				/>
 				<div class="absolute inset-x-0 top-[18%] z-20" aria-hidden="true">
-					<p class="px-[0.03em] text-hero text-right"><Wordmark outline /></p>
+					<p class="flex origin-right justify-end px-[0.03em] text-hero">
+						<Wordmark outline class="origin-right scale-[0.97]" />
+					</p>
 				</div>
 				<div
 					class="mono-label absolute inset-x-0 top-0 z-30 flex flex-col gap-1 py-4 sm:flex-row sm:items-center sm:justify-between"

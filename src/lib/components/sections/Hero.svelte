@@ -1,7 +1,13 @@
 <script lang="ts">
 import { disciplines, heroFacts, site } from '#lib/data/site';
+import { reveal } from '#lib/utils/reveal';
 import BgLines from '../layout/BgLines.svelte';
 import Marquee from '../ui/Marquee.svelte';
+
+const leadWords =
+  'Production sites, internal tools, and the design system underneath them — built and operated end-to-end.'.split(
+    ' ',
+  );
 </script>
 
 <section aria-labelledby="hero-title" class="relative overflow-hidden border-b border-border">
@@ -20,11 +26,14 @@ import Marquee from '../ui/Marquee.svelte';
 				id="hero-title"
 				class="font-display text-hero font-extrabold uppercase leading-none tracking-tight"
 			>
-				morkie.
+				<span class="relative inline-block"
+					><span aria-hidden="true" class="hero-blob"></span><span class="relative">m</span></span
+				>orkie<span class="text-accent">.</span>
 			</h1>
-			<p class="mt-6 max-w-xl text-lead text-ink-soft">
-				Production sites, internal tools, and the design system underneath them —
-				built and operated end-to-end.
+			<p use:reveal class="mt-6 max-w-xl text-lead text-ink-soft">
+				{#each leadWords as word, i (word + i)}<span class="stagger-word" style:--d="{i * 40}ms"
+						>{word}</span
+					>{' '}{/each}
 			</p>
 		</div>
 
@@ -45,7 +54,7 @@ import Marquee from '../ui/Marquee.svelte';
 				<span class="mx-6 font-display text-h4 font-semibold uppercase tracking-tight md:mx-10">
 					{d}
 				</span>
-				<span class="mono-label" aria-hidden="true">·</span>
+				<span class="mono-label text-accent" aria-hidden="true">·</span>
 			{/each}
 		</Marquee>
 	</div>

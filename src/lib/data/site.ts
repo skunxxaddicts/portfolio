@@ -29,16 +29,17 @@ export const socialLinks: SocialLink[] = [
 
 export const disciplines = [
   'TypeScript',
-  'SvelteKit',
-  'Next.js',
-  'Node.js',
   'Go',
   'Bun',
-  'Tailwind',
+  'Node JS',
   'React JS',
+  'Next JS',
+  'SvelteKit',
+  'Tailwind',
   'Postgres',
-  'Figma',
   'PocketBase',
+  'Motion',
+  'Figma',
 ] as const;
 
 export const heroFacts = [

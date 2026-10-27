@@ -64,7 +64,7 @@ components: 24 · utils: 2 · routes: 6 · extras: 8
 
 ## Site @utility recipes
 
-- accent-serif, bg-lines, btn, btn-solid, content-shell, hero-blob, mono-label, stagger-word
+- accent-serif, bg-lines, btn, btn-solid, content-shell, logo-mark, mono-label, stagger-word, tracking-display
 
 ## Site-extra tokens (identity — not in kit)
 

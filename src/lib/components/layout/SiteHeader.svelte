@@ -27,10 +27,10 @@ function isActive(href: string): boolean {
 	<div class="content-shell flex items-center justify-between bg-paper">
 		<a
 			href="/"
-			class="flex items-center gap-3 py-4 font-display text-logo font-bold tracking-tight"
+			class="flex items-center gap-2 py-6 font-display text-logo font-bold tracking-tight"
 			aria-label="{site.name} — home"
 		>
-			{site.name}<span class="text-accent">.</span>
+			<span class="logo-mark" aria-hidden="true"></span>{site.name}<span class="text-accent">.</span>
 		</a>
 
 		<nav aria-label="Primary" class="hidden items-center gap-8 md:flex">
@@ -38,7 +38,7 @@ function isActive(href: string): boolean {
 				<a
 					href={item.href}
 					class={cn(
-						'mono-label py-4 transition-colors hover:text-foreground',
+						'mono-label py-6 transition-colors hover:text-foreground',
 						isActive(item.href) && 'text-foreground',
 					)}
 					aria-current={isActive(item.href) ? 'page' : undefined}
@@ -55,7 +55,7 @@ function isActive(href: string): boolean {
 		<button
 			type="button"
 			bind:this={menuBtn}
-			class="mono-label flex items-center gap-2 py-4 md:hidden"
+			class="mono-label flex items-center gap-2 py-6 md:hidden"
 			aria-expanded={menuOpen}
 			aria-controls="mobile-nav"
 			onclick={() => (menuOpen = !menuOpen)}

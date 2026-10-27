@@ -8,6 +8,7 @@ import HomeAbout from '#lib/components/sections/HomeAbout.svelte';
 import Process from '#lib/components/sections/Process.svelte';
 import SelectedWork from '#lib/components/sections/SelectedWork.svelte';
 import Services from '#lib/components/sections/Services.svelte';
+import Testimonials from '#lib/components/sections/Testimonials.svelte';
 import type { PageProps } from './$types';
 
 let { data }: PageProps = $props();
@@ -22,4 +23,5 @@ let { data }: PageProps = $props();
 <Process />
 <GithubRepos result={data.reposResult} />
 <Services index="06" />
+<Testimonials />
 <Cta />

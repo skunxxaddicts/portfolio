@@ -11,7 +11,7 @@ let {
   title,
   description = site.description,
   path = '/',
-  image,
+  image = `${site.url}/images/og-image.png`,
 }: Props = $props();
 
 const fullTitle = $derived(title ? `${title} — ${site.name}` : `${site.name} — ${site.owner}`);
@@ -26,10 +26,9 @@ const canonical = $derived(`${site.url}${path}`);
 	<meta property="og:title" content={fullTitle} />
 	<meta property="og:description" content={description} />
 	<meta property="og:url" content={canonical} />
-	{#if image}
-		<meta property="og:image" content={image} />
-	{/if}
+	<meta property="og:image" content={image} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={fullTitle} />
 	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={image} />
 </svelte:head>

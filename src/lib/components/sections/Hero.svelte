@@ -14,9 +14,19 @@ const leadWords =
 <section aria-labelledby="hero-title" class="relative overflow-hidden border-b border-border">
 	<div class="content-shell relative">
 		<div class="flex min-h-[calc(100svh-var(--spacing-header))] flex-col">
-			<div class="relative flex-1 overflow-hidden [container-type:inline-size]">
+			<div class="relative flex-1 overflow-hidden bg-paper [container-type:inline-size]">
 				<div class="absolute inset-x-0 top-[18%]">
 					<WordmarkStack id="hero-title" class="text-hero" />
+				</div>
+				<div class="absolute inset-x-0 top-[18%] z-20 text-hero mix-blend-difference">
+					<div class="mt-[0.95em]">
+						<p use:reveal class="text-right text-h3 text-paper">
+							{#each leadWords as word, i (word + i)}<span
+									class="stagger-word"
+									style:--d="{i * 40}ms">{word}</span
+								>{' '}{/each}
+						</p>
+					</div>
 				</div>
 				<img
 					src="/images/morkie.png"
@@ -33,14 +43,6 @@ const leadWords =
 				</div>
 				<div class="absolute inset-x-0 bottom-0 z-30 border-t border-border" aria-hidden="true"></div>
 			</div>
-		</div>
-
-		<div class="py-16 md:py-28">
-			<p use:reveal class="text-lead text-ink-soft text-right">
-				{#each leadWords as word, i (word + i)}<span class="stagger-word" style:--d="{i * 40}ms"
-						>{word}</span
-					>{' '}{/each}
-			</p>
 		</div>
 
 		<div class="grid border-t border-border sm:grid-cols-2 lg:grid-cols-4">

@@ -1,0 +1,485 @@
+[
+  {
+    "slug": "7ocean-tour",
+    "title": "7Ocean Tour & Travel",
+    "year": "2026",
+    "sector": "Client work",
+    "group": "shipped",
+    "role": "Design, build, deploy, operate",
+    "scope": "Full production platform",
+    "status": "Live",
+    "tagline": "Production travel platform — live client work",
+    "stack": [
+      "Next.js 16",
+      "React 19",
+      "Tailwind",
+      "PocketBase",
+      "nginx",
+      "pm2",
+      "Cloudflare"
+    ],
+    "links": {
+      "live": "https://7oceantour.com"
+    },
+    "highlights": [
+      "Bilingual content model (EN/ID) resolved at the data layer",
+      "Self-hosted PocketBase admin, edge-gated with Cloudflare Access",
+      "VPS deploy pipeline: nginx + pm2 + Let’s Encrypt + CF cache rules",
+      "Security pass: rate-limited auth, admin UI lockdown, HSTS"
+    ],
+    "brief": {
+      "lead": "A Bali tour operator needed a real platform, not a brochure.",
+      "body": "Full production website for a Bali-based tour operator. Public catalog, trip detail pages, and a private admin panel backed by PocketBase — deployed to a dedicated VPS behind nginx and Cloudflare with a hardened security posture."
+    },
+    "image": "/images/work/7ocean-tour.png",
+    "featured": true,
+    "quote": {
+      "text": "TODO: replace with the real client quote",
+      "author": "TODO — 7Ocean Tour & Travel"
+    }
+  },
+  {
+    "slug": "viral-music",
+    "title": "Viral Music",
+    "year": "2025–2026",
+    "sector": "Case study",
+    "group": "shipped",
+    "role": "Design, build, migrate",
+    "scope": "Brand site + artist/store/admin apps",
+    "status": "Featured",
+    "tagline": "Music label platform — one SvelteKit codebase, four apps",
+    "stack": [
+      "SvelteKit 2",
+      "Svelte 5",
+      "Bun",
+      "Tailwind v4",
+      "Supabase"
+    ],
+    "links": {},
+    "highlights": [
+      "Four host-dispatched apps in one codebase: site, sounds, store, core admin",
+      "Supabase content + auth layer with RLS and admin allowlist gating",
+      "Migrated clean off the legacy Next.js codebase to Svelte 5 runes"
+    ],
+    "brief": {
+      "lead": "A music label platform, not just a brand site.",
+      "body": "Public brand site, artist platform (sounds), ecommerce (store), and internal CMS (core) — all host-dispatched from a single SvelteKit + Svelte 5 codebase on Bun, with Supabase backing content, auth, and realtime."
+    },
+    "featured": true
+  },
+  {
+    "slug": "sinergi-warrior",
+    "title": "Sinergi Warrior",
+    "year": "2026",
+    "sector": "Client work",
+    "group": "shipped",
+    "role": "Fullstack build",
+    "scope": "Marketing site",
+    "status": "Shipped",
+    "tagline": "Company profile site",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind"
+    ],
+    "links": {},
+    "highlights": [
+      "Responsive marketing pages",
+      "Client-ready content structure"
+    ],
+    "brief": {
+      "lead": "A company profile that reads clean on every screen.",
+      "body": "Marketing site for Sinergi Warrior — responsive company profile with service pages and contact flow."
+    }
+  },
+  {
+    "slug": "sharon-inc",
+    "title": "Sharon Inc",
+    "year": "2026",
+    "sector": "Client work",
+    "group": "shipped",
+    "role": "Design, build",
+    "scope": "Storefront + admin CMS",
+    "status": "In progress",
+    "tagline": "Ecommerce storefront & admin CMS",
+    "stack": [
+      "Next.js 16",
+      "React 19",
+      "Vite",
+      "TanStack Router",
+      "Supabase",
+      "Xendit",
+      "Tailwind"
+    ],
+    "links": {},
+    "highlights": [
+      "Two apps, one Supabase project: Next.js 16 storefront + Vite/React admin CMS",
+      "Dual-currency catalog — USD and IDR priced independently, not converted",
+      "Xendit hosted-invoice checkout, server-side price recomputation, verified webhooks",
+      "Admin gating via Postgres RLS is_admin() — no backend, no service-role key client-side"
+    ],
+    "brief": {
+      "lead": "A supplements storefront with a real ops backend, not a theme.",
+      "body": "Health & beauty ecommerce for Sharon Inc — a customer-facing Next.js 16 storefront with dual-currency pricing and Xendit checkout, plus an internal admin CMS (Vite + React + TanStack Router) where every read/write flows through Supabase Auth and Postgres RLS."
+    }
+  },
+  {
+    "slug": "case-parking",
+    "title": "Parking Ops",
+    "year": "2026",
+    "sector": "Case study",
+    "group": "lab",
+    "subdomain": "parking",
+    "role": "Fullstack",
+    "scope": "Kiosk + operator console",
+    "status": "Featured",
+    "tagline": "Live-fee parking kiosk — zero-dependency Bun app",
+    "stack": [
+      "Bun",
+      "bun:sqlite",
+      "Bun.serve",
+      "Web Components",
+      "SSE",
+      "Tailwind (css-kit/gate)"
+    ],
+    "links": {},
+    "highlights": [
+      "Tariff engine as one shared module — unit tests, API, and browser ticker all read it",
+      "SSE occupancy grid + live fee ticker, printable ticket/receipt",
+      "Deposit approval pipeline with actor role gate (requester ≠ decider)",
+      "9/9 bun test — fee math + full session lifecycle on in-memory SQLite"
+    ],
+    "brief": {
+      "lead": "A parking kiosk where the fee ticks live and the console is real.",
+      "body": "Entry ticket → live ticking fee (shared tariff engine, server baseline + per-second client tick) → pay → exit. SSE occupancy board flips bays in real time, plus a full operator console: shifts, deposits, and a role-gated approval pipeline."
+    },
+    "image": "/images/work/case-parking.png",
+    "featured": true
+  },
+  {
+    "slug": "case-teleconsult",
+    "title": "Teleconsult",
+    "year": "2026",
+    "sector": "Case study",
+    "group": "lab",
+    "subdomain": "teleconsult",
+    "role": "Fullstack",
+    "scope": "Booking + video lobby",
+    "status": "Featured",
+    "tagline": "Book → pay → real Jitsi room → WebSocket lobby",
+    "stack": [
+      "Go 1.27",
+      "chi",
+      "pgx",
+      "Postgres",
+      "nhooyr/websocket",
+      "React 19",
+      "Vite",
+      "Tailwind (css-kit/clinic)"
+    ],
+    "links": {},
+    "highlights": [
+      "Bidirectional WS lobby — the realtime layer the source template didn’t have",
+      "Chat persists server-side; late joiners get full history",
+      "Guarded lifecycle: book → pay → lobby → in_session → completed",
+      "Refund approval enforces requester ≠ decider"
+    ],
+    "brief": {
+      "lead": "Booking is easy. The waiting room is the product.",
+      "body": "Practitioner booking with conflict-guarded slots, mock payment that mints a real meet.jit.si link, and a WebSocket waiting-room lobby — presence, persisted chat, typing relay, and a practitioner-ready signal that lights the join button. Intake forms, consent, and refund approvals included."
+    },
+    "image": "/images/work/case-teleconsult.png",
+    "featured": true
+  },
+  {
+    "slug": "case-fieldservice",
+    "title": "FieldOps",
+    "year": "2026",
+    "sector": "Case study",
+    "group": "lab",
+    "subdomain": "fieldops",
+    "role": "Fullstack + mobile",
+    "scope": "Dispatch + technician app",
+    "status": "Featured",
+    "tagline": "Field-service dispatch — Expo web app + Go API",
+    "stack": [
+      "Expo SDK 58",
+      "React Native 0.88",
+      "Expo Router",
+      "Go 1.27",
+      "modernc.org/sqlite"
+    ],
+    "links": {},
+    "highlights": [
+      "Completion gated server-side: all checklist items + captured SVG signature",
+      "Dispatch rejects overlapping technician schedules",
+      "Public status lookup whitelists output and requires phone match",
+      "Single-binary Go API — pure-Go SQLite, zero infrastructure"
+    ],
+    "brief": {
+      "lead": "One codebase: dispatcher board, technician app, public tracker.",
+      "body": "Public service request → dispatch kanban → technician workflow (arrive → checklist → signature → complete) → public track-and-trace with job number + phone matching. One Expo codebase serves as technician app, dispatch board, and public intake — all web-previewable."
+    },
+    "featured": true
+  },
+  {
+    "slug": "case-store",
+    "title": "Store + CMS",
+    "year": "2026",
+    "sector": "Case study",
+    "group": "lab",
+    "subdomain": "store",
+    "role": "Fullstack",
+    "scope": "Storefront + tenant CMS",
+    "status": "Shipped",
+    "tagline": "Online store with protected demo CMS",
+    "stack": [
+      "Next.js",
+      "React",
+      "Server Actions",
+      "Drizzle"
+    ],
+    "links": {},
+    "highlights": [
+      "Draft → publish lifecycle with audit trail",
+      "Tenant-isolated content and uploads"
+    ],
+    "brief": {
+      "lead": "A demo CMS that survives strangers clicking everything.",
+      "body": "Storefront + content management with draft/publish, moderation and audit behavior, tenant isolation, uploads, and snapshot/reset — no redeploy needed to demo editing."
+    }
+  },
+  {
+    "slug": "case-queue",
+    "title": "Queue Board",
+    "year": "2026",
+    "sector": "Case study",
+    "group": "lab",
+    "subdomain": "queue",
+    "role": "Fullstack",
+    "scope": "Ticket + display board",
+    "status": "Shipped",
+    "tagline": "SvelteKit + Hono live queue display",
+    "stack": [
+      "SvelteKit",
+      "Hono",
+      "SSE",
+      "Tailwind (css-kit/studio)"
+    ],
+    "links": {},
+    "highlights": [
+      "One-way SSE push to public display boards",
+      "Public ticket flow"
+    ],
+    "brief": {
+      "lead": "Every screen flips the moment the counter calls.",
+      "body": "Take-a-number public page and an SSE-driven display board — counter calls push to every screen live."
+    }
+  },
+  {
+    "slug": "case-pawn",
+    "title": "Pawn Ledger",
+    "year": "2026",
+    "sector": "Case study",
+    "group": "lab",
+    "subdomain": "pawn",
+    "role": "Fullstack",
+    "scope": "Loan engine + ledger",
+    "status": "Shipped",
+    "tagline": "Nuxt + Go REST — loan simulator & auction board",
+    "stack": [
+      "Nuxt",
+      "Vue",
+      "Go REST",
+      "sqlc",
+      "Tailwind (css-kit/ledger)"
+    ],
+    "links": {},
+    "highlights": [
+      "Loan + interest engine",
+      "Rotated stamp status marks on ledger cards"
+    ],
+    "brief": {
+      "lead": "Interest math dressed as a pawnshop ledger.",
+      "body": "Pawn shop domain: loan simulation, interest accrual, item ledger, and auction board — wrapped in a ledger/cream + gold-stamp visual skin."
+    }
+  },
+  {
+    "slug": "case-cinema",
+    "title": "Cinema Seats",
+    "year": "2026",
+    "sector": "Case study",
+    "group": "lab",
+    "subdomain": "cinema",
+    "role": "Fullstack",
+    "scope": "Seat map + ticketing",
+    "status": "Shipped",
+    "tagline": "Astro + React island over Go GraphQL",
+    "stack": [
+      "Astro",
+      "React island",
+      "Go",
+      "gqlgen GraphQL",
+      "Tailwind (css-kit/theater)"
+    ],
+    "links": {},
+    "highlights": [
+      "Hold → countdown → pay → QR ticket → check-in, full loop",
+      "Islands architecture: static Astro shell, one interactive seat-map island"
+    ],
+    "brief": {
+      "lead": "A 22-seat hold-and-pay loop on a 15-minute countdown.",
+      "body": "SSR schedule page with an interactive 22-seat map React island — hold seats with a 15-minute countdown, pay, get a QR ticket, then check in at the gate."
+    }
+  },
+  {
+    "slug": "case-bengkel",
+    "title": "Bengkel WOs",
+    "year": "2026",
+    "sector": "Case study",
+    "group": "lab",
+    "subdomain": "bengkel",
+    "role": "Fullstack",
+    "scope": "Work-order pipeline",
+    "status": "Shipped",
+    "tagline": "Go templ + HTMX work-order pipeline",
+    "stack": [
+      "Go",
+      "templ",
+      "HTMX",
+      "pgx",
+      "Postgres",
+      "Tailwind (css-kit/workshop)"
+    ],
+    "links": {},
+    "highlights": [
+      "Customer approves estimate via public page — server decrements stock atomically",
+      "Admin kanban auto-refreshes over HTMX, no JS framework"
+    ],
+    "brief": {
+      "lead": "A repair pipeline where the customer’s click moves stock.",
+      "body": "Server-driven repair work orders: draft → estimate → customer approval on a public tracking page → in_progress → done → picked_up. Approval atomically decrements parts stock."
+    }
+  },
+  {
+    "slug": "case-booking",
+    "title": "Booking Ops",
+    "year": "2026",
+    "sector": "Case study",
+    "group": "lab",
+    "subdomain": "booking",
+    "role": "Fullstack",
+    "scope": "Slot engine + ops board",
+    "status": "Featured",
+    "tagline": "SvelteKit + Elysia scheduling — slots, deposits, QR check-in",
+    "stack": [
+      "SvelteKit",
+      "Svelte 5",
+      "Elysia",
+      "Bun",
+      "bun:sqlite",
+      "SSE",
+      "Tailwind (css-kit/studio)"
+    ],
+    "links": {},
+    "highlights": [
+      "Slot engine: weekday rules → grid → date overrides → capacity minus overlaps",
+      "Deposit-gated confirm mints claim-first QR check-in code",
+      "Cancel inside window charges fee bps; freed slot offers earliest waitlist entry",
+      "SSE ops board — public bookings flip staff rows live"
+    ],
+    "brief": {
+      "lead": "A slot engine with deposits, QR gates, and a live ops board.",
+      "body": "Service/resource booking with a real slot engine — weekday availability rules produce a slot grid, booking holds for 15 minutes, deposit gates confirmation and issues a QR code, staff check-in by code, cancel fees by window policy, and a freed slot auto-offers the waitlist. Ops board live over SSE."
+    },
+    "featured": true
+  },
+  {
+    "slug": "e-comm",
+    "title": "E-comm",
+    "year": "2025",
+    "sector": "Lab work",
+    "group": "lab",
+    "subdomain": "ecomm",
+    "role": "Fullstack build",
+    "scope": "Storefront",
+    "status": "Shipped",
+    "tagline": "E-commerce storefront",
+    "stack": [
+      "React",
+      "TypeScript",
+      "REST API",
+      "Tailwind"
+    ],
+    "links": {
+      "github": "https://github.com/dev-morkie/e-comm"
+    },
+    "highlights": [
+      "Product catalog + cart state",
+      "API-driven catalog pages"
+    ],
+    "brief": {
+      "lead": "Cart, catalog, checkout — the full storefront loop.",
+      "body": "Storefront built during the WPH program: product listing, detail views, cart flow, and checkout UI."
+    }
+  },
+  {
+    "slug": "mvp-library",
+    "title": "MVP Library",
+    "year": "2025",
+    "sector": "Lab work",
+    "group": "lab",
+    "subdomain": "library",
+    "role": "Design system",
+    "scope": "Component library",
+    "status": "Shipped",
+    "tagline": "Component & pattern library",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "shadcn/ui"
+    ],
+    "links": {
+      "github": "https://github.com/dev-morkie/MVP-Library"
+    },
+    "highlights": [
+      "Composable primitives",
+      "Shared motion + layout patterns"
+    ],
+    "brief": {
+      "lead": "Build the pieces once, ship the pages faster.",
+      "body": "Reusable component library assembled across projects — primitives, sections, and motion patterns ready to drop into new builds."
+    }
+  },
+  {
+    "slug": "portfolio-slicing",
+    "title": "Portfolio Slicing",
+    "year": "2025",
+    "sector": "Lab work",
+    "group": "lab",
+    "subdomain": "slicing",
+    "role": "Fullstack build",
+    "scope": "Figma→code",
+    "status": "Shipped",
+    "tagline": "Figma→code slicing",
+    "stack": [
+      "Next.js 16",
+      "React 19",
+      "Tailwind",
+      "Motion",
+      "Radix"
+    ],
+    "links": {
+      "github": "https://github.com/dev-morkie/portfolio-slicing"
+    },
+    "highlights": [
+      "Full landing structure: 10 sections, carousels, accordions",
+      "Performance pass documented (PERFORMANCE_OPTIMIZATIONS.md)"
+    ],
+    "brief": {
+      "lead": "Pixel-faithful, then faster than the mockup.",
+      "body": "Pixel-faithful implementation of a designer portfolio: hero, services, carousel portfolio, experience timeline, testimonials, FAQ, and CTA — with scroll-triggered animation throughout."
+    }
+  }
+]

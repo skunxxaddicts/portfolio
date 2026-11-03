@@ -1,5 +1,7 @@
 # Audit — morkie portfolio
 
+> **Status 2026-11-03:** fix plan verified landed (RIO re-audit — `docs/audits/2026-11-03-rio-audit.md`). Findings below kept as the original record; H1–M5, L1–L11 confirmed fixed in code.
+
 **Date:** 2026-10-26 · **Scope:** all aspects (code health, perf, motion, a11y, SEO, security, content, tooling) · **Method:** static analysis + measured audit on production build (`bun run preview`, headless Chrome, mobile + desktop emulation, Lighthouse).
 
 ## Verified clean

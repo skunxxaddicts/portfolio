@@ -8,7 +8,7 @@ Run top to bottom before shipping. A blocked item is a finding, not a footnote.
 - [ ] Tests green — `TODO`
 - [ ] Production build succeeds — `bun run build`
 - [ ] Dependency audit clean or accepted — `bun audit`
-- [ ] Repo-specific gates — node /Users/skunxxaddicts/Documents/DEV/porto-plan/css-kit/tools/kit.mjs check .
+- [ ] Repo-specific gates — `node ../css-kit/tools/kit.mjs check .` (local only — css-kit not on the runner)
 
 ## Integrity
 

@@ -1,5 +1,37 @@
 [
   {
+    "slug": "case-parking",
+    "title": "Parking Ops",
+    "year": "2026",
+    "sector": "Case study",
+    "group": "laboratory",
+    "subdomain": "parking",
+    "role": "Fullstack",
+    "scope": "Kiosk + operator console",
+    "status": "Featured",
+    "tagline": "Live-fee parking kiosk — zero-dependency Bun app",
+    "stack": [
+      "Bun",
+      "bun:sqlite",
+      "Bun.serve",
+      "Web Components",
+      "SSE",
+      "Tailwind (css-kit/gate)"
+    ],
+    "links": {},
+    "highlights": [
+      "Tariff engine as one shared module — unit tests, API, and browser ticker all read it",
+      "SSE occupancy grid + live fee ticker, printable ticket/receipt",
+      "Deposit approval pipeline with actor role gate (requester ≠ decider)",
+      "9/9 bun test — fee math + full session lifecycle on in-memory SQLite"
+    ],
+    "brief": {
+      "lead": "A parking kiosk where the fee ticks live and the console is real.",
+      "body": "Entry ticket → live ticking fee (shared tariff engine, server baseline + per-second client tick) → pay → exit. SSE occupancy board flips bays in real time, plus a full operator console: shifts, deposits, and a role-gated approval pipeline."
+    },
+    "image": "/images/work/case-parking.png"
+  },
+  {
     "slug": "sinergi-warrior",
     "title": "Sinergi Warrior",
     "year": "2026",
@@ -120,38 +152,6 @@
       "lead": "A supplements storefront with a real ops backend, not a theme.",
       "body": "Health & beauty ecommerce for Sharon Inc — a customer-facing Next.js 16 storefront with dual-currency pricing and Xendit checkout, plus an internal admin CMS (Vite + React + TanStack Router) where every read/write flows through Supabase Auth and Postgres RLS."
     }
-  },
-  {
-    "slug": "case-parking",
-    "title": "Parking Ops",
-    "year": "2026",
-    "sector": "Case study",
-    "group": "laboratory",
-    "subdomain": "parking",
-    "role": "Fullstack",
-    "scope": "Kiosk + operator console",
-    "status": "Featured",
-    "tagline": "Live-fee parking kiosk — zero-dependency Bun app",
-    "stack": [
-      "Bun",
-      "bun:sqlite",
-      "Bun.serve",
-      "Web Components",
-      "SSE",
-      "Tailwind (css-kit/gate)"
-    ],
-    "links": {},
-    "highlights": [
-      "Tariff engine as one shared module — unit tests, API, and browser ticker all read it",
-      "SSE occupancy grid + live fee ticker, printable ticket/receipt",
-      "Deposit approval pipeline with actor role gate (requester ≠ decider)",
-      "9/9 bun test — fee math + full session lifecycle on in-memory SQLite"
-    ],
-    "brief": {
-      "lead": "A parking kiosk where the fee ticks live and the console is real.",
-      "body": "Entry ticket → live ticking fee (shared tariff engine, server baseline + per-second client tick) → pay → exit. SSE occupancy board flips bays in real time, plus a full operator console: shifts, deposits, and a role-gated approval pipeline."
-    },
-    "image": "/images/work/case-parking.png"
   },
   {
     "slug": "case-teleconsult",

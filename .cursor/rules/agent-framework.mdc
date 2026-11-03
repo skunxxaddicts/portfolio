@@ -1,0 +1,7 @@
+---
+description: Shared engineering constitution (agent-framework)
+alwaysApply: true
+---
+
+Repo conventions + gates: AGENTS.md · engineering/DEVELOPMENT_STATUS.md.
+Global constitution loads in Claude Code/Devin via ~/.claude/CLAUDE.md; canonical rules: ~/Documents/DEV/agent-framework/rules/.

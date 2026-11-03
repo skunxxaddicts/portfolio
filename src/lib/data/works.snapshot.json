@@ -1,5 +1,30 @@
 [
   {
+    "slug": "sinergi-warrior",
+    "title": "Sinergi Warrior",
+    "year": "2026",
+    "sector": "Client work",
+    "group": "shipped",
+    "role": "Fullstack build",
+    "scope": "Marketing site",
+    "status": "Shipped",
+    "tagline": "Company profile site",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind"
+    ],
+    "links": {},
+    "highlights": [
+      "Responsive marketing pages",
+      "Client-ready content structure"
+    ],
+    "brief": {
+      "lead": "A company profile that reads clean on every screen.",
+      "body": "Marketing site for Sinergi Warrior — responsive company profile with service pages and contact flow."
+    }
+  },
+  {
     "slug": "7ocean-tour",
     "title": "7Ocean Tour & Travel",
     "year": "2026",
@@ -63,31 +88,6 @@
     "brief": {
       "lead": "A music label platform, not just a brand site.",
       "body": "Public brand site, artist platform (sounds), ecommerce (store), and internal CMS (core) — all host-dispatched from a single SvelteKit + Svelte 5 codebase on Bun, with Supabase backing content, auth, and realtime."
-    }
-  },
-  {
-    "slug": "sinergi-warrior",
-    "title": "Sinergi Warrior",
-    "year": "2026",
-    "sector": "Client work",
-    "group": "shipped",
-    "role": "Fullstack build",
-    "scope": "Marketing site",
-    "status": "Shipped",
-    "tagline": "Company profile site",
-    "stack": [
-      "Next.js",
-      "TypeScript",
-      "Tailwind"
-    ],
-    "links": {},
-    "highlights": [
-      "Responsive marketing pages",
-      "Client-ready content structure"
-    ],
-    "brief": {
-      "lead": "A company profile that reads clean on every screen.",
-      "body": "Marketing site for Sinergi Warrior — responsive company profile with service pages and contact flow."
     }
   },
   {
